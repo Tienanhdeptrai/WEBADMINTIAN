@@ -1,0 +1,63 @@
+﻿@model HocWeb.Models.AnnounceModels
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+@section header{
+
+}
+
+@using (Html.BeginForm("Create", "Announces", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container-fluid">
+        <h1 class="m-0 font-weight-bold text-primary">Thêm mới thông báo</h1>
+        <div>
+            <a class="btn btn-primary" href="/Admin/Announces/Index" style="width:200px;"> Trở về </a>
+        </div>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Loại thông báo</p>
+
+                @Html.DropDownListFor(model => model.Type, new[] { new SelectListItem { Text = "Giảm giá", Value = "1" }, new SelectListItem { Text = "Tin tức", Value = "2" } }, new { @class = "form-control form-control-user" })
+            </div>
+            <div class="col-sm-3">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Tiêu đề thông báo</p>
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control form-control-user", @autofocus = "autofocus" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Chi tiết thông báo</p>
+                @Html.EditorFor(model => model.Details, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Details, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
+                @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hiển thị ngay", Value = "True" }, new SelectListItem { Text = "Chưa hiển thị", Value = "False" } }, new { @class = "form-control form-control-user" })
+
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Đường dẫn</p>
+                @Html.EditorFor(model => model.Url, new { htmlAttributes = new { @class = "form-control form-control-user", @autofocus = "autofocus" } })
+                @Html.ValidationMessageFor(model => model.Url, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
+            </div>
+        </div>
+    </div>
+}
+<script src="~/Assets/Admin/vendor/jquery/jquery.min.js"></script>
+<script src="~/Assets/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/Assets/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="~/Assets/Admin/js/sb-admin-2.min.js"></script>
+

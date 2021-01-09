@@ -1,0 +1,87 @@
+﻿@model HocWeb.Models.ShipperModels
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+@section header{
+
+}
+@using (Html.BeginForm("Edit", "Shipper", FormMethod.Post, new { enctype = "multipart/form-data" ))
+{
+    @Html.AntiForgeryToken()
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin </h1>
+    <div>
+        <a style="width:200px;" class="btn btn-primary" href="/Admin/Shipper/Index"> Trở về </a>
+    </div>
+    <hr />
+    @Html.HiddenFor(model => model.ShipperID)
+    @Html.HiddenFor(model => model.CreatedDate)
+    @Html.HiddenFor(model => model.CreatedBy)
+    @Html.HiddenFor(model => model.Status)
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Họ</p>
+            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tên</p>
+            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tài khoản</p>
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user", })
+            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Mật khẩu</p>
+            @Html.TextBoxFor(model => model.Passwords, new { @class = "form-control form-control-user", @placeholder = "Bạn phải nhập ít nhất 6 kí tự", @type = "password" })
+            @Html.ValidationMessageFor(model => model.Passwords, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Địa chỉ</p>
+            @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Email</p>
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Số điện thoại</p>
+            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Chứng minh nhân dân</p>
+            @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái</p>
+            @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Thay đổi ảnh đại diện</p>
+            <input type="file" class="form-control" name="file" accept="image/*" required />
+        </div>
+        <div class="col-sm-2 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000; text-align:center;font-size:20pxr">Hình ảnh</p>
+            <img src="@Html.ValueFor(model => model.Avatar)" alt="Ảnh đại diện" width="250px" height="250px" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
+        </div>
+    </div>
+</div>
+}
+

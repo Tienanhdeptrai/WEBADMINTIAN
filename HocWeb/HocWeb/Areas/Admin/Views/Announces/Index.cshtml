@@ -1,0 +1,69 @@
+﻿@model List<HocWeb.Models.AnnounceModels>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+@section header{
+}
+@section jsFooter{
+    <script src="~/Assets/Admin/js/controller/AnnouncesController.js"></script>
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách thông báo</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/Announces/Create" style="width:200px"> Thêm mới </a>
+    </div>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Loại</th>
+                                <th>Tiêu đề</th>
+                                <th>Ngày tạo</th>
+                                <th>Trạng thái</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Loại</th>
+                                <th>Tiêu đề</th>
+                                <th>Ngày tạo</th>
+                                <th>Trạng thái</th>
+                                <th>#</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr id="row_@item">
+                                    <td>@((item.Type)=="1" ? "Giảm giá" : "Tin tức")</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.CreatedDate</td>
+                                    <td><a href="#" class="btn-active" data-id="@item.Id">@(Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đã tắt")</a></td>
+                                    <td>
+                                        <a class="btn btn-success" href="/Admin/Announces/Edit/@item.Id">Edit</a>
+                                        @Ajax.ActionLink("Xóa", "Delete", new { @id = item.Id }, new AjaxOptions
+                                       {
+                                           Confirm = "Bạn có muốn thông báo này?",
+                                           OnComplete = "$('#row_" + @item.Id + "').remote()",
+                                           OnSuccess = "window.location.reload()",
+                                           HttpMethod = "Delete"
+                                       }, new { @class = "btn btn-danger" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

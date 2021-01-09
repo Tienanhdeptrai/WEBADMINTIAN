@@ -1,0 +1,147 @@
+﻿@model HocWeb.Models.OrderModels
+@using HocWeb.Models
+@using HocWeb.DAO
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    var liststatus = new string[] { "Chờ xác nhận", "Chờ lấy hàng", "Đang giao hàng", "Đã giao hàng", "Đã hủy", "Trả hàng" };
+    decimal total = 0;
+    var dao = new ProductDao();
+}
+
+@section header{
+
+}
+@using (Html.BeginForm())
+{
+    <div class="container-fluid">
+        <h1 class="m-0 font-weight-bold text-primary">Chi tiết đơn hàng</h1>
+        <hr />
+        @Html.HiddenFor(model => model.OrderID)
+        @Html.HiddenFor(model => model.CustomerID)
+        @Html.HiddenFor(model => model.ShipLocation)
+        @Html.HiddenFor(model => model.ShipAddress)
+        @Html.HiddenFor(model => model.ShipMoblie)
+        @Html.HiddenFor(model => model.ShipName)
+        @Html.HiddenFor(model => model.ShipperID)
+        @Html.HiddenFor(model => model.Payment)
+        @Html.HiddenFor(model => model.CreatedDate)
+        @Html.HiddenFor(model => model.Total)
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+
+                <p>Thông tin khách hàng</p>
+                @foreach (var std in ViewData["KHACHHANG"] as IList<UserModels>)
+                {
+                    <dl class="dl-horizontal" style="font-size: 24px">
+                        <dt>
+                            Họ tên khách hàng
+                        </dt>
+                        <dd>
+
+                            @(std.FullName)
+
+                        </dd>
+                        <dt>
+                            Địa chỉ Email
+                        </dt>
+                        <dd>
+                            @std.Email
+                        </dd>
+                        <dt>
+                            Số điện thoại
+                        </dt>
+                        <dd>
+                            @std.Phone
+                        </dd>
+                    </dl>
+                }
+            </div>
+            <div class="col-sm-3">
+                <p>Thông tin người nhận hàng</p>
+                <dl class="dl-horizontal" style="font-size: 24px">
+                    <dt>
+                        Tên người nhận hàng
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.ShipName)
+
+                    </dd>
+                    <dt>
+                        Số điện thoại
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.ShipMoblie)
+
+                    </dd>
+                    <dt>
+                        Địa chỉ
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.ShipAddress)
+
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-sm-3">
+                <p>Thông tin đơn hàng</p>
+                <dl class="dl-horizontal" style="font-size: 24px">
+                    @foreach (var std in ViewData["SANPHAM"] as IList<OrderDetailModels>)
+                    {
+                        <dt>
+                            Tên sản phẩm
+                        </dt>
+                        <dd>
+                            @std.Name
+                        </dd>
+                        <dt>
+                            Số lượng
+                        </dt>
+                        <dd>
+                            @std.Quantity
+                        </dd>
+                        total += Convert.ToDecimal(std.Price);
+
+                    }
+                    <dt>
+                        Tổng tiền
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Total) Đồng
+                    </dd>
+
+                    <dt>
+                        Ngày mua
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.CreatedDate)
+
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-sm-3">
+                <p style="font-size: 24px">Trạng Thái</p>
+                @Html.DropDownListFor(model => model.Status, new[] {
+               new SelectListItem { Text = "Chờ xác nhận", Value = "1" },
+               new SelectListItem { Text = "Chờ lấy hàng", Value = "2" },
+               new SelectListItem { Text = "Đang giao hàng", Value = "3" },
+               new SelectListItem { Text = "Đã giao hàng", Value = "4" },
+               new SelectListItem { Text = "Đã hủy", Value = "5" },
+               new SelectListItem { Text = "Trả hàng", Value = "6" }}, new { @class = "form-control form-control-user" })
+
+                <p style="font-size: 24px">Hình thức thanh toán</p>
+                @Html.DisplayFor(model => model.Payment)
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-1 mb-1 mb-sm-0">
+                <a href="/admin/order/index" class="btn btn-primary" style="width:100px;">Trở về</a>
+            </div>
+            <div class="col-sm-1">
+                <input type="submit" value="Save" class="btn btn-success" style="width:100px;" />
+            </div>
+
+        </div>
+    </div>
+   
+}

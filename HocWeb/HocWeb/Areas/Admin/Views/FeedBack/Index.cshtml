@@ -1,0 +1,70 @@
+﻿@model List<HocWeb.Models.FeedBackModels>
+@using HocWeb.DAO
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    var user = new USERDAO();
+    var product = new ProductDao();
+}
+@section header{
+}
+@section jsFooter{
+    <script src="~/Assets/Admin/js/controller/FeedBackController.js"></script>
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách phản hồi</h1>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Tên tài khoản</th>
+                                <th>Người gửi</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Tên tài khoản</th>
+                                <th>Người gửi</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                                <th>#</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr id="row_@item">
+                                <td>@user.GetCusName(item.UserID)</td>
+                                <td>@item.Name</td>
+                                <td>@product.GetProductName(item.ProductID)</td>
+                                <td>@item.Phone</td>
+                                <td>@item.Email</td>
+                                <td>@item.Address</td>    
+                             
+                                <td>
+                                    <a class="btn btn-primary" href="/Admin/FeedBack/Detail/@item.FeedBackID">Xem nội dung</a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

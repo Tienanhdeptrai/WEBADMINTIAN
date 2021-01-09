@@ -1,0 +1,1300 @@
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\CKFinder.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Dell\Desktop\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+C:\Users\tanph\OneDrive\Máy tính\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+C:\Users\Dai\Desktop\DoAnWebMoi\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.dll
+C:\Users\Dell\Desktop\DoanWebmoi2\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+C:\Users\tanph\Downloads\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+C:\Users\Dell\Desktop\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+C:\Users\Dell\Desktop\WEB\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+H:\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Models.dll.config
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+C:\Users\tanph\Desktop\New folder (3)\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\mongocrypt.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\snappy32.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\snappy64.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\libzstd.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\DnsClient.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Bson.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Driver.Core.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Driver.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Libmongocrypt.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\SharpCompress.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Buffers.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\DnsClient.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Bson.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Driver.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Driver.Core.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Buffers.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.App.config
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Firebase.Auth.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\FireSharp.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Extensions.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Primitives.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Extensions.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Primitives.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Firebase.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\LiteDB.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Reactive.dll
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Firebase.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\LiteDB.xml
+D:\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Reactive.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\mongocrypt.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\snappy32.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\snappy64.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\libzstd.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll.config
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\HocWeb.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.exe.config
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csc.rsp
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.exe.config
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\csi.rsp
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.Managed.Core.targets
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.AppContext.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Collections.Immutable.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Console.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Compression.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.IO.Pipes.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Reflection.Metadata.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.AccessControl.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Claims.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Security.Principal.Windows.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.ValueTuple.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XmlDocument.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.exe.config
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\vbc.rsp
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\roslyn\VBCSCompiler.exe.config
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\DnsClient.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Firebase.Auth.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Firebase.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\FireSharp.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.PlatformServices.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.PlatformServices.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\LiteDB.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.Extensions.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Web.Infrastructure.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Bson.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Driver.Core.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Driver.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Libmongocrypt.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\SharpCompress.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Buffers.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Extensions.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Primitives.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Reactive.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\WebGrease.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\DnsClient.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EntityFramework.SqlServer.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\EPPlus.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Facebook.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Firebase.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Auth.Mvc.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Apis.Core.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\LiteDB.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.Extensions.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Bson.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Driver.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\MongoDB.Driver.Core.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Newtonsoft.Json.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\PagedList.Mvc.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Buffers.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Extensions.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Formatting.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Net.Http.Primitives.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Reactive.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Http.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Helpers.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Mvc.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Optimization.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.Razor.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Deployment.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Web.WebPages.Razor.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Antlr3.Runtime.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.App.config
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csprojAssemblyReference.cache
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CoreCompileInputs.cache
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.csproj.CopyComplete
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\obj\Debug\HocWeb.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Firebase.Storage.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\FirebaseAdmin.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Api.Gax.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Api.Gax.Rest.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Collections.Immutable.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Memory.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Numerics.Vectors.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Threading.Tasks.Extensions.dll
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Commom.dll.config
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\FirebaseAdmin.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Api.Gax.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Api.Gax.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Api.Gax.Rest.pdb
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Google.Api.Gax.Rest.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Collections.Immutable.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Memory.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Numerics.Vectors.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\TLMH\Web\DOANVIPPRO\DoAnWEB\HocWeb\HocWeb\bin\System.Threading.Tasks.Extensions.xml

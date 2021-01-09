@@ -1,0 +1,517 @@
+﻿@model List<HocWeb.Models.OrderModels>
+@using HocWeb.DAO
+@{
+    ViewBag.Title = "Index";
+    var liststatus = new string[] { "Chờ xác nhận", "Chờ lấy hàng", "Đang giao hàng", "Đã giao hàng", "Đã hủy", "Trả hàng"};
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    List<HocWeb.Models.OrderModels> orders = null;
+    var dao = new USERDAO();
+
+}
+@section header{
+
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách hóa đơn</h1>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Tất cả</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Chờ xác nhận</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="layhang-tab" data-toggle="tab" href="#layhang" role="tab" aria-controls="layhang" aria-selected="false">Chờ lấy hàng</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="dangchuyen-tab" data-toggle="tab" href="#dangchuyen" role="tab" aria-controls="dangchuyen" aria-selected="false">Đang giao hàng</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="dachuyen-tab" data-toggle="tab" href="#dachuyen" role="tab" aria-controls="dachuyen" aria-selected="false">Đã giao hàng</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="dahuy-tab" data-toggle="tab" href="#dahuy" role="tab" aria-controls="dahuy" aria-selected="false">Đã hủy</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="hoantien-tab" data-toggle="tab" href="#hoantien" role="tab" aria-controls="hoantien" aria-selected="false">Trả hàng</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <br />
+            <h6>@Model.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổnh</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>                               
+                                <tbody>
+                                    @if (Model.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy đơn hàng</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in Model)
+                                    {
+                                <tr id="row_@item.OrderID">
+                                    <td>@dao.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>
+                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Details</a>
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="choxacnhan" role="tabpanel" aria-labelledby="choxacnhan-tab">
+
+            @{
+                orders = new List<HocWeb.Models.OrderModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 1)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />          
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổnh</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @if (orders.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy đơn hàng</p>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                    @foreach (var item in orders)
+                                    {
+                                <tr id="row_@item.OrderID">
+                                    <td>@dao.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>
+                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Details</a>
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="layhang" role="tabpanel" aria-labelledby="layhang-tab">
+            @{
+                orders = new List<HocWeb.Models.OrderModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 2)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổnh</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @if (orders.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy đơn hàng</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in orders)
+                                    {
+                                <tr id="row_@item.OrderID">
+                                    <td>@dao.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>
+                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Details</a>
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+ 
+        <div class="tab-pane fade" id="dangchuyen" role="tabpanel" aria-labelledby="dangchuyen-tab">
+            @{
+                orders = new List<HocWeb.Models.OrderModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 3)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổnh</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @if (orders.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy đơn hàng</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in orders)
+                                    {
+                                <tr id="row_@item.OrderID">
+                                    <td>@dao.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>
+                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Details</a>
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="dachuyen" role="tabpanel" aria-labelledby="dachuyen-tab">
+            @{
+                orders = new List<HocWeb.Models.OrderModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 4)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổnh</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @if (orders.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy đơn hàng</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in orders)
+                                    {
+                                <tr id="row_@item.OrderID">
+                                    <td>@dao.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>
+                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Details</a>
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="dahuy" role="tabpanel" aria-labelledby="dahuy-tab">
+            @{
+                orders = new List<HocWeb.Models.OrderModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 5)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổnh</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @if (orders.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy đơn hàng</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in orders)
+                                    {
+                                <tr id="row_@item.OrderID">
+                                    <td>@dao.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>
+                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Details</a>
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="hoantien" role="tabpanel" aria-labelledby="hoantien-tab">
+            @{
+                orders = new List<HocWeb.Models.OrderModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 6)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổnh</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @if (orders.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy đơn hàng</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in orders)
+                                    {
+                                <tr id="row_@item.OrderID">
+                                    <td>@dao.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>
+                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Details</a>
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+ </div>
+

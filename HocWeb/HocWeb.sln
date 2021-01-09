@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HocWeb", "HocWeb\HocWeb.csproj", "{0EABEF63-4ECE-405B-BDF2-0AE3769562AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commom", "Commom\Commom.csproj", "{19D757A9-C4B3-432C-B788-AD8226DB816E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EABEF63-4ECE-405B-BDF2-0AE3769562AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EABEF63-4ECE-405B-BDF2-0AE3769562AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EABEF63-4ECE-405B-BDF2-0AE3769562AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EABEF63-4ECE-405B-BDF2-0AE3769562AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19D757A9-C4B3-432C-B788-AD8226DB816E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D757A9-C4B3-432C-B788-AD8226DB816E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D757A9-C4B3-432C-B788-AD8226DB816E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D757A9-C4B3-432C-B788-AD8226DB816E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DB33A4F-EF95-4E2D-BAD9-95F7F0AACC1B}
+	EndGlobalSection
+EndGlobal

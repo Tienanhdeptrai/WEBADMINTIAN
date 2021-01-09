@@ -1,0 +1,81 @@
+﻿@model HocWeb.Models.UserModels
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+
+@section header{
+
+}
+
+@using (Html.BeginForm("Create", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Thêm mới khách hàng</h1>
+    <div>
+        <a style="width:200px;" class="btn btn-primary" href="/Admin/User/Index"> Trở về </a>
+    </div>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Họ tên</p>
+            @Html.TextBoxFor(model => model.FullName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Chứng minh nhân dân</p>
+            @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tài khoản</p>
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user", })
+            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Mật khẩu</p>
+            @Html.TextBoxFor(model => model.Passwords, new { @class = "form-control form-control-user", @placeholder = "Bạn phải nhập ít nhất 6 kí tự", @type = "password" })
+            @Html.ValidationMessageFor(model => model.Passwords, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Địa chỉ</p>
+            @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Email</p>
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Số điện thoại</p>
+            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái</p>
+            @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Thêm ảnh đại diện</p>
+            <input type="file" class="form-control" name="file" accept="image/*" required />
+        </div>
+    </div>
+</div>
+    <script src="~/Assets/Admin/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Assets/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/Assets/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/Assets/Admin/js/sb-admin-2.min.js"></script>
+}

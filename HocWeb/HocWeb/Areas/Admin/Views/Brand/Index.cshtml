@@ -1,0 +1,75 @@
+﻿@model List<HocWeb.Models.BrandModels>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+@section header{
+}
+@section jsFooter{
+    <script src="~/Assets/Admin/js/controller/brandController.js"></script>
+
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách thương hiệu mới</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/Brand/Create" style="width:200px"> Thêm mới </a>
+    </div>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Thương hiệu</th>
+                                <th>Tiêu đề</th>
+                                <th>Ảnh</th>
+                                <th>Nội dung</th>
+                                <th>Trạng thái</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Thương hiệu</th>
+                                <th>Tiêu đề</th>
+                                <th>Ảnh</th>
+                                <th>Nội dung</th>
+                                <th>Trạng thái</th>
+                                <th>#</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr id="row_@item">
+                                <td>@item.Name</td>
+                                <td>@item.MetaTitle</td>
+                                <td align="center" >
+                                    <img src="@item.Image" alt="Hình ảnh" width="50px" height="50px" />
+                                </td>
+                                <td>@item.MetaDescription</td>
+                                <td><a href="#" class="btn-active" data-id="@item.BrandID">@(Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đang khóa")</a></td>
+                                <td>
+                                    <a class="btn btn-success" href="/Admin/Brand/Edit/@item.BrandID">Edit</a>
+                                    @Ajax.ActionLink("Xóa", "Delete", new { @id = item.BrandID }, new AjaxOptions
+                                       {
+                                           Confirm = "Bạn có muốn thông báo này?",
+                                           OnComplete = "$('#row_" + @item.BrandID + "').remote()",
+                                           OnSuccess = "window.location.reload()",
+                                           HttpMethod = "Delete"
+                                       }, new { @class = "btn btn-danger" })
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
