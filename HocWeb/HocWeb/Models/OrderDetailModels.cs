@@ -1,4 +1,5 @@
-﻿namespace HocWeb.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace HocWeb.Models
 {
     public class OrderDetailModels
     {

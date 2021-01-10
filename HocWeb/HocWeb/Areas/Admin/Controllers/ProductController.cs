@@ -48,40 +48,41 @@ namespace HocWeb.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(ProductModels product, HttpPostedFileBase file)
         {
-            var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
-            FileStream stream;
-            if (file.ContentLength > 0)
-            {
-                var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
-                var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
-                var cancellation = new CancellationTokenSource();
-                string path = Path.Combine(Server.MapPath("~/Content/images/"), file.FileName);
-                file.SaveAs(path);
-                stream = new FileStream(Path.Combine(path), FileMode.Open);
-
-                var task = new FirebaseStorage(
-                    Bucket,
-                    new FirebaseStorageOptions
-                    {
-                        AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
-                        ThrowOnCancel = true
-                    })
-                    .Child("images")
-                    .Child(file.FileName)
-                    .PutAsync(stream, cancellation.Token);
-                try
-                {
-                    link = await task;
-                }
-                catch (Exception ex)
-                {
-
-                    Console.WriteLine("Cannot upload file");
-                }
-
-            }
+            
             if (ModelState.IsValid)
             {
+                var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
+                FileStream stream;
+                if (file.ContentLength > 0)
+                {
+                    var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
+                    var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
+                    var cancellation = new CancellationTokenSource();
+                    string path = Path.Combine(Server.MapPath("~/Content/images/"), file.FileName);
+                    file.SaveAs(path);
+                    stream = new FileStream(Path.Combine(path), FileMode.Open);
+
+                    var task = new FirebaseStorage(
+                        Bucket,
+                        new FirebaseStorageOptions
+                        {
+                            AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
+                            ThrowOnCancel = true
+                        })
+                        .Child("images")
+                        .Child(file.FileName)
+                        .PutAsync(stream, cancellation.Token);
+                    try
+                    {
+                        link = await task;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Console.WriteLine("Cannot upload file");
+                    }
+
+                }
                 var dao = new ProductDao();
                 var result = dao.CheckProduct(product.Name);
                 if (result ==false)
@@ -118,40 +119,41 @@ namespace HocWeb.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(ProductModels product, HttpPostedFileBase file)
         {
-            var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
-            FileStream stream;
-            if (file.ContentLength > 0)
-            {
-                var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
-                var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
-                var cancellation = new CancellationTokenSource();
-                string path = Path.Combine(Server.MapPath("~/Content/images/"), file.FileName);
-                file.SaveAs(path);
-                stream = new FileStream(Path.Combine(path), FileMode.Open);
-
-                var task = new FirebaseStorage(
-                    Bucket,
-                    new FirebaseStorageOptions
-                    {
-                        AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
-                        ThrowOnCancel = true
-                    })
-                    .Child("images")
-                    .Child(file.FileName)
-                    .PutAsync(stream, cancellation.Token);
-                try
-                {
-                    link = await task;
-                }
-                catch (Exception ex)
-                {
-
-                    Console.WriteLine("Cannot upload file");
-                }
-
-            }
+            
             if (ModelState.IsValid)
             {
+                var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
+                FileStream stream;
+                if (file.ContentLength > 0)
+                {
+                    var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
+                    var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
+                    var cancellation = new CancellationTokenSource();
+                    string path = Path.Combine(Server.MapPath("~/Content/images/"), file.FileName);
+                    file.SaveAs(path);
+                    stream = new FileStream(Path.Combine(path), FileMode.Open);
+
+                    var task = new FirebaseStorage(
+                        Bucket,
+                        new FirebaseStorageOptions
+                        {
+                            AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
+                            ThrowOnCancel = true
+                        })
+                        .Child("images")
+                        .Child(file.FileName)
+                        .PutAsync(stream, cancellation.Token);
+                    try
+                    {
+                        link = await task;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Console.WriteLine("Cannot upload file");
+                    }
+
+                }
                 var session = (UserSession)Session[CommomConstants.USER_SESSION];
 
                 var data = new ProductDao();

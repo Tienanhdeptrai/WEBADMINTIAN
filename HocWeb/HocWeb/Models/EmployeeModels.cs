@@ -1,56 +1,46 @@
-﻿
-using Newtonsoft.Json;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace HocWeb.Models
 {
     public class EmployeeModels
     {
-        [JsonProperty("Address")]
+        [Required(ErrorMessage = "Bạn chưa nhập địa chỉ ")]
         public string Address { get; set; }
-
-        [JsonProperty("EmployeeID")]
         public string EmployeeID { get; set; }
 
-        [JsonProperty("UserName")]
+        [Required(ErrorMessage = "Bạn chưa nhập tài khoản ")]
         public string UserName { get; set; }
 
-        [JsonProperty("Passwords")]
+        [Required(ErrorMessage = "Bạn chưa nhập mật khẩu ")]
+        [StringLength(50, MinimumLength = 6, ErrorMessage = "Độ dài mật khẩu ít nhất 6 ký tự ")]
         public string Passwords { get; set; }
 
-        [JsonProperty("Avatar")]
         public string Avatar { get; set; }
 
-        [JsonProperty("FirstName")]
+        [Required(ErrorMessage = "Bạn chưa nhập họ nhân viên ")]
         public string FirstName { get; set; }
 
-        [JsonProperty("LastName")]
+        [Required(ErrorMessage = "Bạn chưa nhập tên nhân viên ")]
         public string LastName { get; set; }
 
-        [JsonProperty("Position")]
         public string Position { get; set; }
 
-        [JsonProperty("Email")]
+        [Required(ErrorMessage = "Bạn chưa nhập email")]
         public string Email { get; set; }
 
-        [JsonProperty("Phone")]
+        [Required(ErrorMessage = "Bạn chưa nhập số điện thoại ")]
         public string Phone { get; set; }
 
-        [JsonProperty("CMND")]
+        [Required(ErrorMessage = "Bạn chưa nhập CMND ")]
         public string CMND { get; set; }       
 
-        [JsonProperty("CreatedDate")]
         public string CreatedDate { get; set; }
 
-        [JsonProperty("CreatedBy")]
         public string CreatedBy { get; set; }
-
-        [JsonProperty("ModifiedDate")]
         public string ModifiedDate { get; set; }
 
-        [JsonProperty("ModifiedBy")]
         public string ModifiedBy { get; set; }
 
-        [JsonProperty("Status")]
         public string Status { get; set; }
     }
 }

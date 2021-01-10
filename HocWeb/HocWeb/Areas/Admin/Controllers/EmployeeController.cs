@@ -117,7 +117,7 @@ namespace HocWeb.Areas.Admin.Controllers
         public async Task<ActionResult> Edit(EmployeeModels user, HttpPostedFileBase file)
         {
             var link = "https://i.ibb.co/HDzz1rC/avartarnone.png";
-            try
+            if (ModelState.IsValid)
             {
                 FileStream stream;
                 if (file.ContentLength > 0)
@@ -167,10 +167,7 @@ namespace HocWeb.Areas.Admin.Controllers
                         return View();
                 }
             }
-            catch
-            {
-                return View();
-            } 
+           return View(); 
         }
         [HttpPost]
         public JsonResult ChangeStatus(string id)

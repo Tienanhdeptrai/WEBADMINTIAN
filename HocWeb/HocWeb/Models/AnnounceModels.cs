@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace HocWeb.Models
 {
@@ -9,10 +6,11 @@ namespace HocWeb.Models
     {
         public string Id { get; set; }
 
+        [Required(ErrorMessage = "Bạn chưa nhập tiêu đề ")]
         public string Title { get; set; }
-
         public string Type { get; set; }
 
+        [Required(ErrorMessage = "Bạn chưa nhập thông tin chi tiết ")]
         public string Details { get; set; }
 
         public string CreatedDate { get; set; }
@@ -25,6 +23,7 @@ namespace HocWeb.Models
 
         public string Status { get; set; }
 
+        [Required(ErrorMessage = "Bạn chưa nhập đường dẫn ")]
         public string Url { get; set; }
     }
 }
