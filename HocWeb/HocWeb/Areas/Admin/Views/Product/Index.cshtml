@@ -25,19 +25,28 @@
             <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Tất cả</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Điện thoại</a>
+            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Đóng Hộp</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="layhang-tab" data-toggle="tab" href="#layhang" role="tab" aria-controls="layhang" aria-selected="false">LAPTOP</a>
+            <a class="nav-link" id="layhang-tab" data-toggle="tab" href="#layhang" role="tab" aria-controls="layhang" aria-selected="false">Sấy Khô</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="dangchuyen-tab" data-toggle="tab" href="#dangchuyen" role="tab" aria-controls="dangchuyen" aria-selected="false">TABLET</a>
+            <a class="nav-link" id="dangchuyen-tab" data-toggle="tab" href="#dangchuyen" role="tab" aria-controls="dangchuyen" aria-selected="false">Ăn liền</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="dachuyen-tab" data-toggle="tab" href="#dachuyen" role="tab" aria-controls="dachuyen" aria-selected="false">Đồng hồ</a>
+            <a class="nav-link" id="dachuyen-tab" data-toggle="tab" href="#dachuyen" role="tab" aria-controls="dachuyen" aria-selected="false">Đông Lạnh</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" id="dahuy-tab" data-toggle="tab" href="#dahuy" role="tab" aria-controls="dahuy" aria-selected="false">Phụ kiện</a>
+            <a class="nav-link" id="dahuy-tab" data-toggle="tab" href="#dahuy" role="tab" aria-controls="dahuy" aria-selected="false">Chân Không</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="giavi-tab" data-toggle="tab" href="#giavi" role="tab" aria-controls="giavi" aria-selected="false">Gia Vị</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="douong-tab" data-toggle="tab" href="#douong" role="tab" aria-controls="douong" aria-selected="false">Đồ Uống</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="orther-tab" data-toggle="tab" href="#orther" role="tab" aria-controls="orther" aria-selected="false">Thực Phẩm Khác</a>
         </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -74,22 +83,22 @@
                                     }
                                     @foreach (var item in Model)
                                     {
-                                <tr id="row_@item.ProductID">
-                                    <td>@item.Name</td>
-                                    <td>@dao.GetBrandNameByID(item.BrandID)</td>
-                                    <td>@dao.GetCateNameByID(item.CategoryID)</td>             
-                                    <td align="center">
-                                        <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
-                                    </td>
-                                    <td>@item.Price</td>
-                                    <td>@item.PromotionPrice</td>
-                                    <td>@item.Counts</td>
-                                    <td>@item.Warranty</td>
-                                    <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                    <td>
-                                        <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
-                                    </td>
-                                </tr>
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
+                                            </td>
+                                        </tr>
 
                                     }
 
@@ -149,24 +158,24 @@
                                     }
                                     @foreach (var item in products)
                                     {
-                                <tr id="row_@item.ProductID">
-                                    <td>@item.Name</td>
-                                    <td>@dao.GetBrandNameByID(item.BrandID)</td>
-                                    <td>@dao.GetCateNameByID(item.CategoryID)</td>
-                                    <td align="center">
-                                        <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
-                                    </td>
-                                    <td>@item.Price</td>
-                                    <td>@item.PromotionPrice</td>
-                                    <td>@item.Counts</td>
-                                    <td>@item.Warranty</td>
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
 
 
-                                    <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                    <td>
-                                        <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
-                                    </td>
-                                </tr>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
+                                            </td>
+                                        </tr>
 
                                     }
 
@@ -178,81 +187,6 @@
             </div>
         </div>
         <div class="tab-pane fade" id="layhang" role="tabpanel" aria-labelledby="layhang-tab">
-            @{
-                products = new List<HocWeb.Models.ProductModels>();
-
-            }
-            @foreach (var item in Model)
-            {
-                if (item.CategoryID == "-MJaC7kTLJOYZjt9G4zs")
-                {
-                    products.Add(item);
-                }
-            }
-            <br />
-            <h6>@products.Count Sản phẩm </h6>
-            <br />
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>Tên sản phẩm</th>
-                                        <th>Tên hãng</th>
-                                        <th>Tên danh mục</th>
-                                        <th>Hình ảnh</th>
-                                        <th>Giá</th>
-                                        <th>Giá ưu đãi</th>
-                                        <th>Số lượng</th>
-                                        <th>Bảo hành</th>
-                                        <th>Status</th>
-                                        <th>#</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @if (products.Count == 0)
-                                    {
-                                        <tr>
-                                            <td colspan="6">
-                                                <img src="~/Assets/Admin/img/empty.png" style="display:block;margin:0 auto" width="200px" height="200px" />
-                                                <br />
-                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
-                                            </td>
-                                        </tr>
-                                    }
-                                    @foreach (var item in products)
-                                    {
-                                <tr id="row_@item.ProductID">
-                                    <td>@item.Name</td>
-                                    <td>@dao.GetBrandNameByID(item.BrandID)</td>
-                                    <td>@dao.GetCateNameByID(item.CategoryID)</td>
-                                    <td align="center">
-                                        <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
-                                    </td>
-                                    <td>@item.Price</td>
-                                    <td>@item.PromotionPrice</td>
-                                    <td>@item.Counts</td>
-                                    <td>@item.Warranty</td>
-
-
-                                    <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                    <td>
-                                        <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
-                                    </td>
-                                </tr>
-
-                                    }
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="dangchuyen" role="tabpanel" aria-labelledby="dangchuyen-tab">
             @{
                 products = new List<HocWeb.Models.ProductModels>();
 
@@ -299,99 +233,24 @@
                                     }
                                     @foreach (var item in products)
                                     {
-                                <tr id="row_@item.ProductID">
-                                    <td>@item.Name</td>
-                                    <td>@dao.GetBrandNameByID(item.BrandID)</td>
-                                    <td>@dao.GetCateNameByID(item.CategoryID)</td>
-                                    <td align="center">
-                                        <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
-                                    </td>
-                                    <td>@item.Price</td>
-                                    <td>@item.PromotionPrice</td>
-                                    <td>@item.Counts</td>
-                                    <td>@item.Warranty</td>
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
 
 
-                                    <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                    <td>
-                                        <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
-                                    </td>
-                                </tr>
-
-                                    }
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="dachuyen" role="tabpanel" aria-labelledby="dachuyen-tab">
-            @{
-                products = new List<HocWeb.Models.ProductModels>();
-
-            }
-            @foreach (var item in Model)
-            {
-                if (item.CategoryID == "-MJaCJRVtI_o9Hv5XY-N")
-                {
-                    products.Add(item);
-                }
-            }
-            <br />
-            <h6>@products.Count Sản phẩm </h6>
-            <br />
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>Tên sản phẩm</th>
-                                        <th>Tên hãng</th>
-                                        <th>Tên danh mục</th>       
-                                        <th>Hình ảnh</th>
-                                        <th>Giá</th>
-                                        <th>Giá ưu đãi</th>
-                                        <th>Số lượng</th>
-                                        <th>Bảo hành</th>
-                                        <th>Status</th>
-                                        <th>#</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @if (products.Count == 0)
-                                    {
-                                        <tr>
-                                            <td colspan="6">
-                                                <img src="~/Assets/Admin/img/empty.png" style="display:block;margin:0 auto" width="200px" height="200px" />
-                                                <br />
-                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
                                             </td>
                                         </tr>
-                                    }
-                                    @foreach (var item in products)
-                                    {
-                                <tr id="row_@item.ProductID">
-                                    <td>@item.Name</td>
-                                    <td>@dao.GetBrandNameByID(item.BrandID)</td>
-                                    <td>@dao.GetCateNameByID(item.CategoryID)</td>
-                                    <td align="center">
-                                        <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
-                                    </td>
-                                    <td>@item.Price</td>
-                                    <td>@item.PromotionPrice</td>
-                                    <td>@item.Counts</td>
-                                    <td>@item.Warranty</td>
-
-
-                                    <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                    <td>
-                                        <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
-                                    </td>
-                                </tr>
 
                                     }
 
@@ -402,14 +261,14 @@
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="dahuy" role="tabpanel" aria-labelledby="dahuy-tab">
+        <div class="tab-pane fade" id="dangchuyen" role="tabpanel" aria-labelledby="dangchuyen-tab">
             @{
                 products = new List<HocWeb.Models.ProductModels>();
 
             }
             @foreach (var item in Model)
             {
-                if (item.CategoryID == "-MJaCDw6CYGQenBvOtGO")
+                if (item.CategoryID == "-MJaC7kTLJOYZjt9G4zs")
                 {
                     products.Add(item);
                 }
@@ -449,24 +308,399 @@
                                     }
                                     @foreach (var item in products)
                                     {
-                                <tr id="row_@item.ProductID">
-                                    <td>@item.Name</td>
-                                    <td>@dao.GetBrandNameByID(item.BrandID)</td>
-                                    <td>@dao.GetCateNameByID(item.CategoryID)</td>
-                                    <td align="center">
-                                        <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
-                                    </td>
-                                    <td>@item.Price</td>
-                                    <td>@item.PromotionPrice</td>
-                                    <td>@item.Counts</td>
-                                    <td>@item.Warranty</td>
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
 
 
-                                    <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                    <td>
-                                        <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
-                                    </td>
-                                </tr>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="dachuyen" role="tabpanel" aria-labelledby="dachuyen-tab">
+            @{
+                products = new List<HocWeb.Models.ProductModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == "donglanh")
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Tên danh mục</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Giá ưu đãi</th>
+                                        <th>Số lượng</th>
+                                        <th>Bảo hành</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/empty.png" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <br />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="dahuy" role="tabpanel" aria-labelledby="dahuy-tab">
+            @{
+                products = new List<HocWeb.Models.ProductModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == "chankhong")
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Tên danh mục</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Giá ưu đãi</th>
+                                        <th>Số lượng</th>
+                                        <th>Bảo hành</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/empty.png" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <br />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="giavi" role="tabpanel" aria-labelledby="giavi-tab">
+            @{
+                products = new List<HocWeb.Models.ProductModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == "categiavi")
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Tên danh mục</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Giá ưu đãi</th>
+                                        <th>Số lượng</th>
+                                        <th>Bảo hành</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/empty.png" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <br />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="douong" role="tabpanel" aria-labelledby="douong-tab">
+            @{
+                products = new List<HocWeb.Models.ProductModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == "1")
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Tên danh mục</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Giá ưu đãi</th>
+                                        <th>Số lượng</th>
+                                        <th>Bảo hành</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/empty.png" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <br />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="orther" role="tabpanel" aria-labelledby="orther-tab">
+            @{
+                products = new List<HocWeb.Models.ProductModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.CategoryID == "orther")
+                {
+                    products.Add(item);
+                }
+            }
+            <br />
+            <h6>@products.Count Sản phẩm </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Tên hãng</th>
+                                        <th>Tên danh mục</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Giá ưu đãi</th>
+                                        <th>Số lượng</th>
+                                        <th>Bảo hành</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (products.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/empty.png" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <br />
+                                                <p style="text-align:center">Không tìm thấy sản phẩm</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in products)
+                                    {
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Counts</td>
+                                            <td>@item.Warranty</td>
+
+
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Sửa</a>
+                                            </td>
+                                        </tr>
 
                                     }
 
