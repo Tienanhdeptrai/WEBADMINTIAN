@@ -44,13 +44,12 @@ namespace HocWeb.Areas.Admin.Controllers
             return View(product);
         }
         [HttpPost]
-        [ValidateInput(false)]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<ActionResult> Create(ProductModels product, HttpPostedFileBase file)
         {
             
-            if (ModelState.IsValid)
-            {
+           
                 var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
                 if (file.ContentLength > 0)
@@ -109,19 +108,16 @@ namespace HocWeb.Areas.Admin.Controllers
                 {
                     SetAlert("Sản phẩm đã tồn tại", "error");
                 }
-            }
+            
             SetViewBag();
             SetViewBag1();
             return View(product);
         }
         [HttpPost]
-        [ValidateInput(false)]
-        [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(ProductModels product, HttpPostedFileBase file)
         {
             
-            if (ModelState.IsValid)
-            {
+           
                 var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
                 if (file.ContentLength > 0)
@@ -170,7 +166,7 @@ namespace HocWeb.Areas.Admin.Controllers
                 {
                     SetAlert("Sửa không thành công", "error");
                 }
-            }
+            
             SetViewBag();
             SetViewBag1();
             return View(product);

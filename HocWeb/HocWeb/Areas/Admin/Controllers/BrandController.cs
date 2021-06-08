@@ -116,8 +116,7 @@ namespace HocWeb.Areas.Admin.Controllers
         public async Task<ActionResult> Edit(BrandModels category, HttpPostedFileBase file)
         {
             
-            if (ModelState.IsValid)
-            {
+           
                 var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
                 if (file.ContentLength > 0)
@@ -165,7 +164,7 @@ namespace HocWeb.Areas.Admin.Controllers
                 {
                     SetAlert("Sửa danh mục không thành công", "error");
                 }
-            }
+            
             return View(category);
         }
         [HttpDelete]

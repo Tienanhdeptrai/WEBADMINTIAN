@@ -14,11 +14,13 @@ namespace HocWeb.Models
         public string Description { get; set; }
         [Required(ErrorMessage = "Chưa có hình ảnh ")]
         public string Image { get; set; }
-        [Required(ErrorMessage = "Bạn chưa nhập giá ")]
+
+      
         public string Price { get; set; }
         [Required(ErrorMessage = "Bạn chưa nhập giá ")]
         public string PromotionPrice { get; set; }
-            public string BrandID { get; set; }
+        [Required(ErrorMessage = "Bạn chưa nhập giá ")]
+        public string BrandID { get; set; }
             public string CategoryID { get; set; }
         [Required(ErrorMessage = "Bạn chưa nhập bản hành ")]
         public string Warranty { get; set; }
