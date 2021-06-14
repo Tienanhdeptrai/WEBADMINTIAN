@@ -51,7 +51,12 @@ namespace HocWeb.DAO
             var model = Collection.AsQueryable().SingleOrDefault(x => x.UserID == id);
             return model.FullName;
         }
-               
+        public string GetAvatar(string id)
+        {
+            var model = Collection.AsQueryable().SingleOrDefault(x => x.UserID == id);
+            return model.Avatar;
+        }
+
         public List<UserModels> GetAll()
         {
             return Collection;

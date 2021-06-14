@@ -1,0 +1,151 @@
+﻿@model HocWeb.Models.SellserModels
+@using HocWeb.Models
+@using HocWeb.DAO
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    var dao = new USERDAO();
+}
+
+@section header{
+
+}
+@using (Html.BeginForm())
+{
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Chi tiết yêu cầu phê duyệt</h1>
+    <hr />
+    @Html.HiddenFor(model => model.StoreID)
+    @Html.HiddenFor(model => model.BackID)
+    @Html.HiddenFor(model => model.FrontID)
+    @Html.HiddenFor(model => model.CreateAt)
+    @Html.HiddenFor(model => model.StoreName)
+    @Html.HiddenFor(model => model.Description)
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+
+            <p>Thông tin chủ store</p>
+            @foreach (var std in ViewData["KHACHHANG"] as IList<UserModels>)
+            {
+                <dl class="dl-horizontal" style="font-size: 24px">
+                    <dt>
+                        Họ tên khách hàng
+                    </dt>
+                    <dd>
+
+                        @(std.FullName)
+
+                    </dd>
+                    <dt>
+                        Ảnh khách hàng
+                    </dt>
+                    <dd>
+
+                        <img src="@std.Avatar" alt="Ảnh đại diện" width="200px" height="200px" />
+
+                    </dd>
+                    <dt>
+                        Địa chỉ Email
+                    </dt>
+                    <dd>
+                        @std.Email
+                    </dd>
+                    <dt>
+                        Số điện thoại
+                    </dt>
+                    <dd>
+                        @std.Phone
+                    </dd>
+                </dl>
+            }
+        </div>
+        <div class="col-sm-3">
+            <p>Thông tin đơn xin quyền mở của hàng</p>
+            <dl class="dl-horizontal" style="font-size: 24px">
+                <dt>
+                    Tên cửa hàng
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.StoreName)
+
+                </dd>
+                <dt>
+                    Chi tiết cửa hàng
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+
+                </dd>
+                <dt>
+                    Thời gian tạo
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CreateAt)
+
+                </dd>
+                <dt>
+                    Giấy chứng minh(trước)
+                </dt>
+                <dd>
+                    <img src="@Model.FrontID" alt="Mặt trước" width="250px" height="120px" />
+                </dd>
+                <dt>
+                    Giấy chứng minh(Sau)
+                </dt>
+                <dd>
+                    <img src="@Model.BackID" alt="Mặt trước" width="250px" height="120px" />
+                </dd>
+            </dl>
+        </div>
+        <div class="col-sm-3">
+            <p>Danh sách địa chỉ của cửa hàng</p>
+            <dl class="dl-horizontal" style="font-size: 24px">
+                @foreach (var std in ViewData["DIACHI"] as IList<AddressModels>)
+                {
+                    <dt>
+                        Số nhà, tên đường
+                    </dt>
+                    <dd>
+                        @std.NumberAddress
+                    </dd>
+                    <dt>
+                        Xã
+                    </dt>
+                    <dd>
+                        @std.Xa
+                    </dd>
+                    <dt>
+                        Huyện
+                    </dt>
+                    <dd>
+                        @std.Huyen
+                    </dd>
+                    <dt>
+                        Thành Phố
+                    </dt>
+                    <dd>
+                        @std.City
+                    </dd>
+                }
+            </dl>
+        </div>
+        <div class="col-sm-3">
+            <p style="font-size: 24px">Trạng Thái</p>
+            @Html.DropDownListFor(model => model.Status, new[] {
+           new SelectListItem { Text = "Chờ xác nhận", Value = "1" },
+           new SelectListItem { Text = "Phê duyệt đơn", Value = "2" },
+           new SelectListItem { Text = "Từ chối", Value = "3" }}, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-1 mb-1 mb-sm-0">
+            <a href="/admin/sellsers/index" class="btn btn-primary" style="width:100px;">Trở về</a>
+        </div>
+        <div class="col-sm-1">
+            <input type="submit" value="Save" class="btn btn-success" style="width:100px;" />
+        </div>
+
+    </div>
+</div>
+
+}

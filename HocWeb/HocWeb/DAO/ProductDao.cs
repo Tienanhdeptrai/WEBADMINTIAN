@@ -50,7 +50,7 @@ namespace HocWeb.DAO
 
         public int CountProduct()
         {
-            return ProductCollection.AsQueryable().Count(x => x.Status=="true");
+            return ProductCollection.AsQueryable().Count(x => x.Status=="True");
         }
         public ProductModels GetByID(string ID)
         {

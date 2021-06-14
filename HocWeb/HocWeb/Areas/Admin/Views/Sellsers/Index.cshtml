@@ -1,0 +1,319 @@
+﻿@model List<HocWeb.Models.SellserModels>
+@using HocWeb.DAO
+@using HocWeb.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    var liststatus = new string[] { "Chờ xác nhận", "Đã phê duyệt", "Đơn từ chối"};
+    List<HocWeb.Models.SellserModels> orders = null;
+    var dao = new USERDAO();
+}
+@section header{
+
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách xin quyền</h1>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Tất cả</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Chờ xác nhận</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="layhang-tab" data-toggle="tab" href="#layhang" role="tab" aria-controls="layhang" aria-selected="false">Đã phê duyệt</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="dangchuyen-tab" data-toggle="tab" href="#dangchuyen" role="tab" aria-controls="dangchuyen" aria-selected="false">Đơn từ chối</a>
+        </li>
+    </ul>
+    <hr />
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <br />
+            <h6>@Model.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>StoreName</th>
+                                        <th>SellerName</th>
+                                        <th>SellerImage</th>
+                                        <th>PhoneNo</th>
+                                        <th>FrontID</th>
+                                        <th>BackID</th>
+                                        <th>CreateDate</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>StoreName</th>
+                                        <th>SellerName</th>
+                                        <th>SellerImage</th>
+                                        <th>PhoneNo</th>
+                                        <th>FrontID</th>
+                                        <th>BackID</th>
+                                        <th>CreateDate</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr id="row_@item">
+                                            <td>@item.StoreName</td>
+                                            <td>@dao.GetCusName(item.StoreID)</td>
+                                            <td align="center">
+                                                <img src="@dao.GetAvatar(item.StoreID)" alt="Ảnh đại diện" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.StoreName</td>
+                                            <td align="center">
+                                                <img src="@item.FrontID" alt="Mặt trước" width="250px" height="120px" />
+                                            </td>
+                                            <td align="center">
+                                                <img src="@item.BackID" alt="Mặt trước" width="250px" height="120px" />
+                                            </td>
+                                            <td>@item.CreateAt</td>
+                                            <td>
+                                                <a class="btn btn-success" href="/Admin/Sellsers/Edit/@item.StoreID">Chi tiết</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="choxacnhan" role="tabpanel" aria-labelledby="choxacnhan-tab">
+
+            @{
+                orders = new List<HocWeb.Models.SellserModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 1)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>StoreName</th>
+                                        <th>SellerName</th>
+                                        <th>SellerImage</th>
+                                        <th>PhoneNo</th>
+                                        <th>FrontID</th>
+                                        <th>BackID</th>
+                                        <th>CreateDate</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>StoreName</th>
+                                        <th>SellerName</th>
+                                        <th>SellerImage</th>
+                                        <th>PhoneNo</th>
+                                        <th>FrontID</th>
+                                        <th>BackID</th>
+                                        <th>CreateDate</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in orders)
+                                    {
+                                        <tr id="row_@item">
+                                            <td>@item.StoreName</td>
+                                            <td>@dao.GetCusName(item.StoreID)</td>
+                                            <td align="center">
+                                                <img src="@dao.GetAvatar(item.StoreID)" alt="Ảnh đại diện" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.StoreName</td>
+                                            <td align="center">
+                                                <img src="@item.FrontID" alt="Mặt trước" width="250px" height="120px" />
+                                            </td>
+                                            <td align="center">
+                                                <img src="@item.BackID" alt="Mặt trước" width="250px" height="120px" />
+                                            </td>
+                                            <td>@item.CreateAt</td>
+                                            <td>
+                                                <a class="btn btn-success" href="/Admin/Sellsers/Edit/@item.StoreID">Chi tiết</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="layhang" role="tabpanel" aria-labelledby="layhang-tab">
+            @{
+                orders = new List<HocWeb.Models.SellserModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 2)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>StoreName</th>
+                                        <th>SellerName</th>
+                                        <th>SellerImage</th>
+                                        <th>PhoneNo</th>
+                                        <th>FrontID</th>
+                                        <th>BackID</th>
+                                        <th>CreateDate</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>StoreName</th>
+                                        <th>SellerName</th>
+                                        <th>SellerImage</th>
+                                        <th>PhoneNo</th>
+                                        <th>FrontID</th>
+                                        <th>BackID</th>
+                                        <th>CreateDate</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in orders)
+                                    {
+                                        <tr id="row_@item">
+                                            <td>@item.StoreName</td>
+                                            <td>@dao.GetCusName(item.StoreID)</td>
+                                            <td align="center">
+                                                <img src="@dao.GetAvatar(item.StoreID)" alt="Ảnh đại diện" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.StoreName</td>
+                                            <td align="center">
+                                                <img src="@item.FrontID" alt="Mặt trước" width="250px" height="120px" />
+                                            </td>
+                                            <td align="center">
+                                                <img src="@item.BackID" alt="Mặt trước" width="250px" height="120px" />
+                                            </td>
+                                            <td>@item.CreateAt</td>
+                                            <td>
+                                                <a class="btn btn-success" href="/Admin/Sellsers/Edit/@item.StoreID">Chi tiết</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="dangchuyen" role="tabpanel" aria-labelledby="dangchuyen-tab">
+            @{
+                orders = new List<HocWeb.Models.SellserModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (Convert.ToInt32(item.Status) == 3)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>StoreName</th>
+                                        <th>SellerName</th>
+                                        <th>SellerImage</th>
+                                        <th>PhoneNo</th>
+                                        <th>FrontID</th>
+                                        <th>BackID</th>
+                                        <th>CreateDate</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>StoreName</th>
+                                        <th>SellerName</th>
+                                        <th>SellerImage</th>
+                                        <th>PhoneNo</th>
+                                        <th>FrontID</th>
+                                        <th>BackID</th>
+                                        <th>CreateDate</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in orders)
+                                    {
+                                        <tr id="row_@item">
+                                            <td>@item.StoreName</td>
+                                            <td>@dao.GetCusName(item.StoreID)</td>
+                                            <td align="center">
+                                                <img src="@dao.GetAvatar(item.StoreID)" alt="Ảnh đại diện" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.StoreName</td>
+                                            <td align="center">
+                                                <img src="@item.FrontID" alt="Mặt trước" width="250px" height="120px" />
+                                            </td>
+                                            <td align="center">
+                                                <img src="@item.BackID" alt="Mặt trước" width="250px" height="120px" />
+                                            </td>
+                                            <td>@item.CreateAt</td>
+                                            <td>
+                                                <a class="btn btn-success" href="/Admin/Sellsers/Edit/@item.StoreID">Chi tiết</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
