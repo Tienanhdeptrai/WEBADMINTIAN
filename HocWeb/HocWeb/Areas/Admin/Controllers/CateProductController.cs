@@ -20,6 +20,10 @@ namespace HocWeb.Areas.Admin.Controllers
         public ActionResult Edit(string ID)
         {
             var category = new CateProductDao().ViewDetail(ID);
+            var modelProduct = new ProductDao().ListAllPaging();
+            var modelProductUser = new ProductUserDao().ListAll();
+            ViewData["SANPHAM"] = modelProduct;
+            ViewData["SANPHAMUSER"] = modelProductUser;
             return View(category);
         }
         [HttpGet]

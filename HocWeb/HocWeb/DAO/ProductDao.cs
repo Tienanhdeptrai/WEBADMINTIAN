@@ -7,8 +7,6 @@ using FireSharp.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-
-
 namespace HocWeb.DAO
 {
 

@@ -402,6 +402,7 @@
     <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\EmployeeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\SellsersController.cs" />
     <Compile Include="Areas\Admin\Controllers\ShipperController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
@@ -414,6 +415,7 @@
     <Compile Include="DAO\FeedBackDAO.cs" />
     <Compile Include="DAO\OrderDao.cs" />
     <Compile Include="DAO\ProductDao.cs" />
+    <Compile Include="DAO\ProductUserDao.cs" />
     <Compile Include="DAO\SellserDAO.cs" />
     <Compile Include="DAO\ShipperDAO.cs" />
     <Compile Include="DAO\USERDAO.cs" />
@@ -430,6 +432,7 @@
     <Compile Include="Models\OrderDetailModels.cs" />
     <Compile Include="Models\OrderModels.cs" />
     <Compile Include="Models\ProductModels.cs" />
+    <Compile Include="Models\ProductUserModels.cs" />
     <Compile Include="Models\SellerModels.cs" />
     <Compile Include="Models\ShipperModels.cs" />
     <Compile Include="Models\TimeLine.cs" />
@@ -3392,6 +3395,8 @@
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Sellsers\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Sellsers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductUser\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductUser\Edit.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

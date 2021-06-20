@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Quản lí khách hàng";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    List<HocWeb.Models.UserModels> orders = null;
 }
 @section header{
 
@@ -12,61 +13,214 @@
 }
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="m-0 font-weight-bold text-primary">Danh sách khách hàng</h1>
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách Khách hàng- Người bán hàng</h1>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Tất cả</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Khách hàng</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="layhang-tab" data-toggle="tab" href="#layhang" role="tab" aria-controls="layhang" aria-selected="false">Người bán hàng</a>
+        </li>
+    </ul>
+    <hr />
     <div>
-        <a class="btn btn-primary" href="/Admin/User/Create" style="width:200px;"> Thêm mới </a>
+        <a class="btn btn-primary" href="/Admin/User/Create" style="width:200px;"> Thêm mới khách hàng </a>
     </div>
     <hr />
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
-                            <tr>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Name</th>
+                                        <th>Ảnh</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Name</th>
+                                        <th>Ảnh</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @if (Model.Count > 0)
+                                    {
+                                        foreach (var item in Model)
+                                        {
+                                            <tr id="row_@item">
+                                                <td>@item.UserName</td>
+                                                <td>@item.FullName</td>
+                                                <td align="center">
+                                                    <img src="@item.Avatar" alt="Ảnh đại diện" width="50px" height="50px" />
+                                                </td>
 
-                                <th>UserName</th>
-                                <th>Name</th>
-                                <th>Ảnh</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                                <th>#</th>
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>UserName</th>
-                                <th>Name</th>
-                                <th>Ảnh</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                                <th>#</th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            @if (Model.Count > 0)
-                            {
-                                foreach (var item in Model)
-                                {
-                            <tr id="row_@item">
-                                <td>@item.UserName</td>
-                                <td>@item.FullName</td>
-                                <td align="center">
-                                    <img src="@item.Avatar" alt="Ảnh đại diện" width="50px" height="50px" />
-                                </td>
-
-                                <td>@item.Email </td>
-                                <td><a href="#" class="btn-active" data-id="@item.UserID">@( Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đang khóa")</a></td>
-                                <td>
-                                    <a class="btn btn-success" href="/Admin/User/Edit/@item.UserID">Edit</a>
-                                </td>
-                            </tr>
-                                }
-                            }
-                        </tbody>
-                    </table>
+                                                <td>@item.Email </td>
+                                                <td><a href="#" class="btn-active" data-id="@item.UserID">@( Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đang khóa")</a></td>
+                                                <td>
+                                                    <a class="btn btn-success" href="/Admin/User/Edit/@item.UserID">Edit</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="tab-pane fade" id="choxacnhan" role="tabpanel" aria-labelledby="choxacnhan-tab">
+
+            @{
+                orders = new List<HocWeb.Models.UserModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.Merchant == false)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>Số lượng khách @orders.Count</h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Name</th>
+                                        <th>Ảnh</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Name</th>
+                                        <th>Ảnh</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @if (orders.Count > 0)
+                                    {
+                                        foreach (var item in orders)
+                                        {
+                                            <tr id="row_@item.UserID">
+                                                <td>@item.UserName</td>
+                                                <td>@item.FullName</td>
+                                                <td align="center">
+                                                    <img src="@item.Avatar" alt="Ảnh đại diện" width="50px" height="50px" />
+                                                </td>
+
+                                                <td>@item.Email </td>
+                                                <td><a href="#" class="btn-active" data-id="@item.UserID">@( Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đang khóa")</a></td>
+                                                <td>
+                                                    <a class="btn btn-success" href="/Admin/User/Edit/@item.UserID">Edit</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="layhang" role="tabpanel" aria-labelledby="layhang-tab">
+            @{
+                orders = new List<HocWeb.Models.UserModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.Merchant == true)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>Số Lượng Người Bán @orders.Count </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Name</th>
+                                        <th>Ảnh</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Name</th>
+                                        <th>Ảnh</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @if (orders.Count > 0)
+                                    {
+                                        foreach (var item in orders)
+                                        {
+                                            <tr id="row_@item.UserID">
+                                                <td>@item.UserName</td>
+                                                <td>@item.FullName</td>
+                                                <td align="center">
+                                                    <img src="@item.Avatar" alt="Ảnh đại diện" width="50px" height="50px" />
+                                                </td>
+
+                                                <td>@item.Email </td>
+                                                <td><a href="#" class="btn-active" data-id="@item.UserID">@( Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đang khóa")</a></td>
+                                                <td>
+                                                    <a class="btn btn-success" href="/Admin/User/Edit/@item.UserID">Edit</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

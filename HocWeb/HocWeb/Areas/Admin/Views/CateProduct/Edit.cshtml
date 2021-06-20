@@ -1,8 +1,27 @@
 ﻿@model HocWeb.Models.CateProductModels
-
+@using HocWeb.Models
+@using HocWeb.DAO
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    List<HocWeb.Models.ProductModels> products = new List<HocWeb.Models.ProductModels>();
+    List<HocWeb.Models.ProductUserModels> productusers = new List<HocWeb.Models.ProductUserModels>();
+    var dao = new ProductDao();
+    var userdao = new USERDAO();
+    foreach (var item in ViewData["SANPHAM"] as IList<ProductModels>)
+    {
+        if (item.CategoryID == Model.CateProductID)
+        {
+            products.Add(item);
+        }
+    }
+    foreach (var item in ViewData["SANPHAMUSER"] as IList<ProductUserModels>)
+    {
+        if (item.CategoryID == Model.CateProductID)
+        {
+            productusers.Add(item);
+        }
+    }
 }
 
 @section header{
@@ -13,56 +32,154 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="container-fluid">
-        <h1 class="m-0 font-weight-bold text-primary">Thêm mới danh mục sản phẩm</h1>
-        <div>
-            <a class="btn btn-primary" href="/Admin/CateProduct/Index" style="width:200px"> Trở về </a>
-        </div>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.CateProductID)
-         @Html.HiddenFor(model => model.Icon)
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Chi tiết danh mục sản phẩm</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/CateProduct/Index" style="width:200px"> Trở về </a>
+    </div>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.CateProductID)
+    @Html.HiddenFor(model => model.Icon)
 
-        <div class="form-group row">
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Tên danh mục</p>
-                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control form-control-user", @autofocus = "autofocus" } })
-                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-            </div>
-            <div class="col-sm-3">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Tiêu đề danh mục</p>
-                @Html.EditorFor(model => model.MetaTitle, new { htmlAttributes = new { @class = "form-control form-control-user" } })
-                @Html.ValidationMessageFor(model => model.MetaTitle, "", new { @class = "text-danger" })
-            </div>
-            <div class="col-sm-3">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Vị trí xuất hiện</p>
-                @Html.EditorFor(model => model.Displayed, new { htmlAttributes = new { @class = "form-control form-control-user" } })
-                @Html.ValidationMessageFor(model => model.Displayed, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Tên danh mục</p>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control form-control-user", @autofocus = "autofocus" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
         </div>
-        <div class="form-group row">
-            <div class="col-sm-6 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Nội dung</p>
-                @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
-            </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Tiêu đề danh mục</p>
+            @Html.EditorFor(model => model.MetaTitle, new { htmlAttributes = new { @class = "form-control form-control-user" } })
+            @Html.ValidationMessageFor(model => model.MetaTitle, "", new { @class = "text-danger" })
         </div>
-        <div class="form-group row">
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
-                @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
-            </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Vị trí xuất hiện</p>
+            @Html.EditorFor(model => model.Displayed, new { htmlAttributes = new { @class = "form-control form-control-user" } })
+            @Html.ValidationMessageFor(model => model.Displayed, "", new { @class = "text-danger" })
         </div>
-        <div>
-            @Html.HiddenFor(model => model.CreatedDate)
-            @Html.HiddenFor(model => model.CreatedBy)
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-6 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Nội dung</p>
+            @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
         </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-success" style="width:200px" />
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
+            @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div>
+        @Html.HiddenFor(model => model.CreatedDate)
+        @Html.HiddenFor(model => model.CreatedBy)
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-success" style="width:200px" />
+        </div>
+    </div>
+    <hr />
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h1>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Tên hãng</th>
+                                <th>Tên danh mục</th>
+                                <th>Hình ảnh</th>
+                                <th>Giá</th>
+                                <th>Giá ưu đãi</th>
+                                <th>Số lượng</th>
+                                <th>Bảo hành</th>
+                                <th>Status</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in products)
+                            {
+                                <tr id="row_@item.ProductID">
+                                    <td>@item.Name</td>
+                                    <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                    <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                    <td align="center">
+                                        <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                    </td>
+                                    <td>@item.Price</td>
+                                    <td>@item.PromotionPrice</td>
+                                    <td>@item.Counts</td>
+                                    <td>@item.Warranty</td>
+                                    <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                    <td>
+                                        <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Chi tiết</a>
+                                    </td>
+                                </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
+    <hr />
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm của khách hàng</h1>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Tên người bán</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Tên danh mục</th>
+                                <th>Hình ảnh</th>
+                                <th>Giá</th>
+                                <th>Giá ưu đãi</th>
+                                <th>Số lượng</th>
+                                <th>Status</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in productusers)
+                            {
+                            <tr id="row_@item.ProductID">
+                                <td>@userdao.GetCusName(item.UserID)</td>
+                                <td>@item.Name</td>
+                                <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                <td align="center">
+                                    <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                </td>
+                                <td>@item.Price</td>
+                                <td>@item.PromotionPrice</td>
+                                <td>@item.Count</td>
+                                <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                <td>
+                                    <a class="btn btn-primary" href="~/Admin/Product/Edit/@item.ProductID">Chi tiết</a>
+                                </td>
+                            </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 }
 
 

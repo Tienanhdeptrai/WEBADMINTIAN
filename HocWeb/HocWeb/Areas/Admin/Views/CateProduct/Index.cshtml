@@ -53,7 +53,7 @@
                                 <td>@item.MetaDescription</td>
                                 <td><a href="#" class="btn-active" data-id="@item.CateProductID">@(Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đang khóa")</a></td>
                                 <td>
-                                    <a class="btn btn-success" href="/Admin/CateProduct/Edit/@item.CateProductID">Edit</a>
+                                    <a class="btn btn-primary" href="/Admin/CateProduct/Edit/@item.CateProductID">Chi tiết</a>
                                     @Ajax.ActionLink("Xóa", "Delete", new { @id = item.CateProductID }, new AjaxOptions
                                        {
                                            Confirm = "Bạn có muốn thông báo này?",

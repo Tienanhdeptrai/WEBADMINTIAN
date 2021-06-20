@@ -1,6 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace HocWeb.Models
 {
+    public class MechantModel
+    {
+        public bool Merchant { get; set; }
+    }
   
     public class UserModels
     {
@@ -39,6 +43,8 @@ namespace HocWeb.Models
         public string ModifiedBy { get; set; }
 
         public string Status { get; set; }
+
+        public bool Merchant { get; set; }
 
     }
 }

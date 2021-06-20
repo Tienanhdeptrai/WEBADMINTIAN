@@ -1,7 +1,18 @@
 ﻿@model HocWeb.Models.BrandModels
+@using HocWeb.Models
+@using HocWeb.DAO
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    var dao = new ProductDao();
+    List<HocWeb.Models.ProductModels> products = new List<HocWeb.Models.ProductModels>();
+    foreach (var item in ViewData["SANPHAM"] as IList<ProductModels>)
+    {
+        if (item.BrandID == Model.BrandID)
+        {
+            products.Add(item);
+        }
+    }
 }
 @section header{
 
@@ -10,58 +21,108 @@
 {
     @Html.AntiForgeryToken()
 
-<div class="container-fluid">
-    <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thương hiệu</h1>
-    <div>
-        <a class="btn btn-primary" href="/Admin/Brand/Index" style="width:200px"> Trở về </a>
-    </div>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.BrandID)
+    <div class="container-fluid">
+        <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thương hiệu</h1>
+        <div>
+            <a class="btn btn-primary" href="/Admin/Brand/Index" style="width:200px"> Trở về </a>
+        </div>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.BrandID)
 
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">Tên danh mục</p>
-            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control form-control-user", @autofocus = "autofocus" } })
-            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Tên danh mục</p>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control form-control-user", @autofocus = "autofocus" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-3">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Tiêu đề danh mục</p>
+                @Html.EditorFor(model => model.MetaTitle, new { htmlAttributes = new { @class = "form-control form-control-user" } })
+                @Html.ValidationMessageFor(model => model.MetaTitle, "", new { @class = "text-danger" })
+            </div>
         </div>
-        <div class="col-sm-3">
-            <p style="font-weight:bold; color:#000000;font-size:20px">Tiêu đề danh mục</p>
-            @Html.EditorFor(model => model.MetaTitle, new { htmlAttributes = new { @class = "form-control form-control-user" } })
-            @Html.ValidationMessageFor(model => model.MetaTitle, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-6 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">Nội dung</p>
-            @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
-        </div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Nội dung</p>
+                @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
+            </div>
 
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-4 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">Thêm hình khác</p>
-            <input type="file" class="form-control" name="file" accept="image/*" required />
         </div>
-        <div class="col-sm-4 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
-            @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
+        <div class="form-group row">
+            <div class="col-sm-4 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Thêm hình khác</p>
+                <input type="file" class="form-control" name="file" accept="image/*" required />
+            </div>
+            <div class="col-sm-4 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
+                @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
+            </div>
+        </div>
+        <div class="col-sm-2 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000; text-align:center;font-size:20pxr">Hình ảnh</p>
+            <img src="@Html.ValueFor(model => model.Image)" alt="Ảnh minh họa sản phẩm" width="250px" height="250px" />
+        </div>
+        <div>
+            @Html.HiddenFor(model => model.CreatedDate)
+            @Html.HiddenFor(model => model.CreatedBy)
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
+            </div>
+        </div>
+        <hr />
+        <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm đang sử dụng thương hiệu</h1>
+        <hr />
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Tên hãng</th>
+                                    <th>Tên danh mục</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Giá</th>
+                                    <th>Giá ưu đãi</th>
+                                    <th>Số lượng</th>
+                                    <th>Bảo hành</th>
+                                    <th>Status</th>
+                                    <th>#</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in products)
+                                {
+                                    <tr id="row_@item.ProductID">
+                                        <td>@item.Name</td>
+                                        <td>@dao.GetBrandNameByID(item.BrandID)</td>
+                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td align="center">
+                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="50px" height="50px" />
+                                        </td>
+                                        <td>@item.Price</td>
+                                        <td>@item.PromotionPrice</td>
+                                        <td>@item.Counts</td>
+                                        <td>@item.Warranty</td>
+                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                        <td>
+                                            <a class="btn btn-success" href="~/Admin/Product/Edit/@item.ProductID">Chi tiết</a>
+                                        </td>
+                                    </tr>
+
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-sm-2 mb-1 mb-sm-0">
-        <p style="font-weight:bold; color:#000000; text-align:center;font-size:20pxr">Hình ảnh</p>
-        <img src="@Html.ValueFor(model => model.Image)" alt="Ảnh minh họa sản phẩm" width="250px" height="250px" />
-    </div>
-    <div>
-        @Html.HiddenFor(model => model.CreatedDate)
-        @Html.HiddenFor(model => model.CreatedBy)
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
-        </div>
-    </div>
-</div>
 }
 

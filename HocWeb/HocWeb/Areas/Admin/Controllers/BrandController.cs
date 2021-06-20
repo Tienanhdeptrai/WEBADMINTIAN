@@ -8,6 +8,7 @@ using System.IO;
 using Firebase.Auth;
 using System.Threading;
 using Firebase.Storage;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace HocWeb.Areas.Admin.Controllers
@@ -29,6 +30,8 @@ namespace HocWeb.Areas.Admin.Controllers
         public ActionResult Edit(string ID)
         {
             var category = new BrandDAO().ViewDetail(ID);
+            var modelProduct = new ProductDao().ListAllPaging();
+            ViewData["SANPHAM"] = modelProduct;
             return View(category);
         }
         [HttpGet]
@@ -170,8 +173,15 @@ namespace HocWeb.Areas.Admin.Controllers
         [HttpDelete]
         public ActionResult Delete(string id)
         {
-            new BrandDAO().Delete(id);
-            SetAlert("Xóa thành công", "success");
+            var dao = new BrandDAO().Delete(id);
+            if (dao)
+            {
+                SetAlert("Xóa thành công", "success");
+            }
+            else
+            {
+                SetAlert("Không thể xoá thương hiệu này", "error");
+            }
             return RedirectToAction("Index");
         }
     }

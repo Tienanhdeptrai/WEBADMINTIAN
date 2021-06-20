@@ -30,7 +30,7 @@ namespace HocWeb.Models
         public string MetaDescription { get; set; }
         public string Status { get; set; }
         [Required(ErrorMessage = "Bạn chưa nhập số lượng ")]
-        public string Counts { get; set; }
+        public int Counts { get; set; }
        public object MoreImages { get; set; }
        public object Rating { get; set; }
         

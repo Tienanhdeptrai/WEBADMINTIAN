@@ -15,6 +15,7 @@ namespace HocWeb.DAO
         private FirebaseContext dBContext;
         private List<SellserModels> Collection = new List<SellserModels>();
         private List<AddressModels> CollectionAddress = new List<AddressModels>();
+        private MechantModel CollectionUser = new MechantModel();
         public SellserDAO()
         {
             try
@@ -46,6 +47,7 @@ namespace HocWeb.DAO
             {
                 FirebaseResponse response = dBContext.Client.Update("Brief/" + models.StoreID, models);
                 SellserModels data = JsonConvert.DeserializeObject<SellserModels>(response.Body);
+                ChangeStatus(models.StoreID);
                 return true;
             }
             catch
@@ -70,6 +72,33 @@ namespace HocWeb.DAO
             }
             catch { }
             return CollectionAddress;
+        }
+        public MechantModel GetUserById(string id)
+        {
+            try
+            {
+                dBContext = new FirebaseContext();
+                FirebaseResponse response = dBContext.Client.Get("Users/" + id);
+                dynamic data = JsonConvert.DeserializeObject(response.Body);
+                CollectionUser = data;
+            }
+            catch { }
+            return CollectionUser;
+        }
+        public bool ChangeStatus(string id)
+        {
+            var model = new MechantModel();
+            model = GetUserById(id);
+            if (model.Merchant == true)
+            {
+                model.Merchant = false;
+            }
+            else
+            {
+                model.Merchant = true;
+            }
+            dBContext.Client.Update("Users/" + id, model);
+            return model.Merchant;
         }
     }
 }
