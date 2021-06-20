@@ -28,6 +28,16 @@ namespace HocWeb.DAO
             }
             catch { }
         }
+        public List<ProductUserModels> GetProductByUser(string userId)
+        {
+            List<ProductUserModels> model = new List<ProductUserModels>();
+            foreach (var item in ProductCollection)
+            {
+                if (item.UserID == userId)
+                    model.Add(item);
+            }
+            return model;
+        }
         public List<ProductUserModels> ListAll()
         {
             List<ProductUserModels> model = ProductCollection.AsQueryable<ProductUserModels>().ToList();

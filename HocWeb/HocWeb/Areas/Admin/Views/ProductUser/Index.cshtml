@@ -72,21 +72,21 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                        <tr id="row_@item.ProductID">
-                                            <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                            <td>@item.Name</td>
-                                            <td>@dao.GetCateNameByID(item.CategoryID)</td>
-                                            <td align="center">
-                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                            </td>
-                                            <td>@item.Price</td>
-                                            <td>@item.PromotionPrice</td>
-                                            <td>@item.Count</td>
-                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                            <td>
-                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                            </td>
-                                        </tr>
+                                    <tr id="row_@item.ProductID">
+                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
+                                        <td>@item.Name</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                        <td align="center">
+                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                        </td>
+                                        <td>@item.Price</td>
+                                        <td>@item.PromotionPrice</td>
+                                        <td>@item.Count</td>
+                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                        <td>
+                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                        </td>
+                                    </tr>
 
                                     }
                                 </tbody>
@@ -137,7 +137,7 @@
                                     <tr id="row_@item.ProductID">
                                         <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
                                         <td>@item.Name</td>
-                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
                                         <td align="center">
                                             <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
                                         </td>
@@ -197,7 +197,7 @@
                                     <tr id="row_@item.ProductID">
                                         <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
                                         <td>@item.Name</td>
-                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
                                         <td align="center">
                                             <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
                                         </td>
@@ -257,7 +257,7 @@
                                     <tr id="row_@item.ProductID">
                                         <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
                                         <td>@item.Name</td>
-                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
                                         <td align="center">
                                             <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
                                         </td>
@@ -317,7 +317,7 @@
                                     <tr id="row_@item.ProductID">
                                         <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
                                         <td>@item.Name</td>
-                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
                                         <td align="center">
                                             <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
                                         </td>
@@ -377,7 +377,7 @@
                                     <tr id="row_@item.ProductID">
                                         <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
                                         <td>@item.Name</td>
-                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
                                         <td align="center">
                                             <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
                                         </td>
@@ -437,7 +437,7 @@
                                     <tr id="row_@item.ProductID">
                                         <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
                                         <td>@item.Name</td>
-                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
                                         <td align="center">
                                             <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
                                         </td>
@@ -497,7 +497,7 @@
                                     <tr id="row_@item.ProductID">
                                         <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
                                         <td>@item.Name</td>
-                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
                                         <td align="center">
                                             <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
                                         </td>
@@ -557,7 +557,7 @@
                                     <tr id="row_@item.ProductID">
                                         <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
                                         <td>@item.Name</td>
-                                        <td>@dao.GetCateNameByID(item.CategoryID)</td>
+                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
                                         <td align="center">
                                             <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
                                         </td>

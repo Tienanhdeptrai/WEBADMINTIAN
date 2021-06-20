@@ -14,8 +14,9 @@ namespace HocWeb.Models
         public string Status { get; set; }
         public string BrandName { get; set; }
         public string CategoryName { get; set; }
-        
-            
+        public bool UserProduct { get; set; }
+
+
 
     }
 }

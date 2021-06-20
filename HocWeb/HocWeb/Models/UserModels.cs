@@ -32,7 +32,6 @@ namespace HocWeb.Models
         public string CMND { get; set; }
 
         [Required(ErrorMessage = "Bạn chưa nhập địa chỉ ")]
-        public string Address { get; set; }
 
         public string CreatedDate { get; set; }
 

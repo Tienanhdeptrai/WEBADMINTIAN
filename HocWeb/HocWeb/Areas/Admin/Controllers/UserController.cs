@@ -31,6 +31,14 @@ namespace HocWeb.Areas.Admin.Controllers
         public ActionResult Edit(string id)
         {
             var user = new USERDAO().ViewDetail(id);
+            if(user.Merchant == true)
+            {
+                IList<ProductUserModels> product = new ProductUserDao().GetProductByUser(user.UserID);
+                IList<AddressModels> address = new SellserDAO().GetListAddress(id);
+                ViewData["SANPHAM"] = product;
+                ViewData["Seller"] = new SellserDAO().ViewDetail(id);
+                ViewData["DIACHI"] = address;
+            }
             return View(user);
         }
         [HttpGet]

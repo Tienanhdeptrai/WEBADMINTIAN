@@ -19,45 +19,38 @@
     </div>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Họ tên</p>
-            @Html.TextBoxFor(model => model.FullName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
-        </div>
-        <div class="col-sm-3">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Chứng minh nhân dân</p>
-            @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
-        </div>
+<div class="form-group row">
+    <div class="col-sm-3 mb-1 mb-sm-0">
+        <p style="font-weight:bold; color:#000000;font-size:20px">  Họ tên</p>
+        @Html.TextBoxFor(model => model.FullName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
     </div>
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Tài khoản</p>
-            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user", })
-            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-        </div>
-        <div class="col-sm-3">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Mật khẩu</p>
-            @Html.TextBoxFor(model => model.Passwords, new { @class = "form-control form-control-user", @placeholder = "Bạn phải nhập ít nhất 6 kí tự", @type = "password" })
-            @Html.ValidationMessageFor(model => model.Passwords, "", new { @class = "text-danger" })
-        </div>
-
+    <div class="col-sm-3">
+        <p style="font-weight:bold; color:#000000;font-size:20px">  Chứng minh nhân dân</p>
+        @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
     </div>
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Địa chỉ</p>
-            @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-user" })
-        </div>
-        <div class="col-sm-3">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Email</p>
-            @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
-            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-        </div>
+    <div class="col-sm-3">
+        <p style="font-weight:bold; color:#000000;font-size:20px">  Email</p>
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
     </div>
+</div>
+<div class="form-group row">
+    <div class="col-sm-3 mb-1 mb-sm-0">
+        <p style="font-weight:bold; color:#000000;font-size:20px">  Tài khoản</p>
+        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user", })
+        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3">
+        <p style="font-weight:bold; color:#000000;font-size:20px">  Mật khẩu</p>
+        @Html.TextBoxFor(model => model.Passwords, new { @class = "form-control form-control-user", @placeholder = "Bạn phải nhập ít nhất 6 kí tự", @type = "password" })
+        @Html.ValidationMessageFor(model => model.Passwords, "", new { @class = "text-danger" })
+    </div>
+    <div class="col-sm-3 mb-1 mb-sm-0">
+        <p style="font-weight:bold; color:#000000;font-size:20px">  Số điện thoại</p>
+        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
+    </div>
+</div>
     <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Số điện thoại</p>
-            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
-        </div>
         <div class="col-sm-3">
             <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái</p>
             @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })

@@ -54,14 +54,14 @@
                                 <td>@item.UserName</td>
                                 <td>@item.FirstName @item.LastName</td>
                                 <td align="center">
-                                    <img src="@item.Avatar" alt="Ảnh đại diện" width="50px" height="50px" />
+                                    <img src="@item.Avatar" alt="Ảnh đại diện" width="100px" height="100px" />
                                 </td>
                                 <td>@(item.Position == "1" ? "Nhân viên": item.Position == "2" ? "Quản trị viên" :"Quản lí")</td>
                                 <td>@item.Phone </td>
                                 <td>@item.Email </td>
                                 <td><a href="#" class="btn-active" data-id="@item.EmployeeID">@( Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đang khóa")</a></td>
                                 <td>
-                                    <a class="btn btn-success" href="/Admin/Employee/Edit/@item.EmployeeID">Edit</a>
+                                    <a class="btn btn-primary" href="/Admin/Employee/Edit/@item.EmployeeID">Chi tiết</a>
                                 </td>
                             </tr>
                                 }

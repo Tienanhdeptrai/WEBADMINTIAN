@@ -1,7 +1,12 @@
 ﻿@model HocWeb.Models.UserModels
+@using HocWeb.Models
+@using HocWeb.DAO
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    var dao = new ProductDao();
+    var modelSeller = new SellserModels();
+    modelSeller = ViewData["Seller"] as SellserModels;
 }
 @section header{
 
@@ -10,7 +15,17 @@
 {
     @Html.AntiForgeryToken()
 <div class="container-fluid">
-    <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin khách hàng</h1>
+    @{
+        if (Model.Merchant == true)
+        {
+            <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin người bán</h1>
+        }
+        else
+        {
+            <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin khách hàng</h1>
+        }
+    }
+
     <div>
         <a style="width:200px;" class="btn btn-primary" href="/Admin/User/Index"> Trở về </a>
     </div>
@@ -20,63 +35,143 @@
     @Html.HiddenFor(model => model.CreatedDate)
     @Html.HiddenFor(model => model.CreatedBy)
     @Html.HiddenFor(model => model.Status)
-     @Html.HiddenFor(model => model.Merchant)
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Tài khoản</p>
-            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
+    @Html.HiddenFor(model => model.Merchant)
+    <div class="col-sm-10 mb-1 mb-sm-0">
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Tài khoản</p>
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
+            </div>
+            <div class="col-sm-3 ">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Mật khẩu</p>
+                @Html.TextBoxFor(model => model.Passwords, new { @class = "form-control form-control-user" })
+            </div>
+            <div class="col-sm-3">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Email</p>
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
+            </div>
         </div>
-        <div class="col-sm-3 ">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Mật khẩu</p>
-            @Html.TextBoxFor(model => model.Passwords, new { @class = "form-control form-control-user", @type = "password" })
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Họ tên</p>
+                @Html.TextBoxFor(model => model.FullName, new { @class = "form-control form-control-user" })
+            </div>
+            <div class="col-sm-3">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Chứng minh nhân dân</p>
+                @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
+            </div>
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Số điện thoại</p>
+                @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-3">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái</p>
+                @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
+            </div>
+            @{
+                if (Model.Merchant == true)
+                {
+                    <div class="col-sm-3 mb-1 mb-sm-0">
+                        <p style="font-weight:bold; color:#000000;font-size:20px"> Tên của hàng</p>
+                        <p style="font-weight:bold; color:#000000;font-size:30px">@modelSeller.StoreName</p>
+                    </div>
+                }
+            }
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-3 mb-1 mb-sm-0">
+                <input type="file" class="form-control" name="file" accept="image/*" required />
+                <img src="@Html.ValueFor(model => model.Avatar)" alt="Ảnh đại diện" width="250px" height="250px" />
+            </div>
+            <div class="col-sm-5">
+                @{
+                    if (Model.Merchant == true)
+                    {
+                        <p style="font-weight:bold; color:#000000;font-size:20px"> Danh sách địa chỉ của cửa hàng</p>
+                        <dl class="dl-horizontal" style="font-size: 24px">
+                            @foreach (var std in ViewData["DIACHI"] as IList<AddressModels>)
+                            {
+                                <dt>
+                                   + Số nhà, tên đường : @std.NumberAddress
+                                </dt>
+
+                                <dt>
+                                   + Xã :  @std.Xa
+                                </dt>
+                                <dt>
+                                   + Huyện: @std.Huyen
+                                </dt>
+                                <dt>
+                                   + Thành Phố : @std.City
+                                </dt>
+                            }
+                        </dl>
+                    }
+                }
+            </div>
         </div>
     </div>
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Họ tên</p>
-            @Html.TextBoxFor(model => model.FullName, new { @class = "form-control form-control-user" })
-        </div>
-        <div class="col-sm-3">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Chứng minh nhân dân</p>
-            @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
-        </div>
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Địa chỉ</p>
-            @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-user" })
-        </div>
-        <div class="col-sm-3">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Email</p>
-            @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
-        </div>
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Số điện thoại</p>
-            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
-        </div>
-        <div class="col-sm-3">
-            <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái</p>
-            @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
-        </div>
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000;font-size:20px">Thay đổi ảnh đại diện</p>
-            <input type="file" class="form-control" name="file" accept="image/*" required />
-        </div>
-        <div class="col-sm-2 mb-1 mb-sm-0">
-            <p style="font-weight:bold; color:#000000; text-align:center;font-size:20px">Hình ảnh</p>
-            <img src="@Html.ValueFor(model => model.Avatar)" alt="Ảnh đại diện" width="250px" height="250px" />
-        </div>
-    </div>
+
+
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
         </div>
     </div>
+    @{
+        if (Model.Merchant == true)
+        {
+            <hr />
+            <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm đang kinh doanh</h1>
+            <hr />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Tên danh mục</th>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Giá ưu đãi</th>
+                                        <th>Số lượng</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in ViewData["SANPHAM"] as IList<ProductUserModels>)
+                                    {
+                                        <tr id="row_@item.ProductID">
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
 </div>
 }
 

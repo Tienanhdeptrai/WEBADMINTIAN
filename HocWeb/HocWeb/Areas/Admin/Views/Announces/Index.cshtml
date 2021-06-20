@@ -47,7 +47,7 @@
                                     <td>@item.CreatedDate</td>
                                     <td><a href="#" class="btn-active" data-id="@item.Id">@(Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đã tắt")</a></td>
                                     <td>
-                                        <a class="btn btn-success" href="/Admin/Announces/Edit/@item.Id">Edit</a>
+                                        <a class="btn btn-primary" href="/Admin/Announces/Edit/@item.Id">Edit</a>
                                         @Ajax.ActionLink("Xóa", "Delete", new { @id = item.Id }, new AjaxOptions
                                        {
                                            Confirm = "Bạn có muốn thông báo này?",

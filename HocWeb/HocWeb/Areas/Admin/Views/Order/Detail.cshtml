@@ -14,134 +14,202 @@
 }
 @using (Html.BeginForm())
 {
-    <div class="container-fluid">
-        <h1 class="m-0 font-weight-bold text-primary">Chi tiết đơn hàng</h1>
-        <hr />
-        @Html.HiddenFor(model => model.OrderID)
-        @Html.HiddenFor(model => model.CustomerID)
-        @Html.HiddenFor(model => model.ShipLocation)
-        @Html.HiddenFor(model => model.ShipAddress)
-        @Html.HiddenFor(model => model.ShipMoblie)
-        @Html.HiddenFor(model => model.ShipName)
-        @Html.HiddenFor(model => model.ShipperID)
-        @Html.HiddenFor(model => model.Payment)
-        @Html.HiddenFor(model => model.CreatedDate)
-        @Html.HiddenFor(model => model.Total)
-        <div class="form-group row">
-            <div class="col-sm-3 mb-1 mb-sm-0">
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Chi tiết đơn hàng</h1>
+    <hr />
+    @Html.HiddenFor(model => model.OrderID)
+    @Html.HiddenFor(model => model.CustomerID)
+    @Html.HiddenFor(model => model.ShipLocation)
+    @Html.HiddenFor(model => model.ShipAddress)
+    @Html.HiddenFor(model => model.ShipMoblie)
+    @Html.HiddenFor(model => model.ShipName)
+    @Html.HiddenFor(model => model.ShipperID)
+    @Html.HiddenFor(model => model.Payment)
+    @Html.HiddenFor(model => model.CreatedDate)
+    @Html.HiddenFor(model => model.Total)
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
 
-                <p>Thông tin khách hàng</p>
-                @foreach (var std in ViewData["KHACHHANG"] as IList<UserModels>)
-                {
-                    <dl class="dl-horizontal" style="font-size: 24px">
-                        <dt>
-                            Họ tên khách hàng
-                        </dt>
-                        <dd>
-
-                            @(std.FullName)
-
-                        </dd>
-                        <dt>
-                            Địa chỉ Email
-                        </dt>
-                        <dd>
-                            @std.Email
-                        </dd>
-                        <dt>
-                            Số điện thoại
-                        </dt>
-                        <dd>
-                            @std.Phone
-                        </dd>
-                    </dl>
-                }
-            </div>
-            <div class="col-sm-3">
-                <p>Thông tin người nhận hàng</p>
+            <p style="font-size: 24px;font-weight:bold; color:black">Thông tin khách hàng</p>
+            @foreach (var std in ViewData["KHACHHANG"] as IList<UserModels>)
+            {
                 <dl class="dl-horizontal" style="font-size: 24px">
                     <dt>
-                        Tên người nhận hàng
+                        Họ tên khách hàng
                     </dt>
                     <dd>
-                        @Html.DisplayFor(model => model.ShipName)
 
+                        @(std.FullName)
+
+                    </dd>
+                    <dt>
+                        Địa chỉ Email
+                    </dt>
+                    <dd>
+                        @std.Email
                     </dd>
                     <dt>
                         Số điện thoại
                     </dt>
                     <dd>
-                        @Html.DisplayFor(model => model.ShipMoblie)
-
-                    </dd>
-                    <dt>
-                        Địa chỉ
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.ShipAddress)
-
+                        @std.Phone
                     </dd>
                 </dl>
-            </div>
-            <div class="col-sm-3">
-                <p>Thông tin đơn hàng</p>
-                <dl class="dl-horizontal" style="font-size: 24px">
-                    @foreach (var std in ViewData["SANPHAM"] as IList<OrderDetailModels>)
-                    {
-                        <dt>
-                            Tên sản phẩm
-                        </dt>
-                        <dd>
-                            @std.Name
-                        </dd>
-                        <dt>
-                            Số lượng
-                        </dt>
-                        <dd>
-                            @std.Quantity
-                        </dd>
-                        total += Convert.ToDecimal(std.Price);
-
-                    }
-                    <dt>
-                        Tổng tiền
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.Total) Đồng
-                    </dd>
-
-                    <dt>
-                        Ngày mua
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.CreatedDate)
-
-                    </dd>
-                </dl>
-            </div>
-            <div class="col-sm-3">
-                <p style="font-size: 24px">Trạng Thái</p>
-                @Html.DropDownListFor(model => model.Status, new[] {
-               new SelectListItem { Text = "Chờ xác nhận", Value = "1" },
-               new SelectListItem { Text = "Chờ lấy hàng", Value = "2" },
-               new SelectListItem { Text = "Đang giao hàng", Value = "3" },
-               new SelectListItem { Text = "Đã giao hàng", Value = "4" },
-               new SelectListItem { Text = "Đã hủy", Value = "5" },
-               new SelectListItem { Text = "Trả hàng", Value = "6" }}, new { @class = "form-control form-control-user" })
-
-                <p style="font-size: 24px">Hình thức thanh toán</p>
-                @Html.DisplayFor(model => model.Payment)
-            </div>
+            }
         </div>
-        <div class="form-group row">
-            <div class="col-sm-1 mb-1 mb-sm-0">
-                <a href="/admin/order/index" class="btn btn-primary" style="width:100px;">Trở về</a>
-            </div>
-            <div class="col-sm-1">
-                <input type="submit" value="Save" class="btn btn-success" style="width:100px;" />
-            </div>
+        <div class="col-sm-3">
+            <p style="font-size: 24px;font-weight:bold; color:black">Thông tin người nhận hàng</p>
+            <dl class="dl-horizontal" style="font-size: 24px">
+                <dt>
+                    Tên người nhận hàng
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ShipName)
 
+                </dd>
+                <dt>
+                    Số điện thoại
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ShipMoblie)
+
+                </dd>
+                <dt>
+                    Địa chỉ
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ShipAddress)
+
+                </dd>
+            </dl>
+        </div>
+        <div class="col-sm-3">
+            <p style="font-size: 24px;font-weight:bold; color:black">Thông tin đơn hàng</p>
+            <dl class="dl-horizontal" style="font-size: 24px">
+                <dt>
+                    Tổng tiền
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Total) Đồng
+                </dd>
+
+                <dt>
+                    Ngày mua
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedDate)
+
+                </dd>
+            </dl>
+        </div>
+        <div class="col-sm-3">
+            <p style="font-size: 24px;font-weight:bold; color:black">Trạng Thái</p>
+            @Html.DropDownListFor(model => model.Status, new[] {
+           new SelectListItem { Text = "Chờ xác nhận", Value = "1" },
+           new SelectListItem { Text = "Chờ lấy hàng", Value = "2" },
+           new SelectListItem { Text = "Đang giao hàng", Value = "3" },
+           new SelectListItem { Text = "Đã giao hàng", Value = "4" },
+           new SelectListItem { Text = "Đã hủy", Value = "5" },
+           new SelectListItem { Text = "Trả hàng", Value = "6" }}, new { @class = "form-control form-control-user" })
+
+            <p style="font-size: 24px;font-weight:bold; color:black">Hình thức thanh toán</p>
+            @{
+                if (Model.Payment == "01")
+                {
+                    <p style="font-size: 24px">Thanh toán khi nhận hàng</p>
+                }
+                else
+                {
+                    <p style="font-size: 24px">Thanh toán trực tuyến</p>
+                }
+            }
         </div>
     </div>
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h1>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Danh mục</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Ảnh</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Đơn vị cung cấp</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Danh mục</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Ảnh</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Đơn vị cung cấp</th>
+                                <th>#</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in ViewData["SANPHAM"] as IList<OrderDetailModels>)
+                            {
+                            <tr id="row_@item">
+                                <td>
+                                    <a href="/Admin/CateProduct/Edit/@item.CategoryID"> @dao.GetCateNameByID(item.CategoryID)   </a> 
+                                </td>
+                                <td>@item.Name</td>
+                                <td align="center">
+                                    <img src="@item.Picture" alt="Hình ảnh" width="100px" height="100px" />
+                                </td>
+                                <td>@item.Price</td>
+                                <td>@item.Quantity</td>
+                                <td>
+                                    @{
+                                        if (item.UserProduct)
+                                        {
+                                            <p style="font-size: 24px">Store Sellser</p>
+
+                                        }
+                                        else
+                                        {
+                                            <p style="font-size: 24px">TiAn</p>
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @{
+                                        if (@item.UserProduct == true)
+                                        {
+                                            <a class="btn btn-primary" href="/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn btn-primary" href="/Admin/Product/Edit/@item.ProductID">Chi tiết</a>
+                                        }
+                                    }
+
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-1 mb-1 mb-sm-0">
+            <a href="/admin/order/index" class="btn btn-primary" style="width:100px;">Trở về</a>
+        </div>
+        <div class="col-sm-1">
+            <input type="submit" value="Save" class="btn btn-success" style="width:100px;" />
+        </div>
+
+    </div>
+</div>
    
 }
