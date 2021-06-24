@@ -13,7 +13,10 @@
 }
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="m-0 font-weight-bold text-primary">Danh sách phản hồi</h1>
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách kho</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/FeedBack/Create" style="width:200px"> Thêm mới </a>
+    </div>
     <hr />
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -22,41 +25,50 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Tên tài khoản</th>
-                                <th>Người gửi</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Số điện thoại</th>
-                                <th>Email</th>
-                                <th>Address</th>
+                                <th>Tên kho</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>Địa chỉ</th>
+                                <th>Trạng thái</th>
                                 <th>#</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Tên tài khoản</th>
-                                <th>Người gửi</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Số điện thoại</th>
-                                <th>Email</th>
-                                <th>Address</th>
+                                <th>Tên kho</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>Địa chỉ</th>
+                                <th>Trạng thái</th>>
                                 <th>#</th>
                             </tr>
                         </tfoot>
                         <tbody>
                             @foreach (var item in Model)
                             {
-                            <tr id="row_@item">
-                                <td>@user.GetCusName(item.UserID)</td>
-                                <td>@item.Name</td>
-                                <td>@product.GetProductName(item.ProductID)</td>
-                                <td>@item.Phone</td>
-                                <td>@item.Email</td>
-                                <td>@item.Address</td>    
-                             
-                                <td>
-                                    <a class="btn btn-primary" href="/Admin/FeedBack/Detail/@item.FeedBackID">Xem nội dung</a>
-                                </td>
-                            </tr>
+                                <tr id="row_@item">
+                                    <td>@item.name</td>
+                                    <td>@item.lat</td>
+                                    <td>@item.lng</td>
+                                    <td>@item.address</td>
+                                    <td>
+                                        @{
+                                            if (item.status == true)
+                                            {
+                                                <p style="color:green; font-size:20px;font-weight:bold">Tốt</p>
+                                            }
+                                            else
+                                            {
+                                                <p style="color:red; font-size:20px;font-weight:bold">Đầy</p>
+                                            }
+                                        }
+
+                                    </td>
+
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/FeedBack/Detail/@item.WarehouseId">Chi tiết</a>
+                                    </td>
+                                </tr>
                             }
                         </tbody>
                     </table>

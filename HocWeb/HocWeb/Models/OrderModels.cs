@@ -26,5 +26,7 @@ namespace HocWeb.Models
         public string Total { get; set; }
 
         public string ShipLocation { get; set; }
+
+        public string WarehouseAddress { get; set; }
     }
 }

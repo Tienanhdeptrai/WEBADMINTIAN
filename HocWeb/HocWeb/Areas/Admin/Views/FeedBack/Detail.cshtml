@@ -6,25 +6,51 @@
 @section header{
 
 }
+@using (Html.BeginForm("Detail", "FeedBack", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
     <div class="container-fluid">
-        <h1 class="m-0 font-weight-bold text-primary">Nội dung phản hồi của khách</h1>
+        <h1 class="m-0 font-weight-bold text-primary">Chi tiết kho</h1>
+        <div>
+            <a class="btn btn-primary" href="/Admin/FeedBack/Index" style="width:200px"> Trở về </a>
+        </div>
         <hr />
-        @Html.HiddenFor(model => model.FeedBackID)
+        @Html.HiddenFor(model => model.WarehouseId)
         <div class="form-group row">
             <div class="col-sm-5 mb-1 mb-sm-0">
-                @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.DisplayFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Tên kho</p>
+                @Html.TextBoxFor(model => model.name, new { @class = "form-control form-control-user" })
+                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
             </div>
             <div class="col-sm-5 mb-1 mb-sm-0">
-                @Html.LabelFor(model => model.CreatedDate, htmlAttributes: new { @class = "control-label col-md-2" })
-                @Html.DisplayFor(model => model.CreatedDate, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Địa chỉ</p>
+                @Html.TextBoxFor(model => model.address, new { @class = "form-control form-control-user" })
+                @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-5 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Latitude</p>
+                @Html.TextBoxFor(model => model.lat, new { @class = "form-control form-control-user" })
+                @Html.ValidationMessageFor(model => model.lat, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-5 mb-1 mb-sm-0">
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Longitude</p>
+                @Html.TextBoxFor(model => model.lng, new { @class = "form-control form-control-user" })
+                @Html.ValidationMessageFor(model => model.lng, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-sm-2">
+                <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
+                @Html.DropDownListFor(model => model.status, new[] { new SelectListItem { Text = "Tốt", Value = "true" },
+               new SelectListItem { Text = "Đầy", Value = "false" } }, new { @class = "form-control form-control-user" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
             </div>
         </div>
     </div>
-<div class="form-group">
-    <div class="col-md-offset-2 col-md-10">
-        <a href="/Admin/FeedBack/Index" class="btn btn-primary" style="width:100px;">Trở về</a>
-    </div>
-</div>
+}
+
+

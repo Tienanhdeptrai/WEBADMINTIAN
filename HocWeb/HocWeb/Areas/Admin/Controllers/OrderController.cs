@@ -20,6 +20,7 @@ namespace HocWeb.Areas.Admin.Controllers
             IList<OrderDetailModels> product = new OrderDao().GetAll(id);
             IList<UserModels> user = new List<UserModels>();
             user.Add(dao);
+            SetViewBag();
             ViewData["KHACHHANG"] = user;
             ViewData["SANPHAM"] = product;
             return View(result);
@@ -50,6 +51,11 @@ namespace HocWeb.Areas.Admin.Controllers
              
             }           
             return View(orders);
+        }
+        public void SetViewBag(long? selectedID = null)
+        {
+            var dao = new FeedBackDAO();
+            ViewBag.WarehouseAddress = new SelectList(dao.ListAll(), "address", "name", selectedID);
         }
     }
 }

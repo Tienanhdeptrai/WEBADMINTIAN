@@ -1,0 +1,66 @@
+﻿@model HocWeb.Models.FeedBackModels
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+}
+
+@section header{
+
+}
+
+@using (Html.BeginForm("Create", "FeedBack", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Thêm mới danh mục sản phẩm</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/CateProduct/Index" style="width:200px"> Trở về </a>
+    </div>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group row">
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tên kho</p>
+            @Html.TextBoxFor(model => model.name, new { @class = "form-control form-control-user" })
+            @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Địa chỉ</p>
+            @Html.TextBoxFor(model => model.address, new { @class = "form-control form-control-user" })
+            @Html.ValidationMessageFor(model => model.address, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Latitude</p>
+            @Html.TextBoxFor(model => model.lat, new { @class = "form-control form-control-user" })
+            @Html.ValidationMessageFor(model => model.lat, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Longitude</p>
+            @Html.TextBoxFor(model => model.lng, new { @class = "form-control form-control-user" })
+            @Html.ValidationMessageFor(model => model.lng, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-2">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
+            @Html.DropDownListFor(model => model.status, new[] { new SelectListItem { Text = "Tốt", Value = "true" },
+           new SelectListItem { Text = "Đầy", Value = "false" } }, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
+        </div>
+    </div>
+</div>
+}
+<script src="~/Assets/Admin/vendor/jquery/jquery.min.js"></script>
+<script src="~/Assets/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="~/Assets/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="~/Assets/Admin/js/sb-admin-2.min.js"></script>
+

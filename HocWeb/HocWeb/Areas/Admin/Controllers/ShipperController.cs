@@ -44,8 +44,7 @@ namespace HocWeb.Areas.Admin.Controllers
         public async Task<ActionResult> Create(ShipperModels user, HttpPostedFileBase file)
         {
             
-            if (ModelState.IsValid)
-            {
+         
                 var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
                 if (file.ContentLength > 0)
@@ -71,12 +70,7 @@ namespace HocWeb.Areas.Admin.Controllers
                     {
                         link = await task;
                     }
-                    catch (Exception ex)
-                    {
-
-                        Console.WriteLine("Cannot upload file");
-                    }
-
+                    catch { }
                 }
                 var session = (UserSession)Session[CommomConstants.USER_SESSION];
                 var dao = new ShipperDAO();
@@ -99,6 +93,9 @@ namespace HocWeb.Areas.Admin.Controllers
                     string token = ab.FirebaseToken;
                     var infouser = ab.User;
                     user.ShipperID = infouser.LocalId;
+                    user.Amount = 0;
+                    user.Rating = 0;
+                    user.Point = 0;
                     user.CreatedDate = DateTime.Now.ToString();
                     user.CreatedBy = "Admin";
                     user.Avatar = link;
@@ -113,8 +110,7 @@ namespace HocWeb.Areas.Admin.Controllers
                     {
                         SetAlert("Thêm không thành công", "error");
                     }
-                }
-            }
+                }   
             return View(user);
         }
         [HttpPost]
@@ -122,8 +118,7 @@ namespace HocWeb.Areas.Admin.Controllers
         public async Task<ActionResult> Edit(ShipperModels user, HttpPostedFileBase file)
         {
             
-            if (ModelState.IsValid)
-            {
+         
                 var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
                 if (file.ContentLength > 0)
@@ -149,11 +144,7 @@ namespace HocWeb.Areas.Admin.Controllers
                     {
                         link = await task;
                     }
-                    catch (Exception ex)
-                    {
-
-                        Console.WriteLine("Cannot upload file");
-                    }
+                    catch { }
 
                 }
                 var session = (UserSession)Session[CommomConstants.USER_SESSION];
@@ -172,8 +163,6 @@ namespace HocWeb.Areas.Admin.Controllers
                     SetAlert("Cập nhật tài khoản không thành công", "error");
                     return View();
                 }
-            }
-            return View();
         }
         [HttpPost]
         public JsonResult ChangeStatus(string id)

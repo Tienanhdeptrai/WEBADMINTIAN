@@ -6,6 +6,7 @@ using HocWeb.Models;
 using FireSharp.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Firebase.Auth;
 
 namespace HocWeb.DAO
 {

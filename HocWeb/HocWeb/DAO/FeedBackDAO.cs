@@ -17,7 +17,7 @@ namespace HocWeb.DAO
             try
             {
                 dBContext = new FirebaseContext();
-                FirebaseResponse response = dBContext.Client.Get("FeedBacks");
+                FirebaseResponse response = dBContext.Client.Get("Warehouse");
                 dynamic data = JsonConvert.DeserializeObject<dynamic>(response.Body);
                 foreach (var item in data)
                 {
@@ -27,35 +27,63 @@ namespace HocWeb.DAO
             catch { }
 
         }
+        public bool Insert(FeedBackModels models)
+        {
+            try
+            {
+                var data = models;
+                PushResponse response = dBContext.Client.Push("Warehouse/", data);
+                data.WarehouseId = response.Result.name;
+                SetResponse setResponse = dBContext.Client.Set("Warehouse/" + data.WarehouseId, data);
+                return true;
+            }
+            catch {
+                return false;
+            }
+     
+        }
         public FeedBackModels ViewDetail(string id)
         {
-            FirebaseResponse response = dBContext.Client.Get("FeedBacks/" + id);
+            FirebaseResponse response = dBContext.Client.Get("Warehouse/" + id);
             FeedBackModels data = JsonConvert.DeserializeObject<FeedBackModels>(response.Body);
             return data;
         }
         public int Counts()
         {
-            return Collection.AsQueryable().Count(x => x.Status == "true");
+            return Collection.AsQueryable().Count(x => x.status == true);
         }
         public List<FeedBackModels> ListAll()
         {
             return Collection;
         }
+        public bool update(FeedBackModels models)
+        {
+            try
+            {
+                FirebaseResponse response = dBContext.Client.Update("Warehouse/" + models.WarehouseId, models);
+                FeedBackModels data = JsonConvert.DeserializeObject<FeedBackModels>(response.Body);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public bool ChangeStatus(string id)
         {
             var model = new FeedBackModels();
-            model = Collection.AsQueryable().SingleOrDefault(x => x.FeedBackID == id);
-            if (model.Status == "true")
+            model = Collection.AsQueryable().SingleOrDefault(x => x.WarehouseId == id);
+            if (model.status == true)
             {
-                model.Status = "false";
+                model.status = false;
             }
             else
             {
-                model.Status = "false";
+                model.status = false;
             }
-            FirebaseResponse response = dBContext.Client.Update("FeedBacks/" + id, model);
+            FirebaseResponse response = dBContext.Client.Update("Warehouse/" + id, model);
             FeedBackModels data = JsonConvert.DeserializeObject<FeedBackModels>(response.Body);
-            return Convert.ToBoolean(model.Status);
+            return Convert.ToBoolean(model.status);
         }
     }
 }

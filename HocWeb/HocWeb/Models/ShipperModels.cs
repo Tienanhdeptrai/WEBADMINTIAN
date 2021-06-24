@@ -43,5 +43,12 @@ namespace HocWeb.Models
         public string ModifiedBy { get; set; }
 
         public string Status { get; set; }
+
+        public long Amount { get; set; }
+
+        public float Rating { get; set; }
+
+        public long Point { get; set; }
+
     }
 }

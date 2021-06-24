@@ -5,7 +5,6 @@
     ViewBag.Title = "Detail";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
     var liststatus = new string[] { "Chờ xác nhận", "Chờ lấy hàng", "Đang giao hàng", "Đã giao hàng", "Đã hủy", "Trả hàng" };
-    decimal total = 0;
     var dao = new ProductDao();
 }
 
@@ -27,104 +26,114 @@
     @Html.HiddenFor(model => model.Payment)
     @Html.HiddenFor(model => model.CreatedDate)
     @Html.HiddenFor(model => model.Total)
-    <div class="form-group row">
-        <div class="col-sm-3 mb-1 mb-sm-0">
+<div class="form-group row">
+    <div class="col-sm-3 mb-1 mb-sm-0">
 
-            <p style="font-size: 24px;font-weight:bold; color:black">Thông tin khách hàng</p>
-            @foreach (var std in ViewData["KHACHHANG"] as IList<UserModels>)
-            {
-                <dl class="dl-horizontal" style="font-size: 24px">
-                    <dt>
-                        Họ tên khách hàng
-                    </dt>
-                    <dd>
-
-                        @(std.FullName)
-
-                    </dd>
-                    <dt>
-                        Địa chỉ Email
-                    </dt>
-                    <dd>
-                        @std.Email
-                    </dd>
-                    <dt>
-                        Số điện thoại
-                    </dt>
-                    <dd>
-                        @std.Phone
-                    </dd>
-                </dl>
-            }
-        </div>
-        <div class="col-sm-3">
-            <p style="font-size: 24px;font-weight:bold; color:black">Thông tin người nhận hàng</p>
+        <p style="font-size: 24px;font-weight:bold; color:black">Thông tin khách hàng</p>
+        @foreach (var std in ViewData["KHACHHANG"] as IList<UserModels>)
+        {
             <dl class="dl-horizontal" style="font-size: 24px">
                 <dt>
-                    Tên người nhận hàng
+                    Họ tên khách hàng
                 </dt>
                 <dd>
-                    @Html.DisplayFor(model => model.ShipName)
 
+                    @(std.FullName)
+
+                </dd>
+                <dt>
+                    Địa chỉ Email
+                </dt>
+                <dd>
+                    @std.Email
                 </dd>
                 <dt>
                     Số điện thoại
                 </dt>
                 <dd>
-                    @Html.DisplayFor(model => model.ShipMoblie)
-
-                </dd>
-                <dt>
-                    Địa chỉ
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.ShipAddress)
-
+                    @std.Phone
                 </dd>
             </dl>
-        </div>
-        <div class="col-sm-3">
-            <p style="font-size: 24px;font-weight:bold; color:black">Thông tin đơn hàng</p>
-            <dl class="dl-horizontal" style="font-size: 24px">
-                <dt>
-                    Tổng tiền
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.Total) Đồng
-                </dd>
-
-                <dt>
-                    Ngày mua
-                </dt>
-                <dd>
-                    @Html.DisplayFor(model => model.CreatedDate)
-
-                </dd>
-            </dl>
-        </div>
-        <div class="col-sm-3">
-            <p style="font-size: 24px;font-weight:bold; color:black">Trạng Thái</p>
-            @Html.DropDownListFor(model => model.Status, new[] {
-           new SelectListItem { Text = "Chờ xác nhận", Value = "1" },
-           new SelectListItem { Text = "Chờ lấy hàng", Value = "2" },
-           new SelectListItem { Text = "Đang giao hàng", Value = "3" },
-           new SelectListItem { Text = "Đã giao hàng", Value = "4" },
-           new SelectListItem { Text = "Đã hủy", Value = "5" },
-           new SelectListItem { Text = "Trả hàng", Value = "6" }}, new { @class = "form-control form-control-user" })
-
-            <p style="font-size: 24px;font-weight:bold; color:black">Hình thức thanh toán</p>
-            @{
-                if (Model.Payment == "01")
-                {
-                    <p style="font-size: 24px">Thanh toán khi nhận hàng</p>
-                }
-                else
-                {
-                    <p style="font-size: 24px">Thanh toán trực tuyến</p>
-                }
-            }
-        </div>
+        }
     </div>
+    <div class="col-sm-3">
+        <p style="font-size: 24px;font-weight:bold; color:black">Thông tin người nhận hàng</p>
+        <dl class="dl-horizontal" style="font-size: 24px">
+            <dt>
+                Tên người nhận hàng
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ShipName)
+
+            </dd>
+            <dt>
+                Số điện thoại
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ShipMoblie)
+
+            </dd>
+            <dt>
+                Địa chỉ
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ShipAddress)
+
+            </dd>
+        </dl>
+    </div>
+    <div class="col-sm-3">
+        <p style="font-size: 24px;font-weight:bold; color:black">Thông tin đơn hàng</p>
+        <dl class="dl-horizontal" style="font-size: 24px">
+            <dt>
+                Tổng tiền
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Total) Đồng
+            </dd>
+
+            <dt>
+                Ngày mua
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CreatedDate)
+
+            </dd>
+        </dl>
+    </div>
+    <div class="col-sm-3">
+        <p style="font-size: 24px;font-weight:bold; color:black">Trạng Thái</p>
+        @Html.DropDownListFor(model => model.Status, new[] {
+       new SelectListItem { Text = "Chờ xác nhận", Value = "1" },
+       new SelectListItem { Text = "Chờ lấy hàng", Value = "2" },
+       new SelectListItem { Text = "Đang giao hàng", Value = "3" },
+       new SelectListItem { Text = "Đã giao hàng", Value = "4" },
+       new SelectListItem { Text = "Đã hủy", Value = "5" },
+       new SelectListItem { Text = "Trả hàng", Value = "6" }}, new { @class = "form-control form-control-user" })
+
+        <p style="font-size: 24px;font-weight:bold; color:black">Hình thức thanh toán</p>
+        @{
+            if (Model.Payment == "01")
+            {
+                <p style="font-size: 24px">Thanh toán khi nhận hàng</p>
+            }
+            else
+            {
+                <p style="font-size: 24px">Thanh toán trực tuyến</p>
+            }
+        }
+        @{
+            if (Model.Status == "1")
+            {
+                <div class="col-sm-10">
+                    <p style="font-weight:bold; color:#000000;font-size:20px">Chọn kho</p>
+                    @Html.DropDownListFor(model => model.WarehouseAddress, null, htmlAttributes: new { @class = "form-control form-control-user" })
+                </div>
+            }
+        }
+
+    </div>
+</div>
     <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm</h1>
     <hr />
     <div class="card shadow mb-4">

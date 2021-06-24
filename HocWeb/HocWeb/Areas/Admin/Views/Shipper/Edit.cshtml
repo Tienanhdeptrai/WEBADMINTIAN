@@ -6,7 +6,7 @@
 @section header{
 
 }
-@using (Html.BeginForm("Edit", "Shipper", FormMethod.Post, new { enctype = "multipart/form-data" ))
+@using (Html.BeginForm("Edit", "Shipper", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 <div class="container-fluid">
@@ -69,8 +69,22 @@
     </div>
     <div class="form-group row">
         <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tiền trong ví</p>
+            @Html.TextBoxFor(model => model.Amount, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Điểm tích luỹ</p>
+            @Html.TextBoxFor(model => model.Point, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Điểm đánh giá</p>
+            @Html.TextBoxFor(model => model.Rating, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
             <p style="font-weight:bold; color:#000000;font-size:20px">Thay đổi ảnh đại diện</p>
-            <input type="file" class="form-control" name="file" accept="image/*" required />
+            <input type="file" class="form-control" name="file" accept="image/*" required value="@Model.Avatar"/>
         </div>
         <div class="col-sm-2 mb-1 mb-sm-0">
             <p style="font-weight:bold; color:#000000; text-align:center;font-size:20pxr">Hình ảnh</p>
