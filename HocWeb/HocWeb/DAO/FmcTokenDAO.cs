@@ -31,5 +31,18 @@ namespace HocWeb.DAO
         {
             return Collection;
         }
+
+        public List<FmcTokenModels> GetByUserId(string userId)
+        {
+            List<FmcTokenModels> fcmListUser = new List<FmcTokenModels>();
+            foreach(var item in Collection)
+            {
+                if(item.UserId == userId)
+                {
+                    fcmListUser.Add(item);
+                }
+            }
+            return fcmListUser;
+        }
     }
 }

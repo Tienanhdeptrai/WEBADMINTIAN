@@ -117,20 +117,19 @@ namespace HocWeb.DAO
             try
             {
                 var fcmToken = new FmcTokenDAO().GetAll();
-                //string[] fcmTokenDevice = new string[fcmToken.Count];
-                //int i = 0;
-                //foreach (var item in fcmToken)
-                //{
-                //    fcmTokenDevice[i++] = item.tokenDecide;
-                //}
-
+                string[] fcmTokenArray = new string[fcmToken.Count];
+                int i = 0;
+                foreach (var item in fcmToken)
+                {
+                    fcmTokenArray[i++] = item.tokenDecide;
+                }
                 string applicationID = "AAAA2WbinkI:APA91bEBVS1RR8PzeEEcnVXieNKReaS4BTcFzKmRHMC-kvXymsbrmITORkNFcEbcqTGjaY1DfF5W6GMvGLOT9JwnOrutVfZ0xUByjSAud2ehowg4cpm2aPpmt1p3cj5IDxQd0ktVp1MX";
 
                 string senderId = "933734030914";
 
                 string webAddr = "https://fcm.googleapis.com/fcm/send";
 
-                string deviceId = "e3zCddOuSmKAaxmUZkkw8M:APA91bF-r2E-DemyZUgE5O-YAN8tsH-axJi9-Pj5yf7_wN9UOPpf6IaJFKBI7dZNk5kUe83V5Ghe6RV4jkXmyKXojG3aPb9Nrum081qHeU7r_pSV7JkfaENsmJ4LTB81ht-eVjGSNMnP";
+                //string deviceId = "e3zCddOuSmKAaxmUZkkw8M:APA91bF-r2E-DemyZUgE5O-YAN8tsH-axJi9-Pj5yf7_wN9UOPpf6IaJFKBI7dZNk5kUe83V5Ghe6RV4jkXmyKXojG3aPb9Nrum081qHeU7r_pSV7JkfaENsmJ4LTB81ht-eVjGSNMnP";
 
                 var result = "-1";
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
@@ -138,40 +137,36 @@ namespace HocWeb.DAO
                 httpWebRequest.Headers.Add(string.Format("Authorization: key={0}", applicationID));
                 httpWebRequest.Headers.Add(string.Format("Sender: id={0}", senderId));
                 httpWebRequest.Method = "POST";
-                foreach (var item in fcmToken)
+                var payload = new
                 {
-                    var payload = new
+                    registration_ids = fcmTokenArray,
+                    priority = "high",
+                    content_available = true,
+                    data = new
                     {
-                        to = item.tokenDecide,
-                        priority = "high",
-                        content_available = true,
-                        data = new
-                        {
-                            targetModule = obj.Type,
-                            targetId = obj.Id
-                        },
-                        notification = new
-                        {
-                            body = obj.Details,
-                            title = obj.Title,
-                        },
-                    };
-                    var serializer = new JavaScriptSerializer();
-                    using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                        targetModule = obj.Type,
+                        targetId = obj.Id
+                    },
+                    notification = new
                     {
-                        string json = serializer.Serialize(payload);
-                        streamWriter.Write(json);
-                        streamWriter.Flush();
-                    }
-
-                    var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                    {
-                        result = streamReader.ReadToEnd();
-
-                    }
+                        body = obj.Details,
+                        title = obj.Title,
+                    },
+                };
+                var serializer = new JavaScriptSerializer();
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = serializer.Serialize(payload);
+                    streamWriter.Write(json);
+                    streamWriter.Flush();
                 }
 
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    result = streamReader.ReadToEnd();
+
+                }
             }
 
             catch (Exception ex)
