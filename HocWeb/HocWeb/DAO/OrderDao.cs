@@ -72,12 +72,6 @@ namespace HocWeb.DAO
                 var timeline = new TimeLineModels();
                 FirebaseResponse response1 = dBContext.Client.Get("Orders/" + models.OrderID + "/TimeLine/");
                 timeline = JsonConvert.DeserializeObject<TimeLineModels>(response1.Body);
-                //timeline.ChoXacNhan = "";
-                //timeline.ChoLayHang = "";
-                //timeline.DangVanChuyen = "";
-                //timeline.DaGiaoHang = "";
-                //timeline.DaHuy = "";
-                //timeline.TraHang = "";
                 if (models.Status == "2")
                 {
                     timeline.ChoXacNhan = dateTime;

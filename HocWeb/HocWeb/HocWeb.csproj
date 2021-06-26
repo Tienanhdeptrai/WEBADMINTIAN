@@ -413,6 +413,7 @@
     <Compile Include="DAO\CateProductDao.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\FeedBackDAO.cs" />
+    <Compile Include="DAO\FmcTokenDAO.cs" />
     <Compile Include="DAO\OrderDao.cs" />
     <Compile Include="DAO\ProductDao.cs" />
     <Compile Include="DAO\ProductUserDao.cs" />
@@ -429,6 +430,7 @@
     <Compile Include="Models\ContactModels.cs" />
     <Compile Include="Models\EmployeeModels.cs" />
     <Compile Include="Models\FeedBackModels.cs" />
+    <Compile Include="Models\FmcTokenModels.cs" />
     <Compile Include="Models\OrderDetailModels.cs" />
     <Compile Include="Models\OrderModels.cs" />
     <Compile Include="Models\ProductModels.cs" />

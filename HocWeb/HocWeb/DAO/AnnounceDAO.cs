@@ -6,15 +6,9 @@ using HocWeb.Models;
 using FireSharp.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Text;
 using System.Net;
 using System.IO;
 using System.Web.Script.Serialization;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using FirebaseAdmin;
-using FirebaseAdmin.Messaging;
-using Google.Apis.Auth.OAuth2;
 
 namespace HocWeb.DAO
 {
@@ -72,7 +66,7 @@ namespace HocWeb.DAO
                     var data = models;
                     PushResponse response = dBContext.Client.Push("Announces/", data);
                     data.Id = response.Result.name;
-                    SetResponse setResponse = dBContext.Client.Set("Announces/" + data.Id, data);
+                    SetResponse setResponse = dBContext.Client.Set("Announces/" + data.Id, data);       
                     if (models.Status == "True")
                     {
                         PushNotification(models);
@@ -122,13 +116,21 @@ namespace HocWeb.DAO
         {
             try
             {
-                string applicationID = "AAAA2WbinkI:APA91bEMmV3LwHkor12q2zcC2t-Q5IZ8HZA226f2KNZkoObpqGYQJ4nGQMVpbouvOD635kBhDd5TlR4SofOi_DD4IjseYbg-rN7UI86wi4spOWASIYCB6wf0teBl28xgzaMzsNQoQG8Z";
+                var fcmToken = new FmcTokenDAO().GetAll();
+                //string[] fcmTokenDevice = new string[fcmToken.Count];
+                //int i = 0;
+                //foreach (var item in fcmToken)
+                //{
+                //    fcmTokenDevice[i++] = item.tokenDecide;
+                //}
+
+                string applicationID = "AAAA2WbinkI:APA91bEBVS1RR8PzeEEcnVXieNKReaS4BTcFzKmRHMC-kvXymsbrmITORkNFcEbcqTGjaY1DfF5W6GMvGLOT9JwnOrutVfZ0xUByjSAud2ehowg4cpm2aPpmt1p3cj5IDxQd0ktVp1MX";
 
                 string senderId = "933734030914";
 
                 string webAddr = "https://fcm.googleapis.com/fcm/send";
 
-                string deviceId = "fsBTwGjTTMGFG377ZupQkl:APA91bFLN-Jcd5BOzb03pMUVPxpu1san-kPvUVgVwMTziDOgZQ6OULxpIOs3OTRq7iy4wBW3LVQICJfTb-zHJGiYlBTByocWak9C564BxR3Z-ZXA08nQ-Tr4GAGGnPa-v51n42pom90o";
+                string deviceId = "e3zCddOuSmKAaxmUZkkw8M:APA91bF-r2E-DemyZUgE5O-YAN8tsH-axJi9-Pj5yf7_wN9UOPpf6IaJFKBI7dZNk5kUe83V5Ghe6RV4jkXmyKXojG3aPb9Nrum081qHeU7r_pSV7JkfaENsmJ4LTB81ht-eVjGSNMnP";
 
                 var result = "-1";
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
@@ -136,32 +138,40 @@ namespace HocWeb.DAO
                 httpWebRequest.Headers.Add(string.Format("Authorization: key={0}", applicationID));
                 httpWebRequest.Headers.Add(string.Format("Sender: id={0}", senderId));
                 httpWebRequest.Method = "POST";
-
-                var payload = new
+                foreach (var item in fcmToken)
                 {
-                    to = deviceId,
-                    priority = "high",
-                    content_available = true,
-                    notification = new
+                    var payload = new
                     {
-                        body = obj.Details,
-                        title = obj.Title
-                    },
-                };
-                var serializer = new JavaScriptSerializer();
-                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
-                {
-                    string json = serializer.Serialize(payload);
-                    streamWriter.Write(json);
-                    streamWriter.Flush();
+                        to = item.tokenDecide,
+                        priority = "high",
+                        content_available = true,
+                        data = new
+                        {
+                            targetModule = obj.Type,
+                            targetId = obj.Id
+                        },
+                        notification = new
+                        {
+                            body = obj.Details,
+                            title = obj.Title,
+                        },
+                    };
+                    var serializer = new JavaScriptSerializer();
+                    using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                    {
+                        string json = serializer.Serialize(payload);
+                        streamWriter.Write(json);
+                        streamWriter.Flush();
+                    }
+
+                    var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                    {
+                        result = streamReader.ReadToEnd();
+
+                    }
                 }
 
-                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    result = streamReader.ReadToEnd();
-                   
-                }
             }
 
             catch (Exception ex)
