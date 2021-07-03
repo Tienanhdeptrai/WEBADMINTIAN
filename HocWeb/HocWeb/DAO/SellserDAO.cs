@@ -84,6 +84,10 @@ namespace HocWeb.DAO
             catch { }
             return CollectionAddress;
         }
+        public int Counts()
+        {
+            return Collection.AsQueryable().Count(x => x.Status == "1");
+        }
         public MechantModel GetUserById(string id)
         {
             try

@@ -32,6 +32,31 @@ namespace HocWeb.DAO
             catch { }
 
         }
+        
+        public List<OrderModels> GetByCustomer(string cusID)
+        {
+            List<OrderModels> orders = new List<OrderModels>();
+            foreach (var item in OrderCollection)
+            {
+                if (item.CustomerID == cusID)
+                {
+                    orders.Add(item);
+                }
+            }
+            return orders;
+        }
+        public List<OrderModels> GetByShipper (string shipperId)
+        {
+            List<OrderModels> orders = new List<OrderModels>();
+            foreach(var item in OrderCollection)
+            {
+                if(item.ShipperID == shipperId)
+                {
+                    orders.Add(item);
+                }
+            }
+            return orders;
+        }
         public List<OrderModels> ListAllPaging()
         {
             List<OrderModels> model = OrderCollection.AsQueryable<OrderModels>().ToList();

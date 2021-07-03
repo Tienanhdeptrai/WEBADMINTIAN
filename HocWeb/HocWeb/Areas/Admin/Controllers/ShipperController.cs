@@ -31,6 +31,7 @@ namespace HocWeb.Areas.Admin.Controllers
         public ActionResult Edit(string id)
         {
             var user = new ShipperDAO().ViewDetail(id);
+            ViewData["ORDERS"] = new OrderDao().GetByShipper(id);
             return View(user);
         }
         [HttpGet]

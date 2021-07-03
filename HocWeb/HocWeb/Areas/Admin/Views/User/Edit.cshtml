@@ -7,6 +7,8 @@
     var dao = new ProductDao();
     var modelSeller = new SellserModels();
     modelSeller = ViewData["Seller"] as SellserModels;
+    var liststatus = new string[] { "Chờ xác nhận", "Chờ lấy hàng", "Đang giao hàng", "Đã giao hàng", "Đã hủy", "Trả hàng" };
+    var userDAO = new USERDAO();
 }
 @section header{
 
@@ -94,17 +96,17 @@
                             @foreach (var std in ViewData["DIACHI"] as IList<AddressModels>)
                             {
                                 <dt>
-                                   + Số nhà, tên đường : @std.NumberAddress
+                                    + Số nhà, tên đường : @std.NumberAddress
                                 </dt>
 
                                 <dt>
-                                   + Xã :  @std.Xa
+                                    + Xã :  @std.Xa
                                 </dt>
                                 <dt>
-                                   + Huyện: @std.Huyen
+                                    + Huyện: @std.Huyen
                                 </dt>
                                 <dt>
-                                   + Thành Phố : @std.City
+                                    + Thành Phố : @std.City
                                 </dt>
                             }
                         </dl>
@@ -171,7 +173,51 @@
             </div>
         }
     }
+    <hr />
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách đơn hàng</h1>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Tên khách hàng</th>
+                                <th>Người nhận</th>
+                                <th>Điện thoại</th>
+                                <th>Địa chỉ nhận</th>
+                                <th>Ngày đặt</th>
+                                <th>Tổng</th>
+                                <th>Status</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewData["ORDERS"] as List<HocWeb.Models.OrderModels>)
+                            {
+                                <tr id="row_@item.OrderID">
+                                    <td>@userDAO.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>
+                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Chi tiết</a>
+                                    </td>
 
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 }
 

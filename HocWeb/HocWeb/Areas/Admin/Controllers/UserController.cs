@@ -38,6 +38,7 @@ namespace HocWeb.Areas.Admin.Controllers
                 ViewData["SANPHAM"] = product;
                 ViewData["Seller"] = new SellserDAO().ViewDetail(id);
                 ViewData["DIACHI"] = address;
+                ViewData["ORDERS"] = new OrderDao().GetByCustomer(id);
             }
             return View(user);
         }

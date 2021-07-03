@@ -12,10 +12,9 @@ namespace HocWeb.Areas.Admin.Controllers
         {
             List<decimal?> doanhthu = new List<decimal?>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             List<decimal?> doanhthunam = new List<decimal?>() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            List<decimal?> OrderChoXacNhan = new List<decimal?>() { 0 };
             List<decimal?> CountProduct = new List<decimal?>() { 0 };
             var order = new OrderDao().GetListOrder();
-            decimal sanpham = new FeedBackDAO().Counts();
+            decimal sanpham = new SellserDAO().Counts();
             CountProduct[0] = sanpham;
             ViewBag.CountProduct = CountProduct;
             decimal? price = 0;
@@ -69,10 +68,25 @@ namespace HocWeb.Areas.Admin.Controllers
             ViewBag.DoanhThu = doanhthu;
             Chart a = new Chart();
             int choxacnhan = 0;
+            int cholayhang = 0;
+            int danggiaohang = 0;
+            int dagiaohang = 0;
+            int dahuy = 0;
+            int trahang = 0;
             foreach (var item in order)
             {
                 if (item.Status == "1")
                     choxacnhan++;
+                else if (item.Status == "2")
+                    cholayhang++;
+                else if (item.Status == "3")
+                    danggiaohang++;
+                else if (item.Status == "4")
+                    dagiaohang++;
+                else if (item.Status == "5")
+                    dahuy++;
+                else if (item.Status == "6")
+                    trahang++;
                 pricenam = Convert.ToDecimal(item.Total);
                 if (item.Status == "4")
                 {
@@ -106,9 +120,15 @@ namespace HocWeb.Areas.Admin.Controllers
             a.nam2016 = doanhthunam[1];
             a.nam2017 = doanhthunam[2];
             a.nam2018 = doanhthunam[3];
-            a.nam2019 = doanhthunam[4];             
-            OrderChoXacNhan[0] = choxacnhan;       
-            ViewBag.ChoXacNhan = OrderChoXacNhan;
+            a.nam2019 = doanhthunam[4];
+            
+            ViewBag.ChoXacNhan = choxacnhan;
+            ViewBag.ChoLayHang = cholayhang;
+            ViewBag.DangGiaoHang = danggiaohang;
+            ViewBag.DaGiao = dagiaohang;
+            ViewBag.DaHuy = dahuy;
+            ViewBag.TraHang = trahang;
+
             ViewBag.DoanhThuNam = doanhthunam;
             ViewBag.TongDoanhThuNam = tong;       
             return View();

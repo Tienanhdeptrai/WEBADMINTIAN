@@ -37,6 +37,7 @@ namespace HocWeb.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                SetViewBag();
                 var result = new OrderDao().ViewDetail(orders.OrderID);
                 var dao = new USERDAO().ViewDetail(result.CustomerID);
                 IList<OrderDetailModels> product = new OrderDao().GetAll(orders.OrderID);
@@ -55,7 +56,7 @@ namespace HocWeb.Areas.Admin.Controllers
         public void SetViewBag(long? selectedID = null)
         {
             var dao = new FeedBackDAO();
-            ViewBag.WarehouseAddress = new SelectList(dao.ListAll(), "address", "name", selectedID);
+            ViewBag.WarehouseId = new SelectList(dao.ListAll(), "WarehouseId", "name", selectedID);
         }
     }
 }
