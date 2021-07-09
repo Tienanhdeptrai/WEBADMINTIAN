@@ -28,6 +28,12 @@ namespace HocWeb.DAO
             }
             catch { }
         }
+
+        internal IList<ProductUserModels> GetProductByUser(object userID)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<ProductUserModels> GetProductByUser(string userId)
         {
             List<ProductUserModels> model = new List<ProductUserModels>();
@@ -61,6 +67,30 @@ namespace HocWeb.DAO
             {
                 return false;
             }
+        }
+        public void ChangeStatusAllProductSeller(string sellerId)
+        {
+            foreach (var item in ProductCollection)
+            {
+                if(item.UserID == sellerId)
+                {
+                    ChangeStatus(item.ProductID);
+                }
+            }
+        }
+        public void ChangeStatus(string id)
+        {
+            var model = new ProductUserModels();
+            model = ProductCollection.AsQueryable().SingleOrDefault(x => x.ProductID == id);
+            if (model.Status == true)
+            {
+                model.Status = false;
+            }
+            else
+            {
+                model.Status = true;
+            }
+            FirebaseResponse response = dBContext.Client.Update("ProductUser/" + id, model);
         }
     }
 }

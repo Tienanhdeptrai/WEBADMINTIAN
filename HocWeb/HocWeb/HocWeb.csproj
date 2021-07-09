@@ -403,6 +403,7 @@
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\EmployeeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductUserController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ReportController.cs" />
     <Compile Include="Areas\Admin\Controllers\SellsersController.cs" />
     <Compile Include="Areas\Admin\Controllers\ShipperController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
@@ -417,6 +418,7 @@
     <Compile Include="DAO\OrderDao.cs" />
     <Compile Include="DAO\ProductDao.cs" />
     <Compile Include="DAO\ProductUserDao.cs" />
+    <Compile Include="DAO\ReportDAO.cs" />
     <Compile Include="DAO\SellserDAO.cs" />
     <Compile Include="DAO\ShipperDAO.cs" />
     <Compile Include="DAO\USERDAO.cs" />
@@ -435,6 +437,8 @@
     <Compile Include="Models\OrderModels.cs" />
     <Compile Include="Models\ProductModels.cs" />
     <Compile Include="Models\ProductUserModels.cs" />
+    <Compile Include="Models\ReportDetailModels.cs" />
+    <Compile Include="Models\ReportModels.cs" />
     <Compile Include="Models\SellerModels.cs" />
     <Compile Include="Models\ShipperModels.cs" />
     <Compile Include="Models\TimeLine.cs" />
@@ -2805,6 +2809,8 @@
     <Content Include="Scripts\ckeditor\ckeditor.asp" />
     <Content Include="Scripts\ckeditor\ckeditor.js" />
     <Content Include="Scripts\ckeditor\ckeditor.pack" />
+    <Content Include="Areas\Admin\Views\Report\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Report\Detail.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
     <Content Include="Scripts\ckeditor\ckeditor_basic.js" />

@@ -31,10 +31,10 @@ namespace HocWeb.Areas.Admin.Controllers
         public ActionResult Edit(string id)
         {
             var user = new USERDAO().ViewDetail(id);
-            if(user.Merchant == true)
-            {
-                IList<ProductUserModels> product = new ProductUserDao().GetProductByUser(user.UserID);
+            if(user.Merchant == true || new SellserDAO().CheckSellerStatus1(user.UserID) == true)
+            {   
                 IList<AddressModels> address = new SellserDAO().GetListAddress(id);
+                IList<ProductUserModels> product = new ProductUserDao().GetProductByUser(user.UserID);
                 ViewData["SANPHAM"] = product;
                 ViewData["Seller"] = new SellserDAO().ViewDetail(id);
                 ViewData["DIACHI"] = address;
@@ -128,7 +128,7 @@ namespace HocWeb.Areas.Admin.Controllers
           
                 var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
-                if (file.ContentLength > 0)
+                if (file  !=null)
                 {
                     var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
                     var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
@@ -156,11 +156,25 @@ namespace HocWeb.Areas.Admin.Controllers
                 var session = (UserSession)Session[CommomConstants.USER_SESSION];
                 var dao = new USERDAO();
                 user.ModifiedBy = session.TenTK;
-                user.Avatar = link;
+                if(user.Avatar == "")
+                {
+                    user.Avatar = link;
+                }
                 user.ModifiedDate = DateTime.Now.ToString(); 
+                
                 var result = dao.Update(user);
                 if (result)
-                {
+                {   
+                    if(user.Merchant== false && new SellserDAO().CheckSeller(user.UserID))
+                    {
+                        new ProductUserDao().ChangeStatusAllProductSeller(user.UserID);
+                        new SellserDAO().ChangeStatusById(user.UserID);
+                    }
+                    if(user.Merchant == true && new SellserDAO().CheckSellerStatus1(user.UserID) == true)
+                    {
+                        new ProductUserDao().ChangeStatusAllProductSeller(user.UserID);
+                          new SellserDAO().ChangeStatusById(user.UserID);
+                     }
                     SetAlert("Chỉnh sửa thành công", "success");
                     return RedirectToAction("Index", "User");
                 }

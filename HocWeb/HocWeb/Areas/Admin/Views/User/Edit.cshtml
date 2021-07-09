@@ -9,6 +9,16 @@
     modelSeller = ViewData["Seller"] as SellserModels;
     var liststatus = new string[] { "Chờ xác nhận", "Chờ lấy hàng", "Đang giao hàng", "Đã giao hàng", "Đã hủy", "Trả hàng" };
     var userDAO = new USERDAO();
+    var sellserdao = new SellserDAO();
+
+    List<HocWeb.Models.OrderModels> orders = new List<HocWeb.Models.OrderModels>();
+    if(ViewData["ORDERS"] as IList<OrderModels> != null)
+    {
+        foreach (var item in ViewData["ORDERS"] as IList<OrderModels>)
+        {
+            orders.Add(item);
+        }
+    }
 }
 @section header{
 
@@ -18,7 +28,7 @@
     @Html.AntiForgeryToken()
 <div class="container-fluid">
     @{
-        if (Model.Merchant == true)
+        if (Model.Merchant==true || new SellserDAO().CheckSellerStatus1(Model.UserID) == true)
         {
             <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin người bán</h1>
         }
@@ -36,8 +46,6 @@
     @Html.HiddenFor(model => model.Avatar)
     @Html.HiddenFor(model => model.CreatedDate)
     @Html.HiddenFor(model => model.CreatedBy)
-    @Html.HiddenFor(model => model.Status)
-    @Html.HiddenFor(model => model.Merchant)
     <div class="col-sm-10 mb-1 mb-sm-0">
         <div class="form-group row">
             <div class="col-sm-3 mb-1 mb-sm-0">
@@ -69,7 +77,7 @@
         </div>
         <div class="form-group row">
             <div class="col-sm-3">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái</p>
+                <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái tài khoản</p>
                 @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Hoạt động", Value = "True" }, new SelectListItem { Text = "Khóa", Value = "False" } }, new { @class = "form-control form-control-user" })
             </div>
             @{
@@ -77,14 +85,31 @@
                 {
                     <div class="col-sm-3 mb-1 mb-sm-0">
                         <p style="font-weight:bold; color:#000000;font-size:20px"> Tên của hàng</p>
-                        <p style="font-weight:bold; color:#000000;font-size:30px">@modelSeller.StoreName</p>
+                        <p class="form-control form-control-user">@modelSeller.StoreName</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái cửa hàng</p>
+                        @Html.DropDownListFor(model => model.Merchant, new[] { new SelectListItem { Text = "Đang kinh doanh", Value = "true" }, new SelectListItem { Text = "Tạm khoá", Value = "false" } }, new { @class = "form-control form-control-user" })
+                    </div>
+                }
+            }
+            @{
+                if (new SellserDAO().CheckSellerStatus1(Model.UserID) == true)
+                {
+                    <div class="col-sm-3 mb-1 mb-sm-0">
+                        <p style="font-weight:bold; color:#000000;font-size:20px"> Tên của hàng</p>
+                        <p class="form-control form-control-user">@modelSeller.StoreName</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p style="font-weight:bold; color:#000000;font-size:20px">  Trạng thái cửa hàng</p>
+                        @Html.DropDownListFor(model => model.Merchant, new[] { new SelectListItem { Text = "Đang kinh doanh", Value = "true" }, new SelectListItem { Text = "Tạm khoá", Value = "false" } }, new { @class = "form-control form-control-user" })
                     </div>
                 }
             }
         </div>
         <div class="form-group row">
             <div class="col-sm-3 mb-1 mb-sm-0">
-                <input type="file" class="form-control" name="file" accept="image/*" required />
+                <input type="file" class="form-control" name="file" accept="image/*" />
                 <img src="@Html.ValueFor(model => model.Avatar)" alt="Ảnh đại diện" width="250px" height="250px" />
             </div>
             <div class="col-sm-5">
@@ -124,7 +149,7 @@
         </div>
     </div>
     @{
-        if (Model.Merchant == true)
+        if (Model.Merchant == true || new SellserDAO().CheckSellerStatus1(Model.UserID)==true)
         {
             <hr />
             <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm đang kinh doanh</h1>
@@ -194,7 +219,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in ViewData["ORDERS"] as List<HocWeb.Models.OrderModels>)
+                            @foreach (var item in orders)
                             {
                                 <tr id="row_@item.OrderID">
                                     <td>@userDAO.GetCusName(item.CustomerID)</td>

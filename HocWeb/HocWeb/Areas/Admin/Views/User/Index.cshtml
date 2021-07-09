@@ -1,8 +1,10 @@
 ﻿@model List<HocWeb.Models.UserModels>
+@using HocWeb.DAO
 @{
     ViewBag.Title = "Quản lí khách hàng";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
     List<HocWeb.Models.UserModels> orders = null;
+    var dao = new SellserDAO();
 }
 @section header{
 
@@ -23,6 +25,9 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" id="layhang-tab" data-toggle="tab" href="#layhang" role="tab" aria-controls="layhang" aria-selected="false">Người bán hàng</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="molai-tab" data-toggle="tab" href="#molai" role="tab" aria-controls="molai" aria-selected="false">Người bán hàng bị khoá</a>
         </li>
     </ul>
     <hr />
@@ -161,7 +166,75 @@
             }
             @foreach (var item in Model)
             {
-                if (item.Merchant == true)
+                if (dao.CheckSeller(item.UserID))
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>Số Lượng Người Bán @orders.Count </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Name</th>
+                                        <th>Ảnh</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>UserName</th>
+                                        <th>Name</th>
+                                        <th>Ảnh</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @if (orders.Count > 0)
+                                    {
+                                        foreach (var item in orders)
+                                        {
+                                            <tr id="row_@item.UserID">
+                                                <td>@item.UserName</td>
+                                                <td>@item.FullName</td>
+                                                <td align="center">
+                                                    <img src="@item.Avatar" alt="Ảnh đại diện" width="100px" height="100px" />
+                                                </td>
+
+                                                <td>@item.Email </td>
+                                                <td><a href="#" class="btn-active" data-id="@item.UserID">@( Convert.ToBoolean(item.Status) ? "Đang hoạt động" : "Đang khóa")</a></td>
+                                                <td>
+                                                    <a class="btn btn-primary" href="/Admin/User/Edit/@item.UserID">Chi tiết</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="molai" role="tabpanel" aria-labelledby="molai-tab">
+            @{
+                orders = new List<HocWeb.Models.UserModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (dao.CheckSellerStatus1(item.UserID))
                 {
                     orders.Add(item);
                 }

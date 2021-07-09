@@ -18,6 +18,7 @@ namespace HocWeb.DAO
         private List<SellserModels> Collection = new List<SellserModels>();
         private List<AddressModels> CollectionAddress = new List<AddressModels>();
         private MechantModel CollectionUser = new MechantModel();
+  
         public SellserDAO()
         {
             try
@@ -42,6 +43,25 @@ namespace HocWeb.DAO
             FirebaseResponse response = dBContext.Client.Get("Brief/" + id );
             SellserModels data = JsonConvert.DeserializeObject<SellserModels>(response.Body);
             return data;
+        }
+        public bool CheckSeller (string id)
+        {
+            foreach (var item in Collection) {
+                if (item.StoreID == id && item.Status == "2")
+                {
+                    return true;
+                }         
+            }
+            return false;
+        }
+        public bool CheckSellerStatus1(string id)
+        {
+            foreach (var item in Collection)
+            {
+                if (item.StoreID == id && item.Status == "4")
+                    return true;
+            }
+            return false;
         }
         public bool Update(SellserModels models)
         {
@@ -87,6 +107,20 @@ namespace HocWeb.DAO
         public int Counts()
         {
             return Collection.AsQueryable().Count(x => x.Status == "1");
+        }
+        public void ChangeStatusById (string userid)
+        {
+            var model = new SellserModels();
+            model = Collection.AsQueryable().SingleOrDefault(x => x.StoreID == userid);
+            if(model.Status == "2")
+            {
+                model.Status = "4";
+            }
+            else
+            {
+                model.Status = "2";
+            }
+            FirebaseResponse response = dBContext.Client.Update("Brief/" + userid, model);
         }
         public MechantModel GetUserById(string id)
         {

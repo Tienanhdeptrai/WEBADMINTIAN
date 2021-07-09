@@ -1,0 +1,83 @@
+﻿@model HocWeb.Models.ReportModels
+@using HocWeb.Models
+@using HocWeb.DAO
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    var user = new USERDAO();
+    var product = new ProductDao();
+    var reprotdDetail = ViewData["REPORTS"] as ReportDetailModels;
+}
+@section header{
+
+}
+@using (Html.BeginForm("Detail", "Report", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Chi tiết báo cáo</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/Report/Index" style="width:200px"> Trở về </a>
+    </div>
+    <hr />
+    @Html.HiddenFor(model => model.FeedBackID)
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Hình người báo cáo</p>
+            <img src="@user.GetAvatar(Model.UserID)" width="250px" height="250px" />
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tên người báo cáo</p>
+            <p class="form-control form-control-user">@Model.ReportName</p>
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Ngày tạo báo cáo</p>
+            <p class="form-control form-control-user">@Model.CreatedDate</p>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Hình chủ cửa hàng</p>
+            <img src="@user.GetAvatar(Model.StoreID)" width="250px" height="250px" />
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tên cửa hàng</p>
+            <p class="form-control form-control-user">@Model.StoreName</p>
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tên chủ cửa hàng</p>
+            <p class="form-control form-control-user">@user.GetCusName(Model.StoreID)</p>
+        </div>
+    </div>
+    <br />
+    <p style="font-weight:bold; color:#000000;font-size:30px">  Nội dung báo cáo</p>
+    <br />
+    <div class="form-group">
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p class="form-control form-control-user">@reprotdDetail.rules_one</p>
+        </div>
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p class="form-control form-control-user">@reprotdDetail.rules_two</p>
+        </div>
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p class="form-control form-control-user">@reprotdDetail.rules_three</p>
+        </div>
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p class="form-control form-control-user">@reprotdDetail.rules_four</p>
+        </div>
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p class="form-control form-control-user">@reprotdDetail.rules_orther</p>
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <a class="btn btn-success" href="~/Admin/User/Edit/@Model.StoreID">
+                Đi đến thông tin người bán hàng
+            </a>
+        </div>
+    </div>
+</div>
+}
+
+

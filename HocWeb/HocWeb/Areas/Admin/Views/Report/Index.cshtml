@@ -1,0 +1,89 @@
+﻿@model List<HocWeb.Models.ReportModels>
+@using HocWeb.DAO
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    var user = new USERDAO();
+    var product = new ProductDao();
+}
+@section header{
+}
+@section jsFooter{
+    <script src="~/Assets/Admin/js/controller/FeedBackController.js"></script>
+}
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách đơn Report</h1>
+    <hr />
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Người gửi đơn</th>
+                                <th>Hình người gửi</th>
+                                <th>Tên cửa hàng</th>
+                                <th>Tên chủ cửa hàng</th>
+                                <th>Hình chủ cửa hàng</th>
+                                <th>Ngày gửi</th>
+                                <th>Trạng thái</th>
+                                <th>#</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Người gửi đơn</th>
+                                <th>Hình người gửi</th>
+                                <th>Tên cửa hàng</th>
+                                <th>Tên chủ cửa hàng</th>
+                                <th>Hình chủ cửa hàng</th>
+                                <th>Ngày gửi</th>
+                                <th>Trạng thái</th>
+                                <th>#</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr id="row_@item">
+                                <td><a href="~/Admin/User/Edit/@item.UserID">@item.ReportName</a></td>
+                                <td align="center">
+                                    <img src="@user.GetAvatar(item.UserID)" alt="Ảnh đại diện" width="100px" height="100px" />
+                                </td>
+                                <td>@item.StoreName</td>
+                                <td><a href="~/Admin/User/Edit/@item.UserID">@user.GetCusName(item.StoreID)</a></td>
+                                <td align="center">
+                                    <img src="@user.GetAvatar(item.StoreID)" alt="Ảnh đại diện" width="100px" height="100px" />
+                                </td>
+                                <td>@item.CreatedDate</td>
+                                <td>
+                                    @{
+                                        if (item.Status == "True")
+                                        {
+                                            <p style="color:green; font-size:20px;font-weight:bold">Chưa kiểm tra</p>
+                                        }
+                                        else
+                                        {
+                                            <p style="color:red; font-size:20px;font-weight:bold">Đã kiểm tra</p>
+                                        }
+                                    }
+
+                                </td>
+
+                                <td>
+                                    <a class="btn btn-primary" href="/Admin/Report/Detail/@item.FeedBackID">Chi tiết</a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
