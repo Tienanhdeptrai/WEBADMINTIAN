@@ -9,73 +9,74 @@
 @using (Html.BeginForm("Edit", "Employee", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    <div class="container-fluid">
-        <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin nhân viên</h1>
-        <div>
-            <a style="width:200px;" class="btn btn-primary" href="/Admin/Employee/Index"> Trở về </a>
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin nhân viên</h1>
+    <div>
+        <a style="width:200px;" class="btn btn-primary" href="/Admin/Employee/Index"> Trở về </a>
+    </div>
+    <hr />
+    @Html.HiddenFor(model => model.EmployeeID)
+    @Html.HiddenFor(model => model.CreatedDate)
+    @Html.HiddenFor(model => model.CreatedBy)
+    @Html.HiddenFor(model => model.Status)
+    @Html.HiddenFor(model => model.Avatar)
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tài khoản</p>
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
         </div>
-        <hr />
-        @Html.HiddenFor(model => model.EmployeeID)
-        @Html.HiddenFor(model => model.CreatedDate)
-        @Html.HiddenFor(model => model.CreatedBy)
-        @Html.HiddenFor(model => model.Status)
-        <div class="form-group row">
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Tài khoản</p>
-                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control form-control-user", @autofocus = "autofocus" })
-            </div>
-            <div class="col-sm-3 ">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Mật khẩu</p>
-                @Html.TextBoxFor(model => model.Passwords, new { @class = "form-control form-control-user", @type = "password" })
-            </div>
-            <div class="col-sm-3">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Chứng minh nhân dân</p>
-                @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
-            </div>
+        <div class="col-sm-3 ">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Mật khẩu</p>
+            @Html.TextBoxFor(model => model.Passwords, new { @class = "form-control form-control-user", @type = "password" })
         </div>
-        <div class="form-group row">
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Họ</p>
-                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control form-control-user" })
-            </div>
-            <div class="col-sm-3 ">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Tên</p>
-                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control form-control-user" })
-            </div>
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Số điện thoại</p>
-                @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Địa chỉ</p>
-                @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-user" })
-            </div>
-            <div class="col-sm-3">
-                <p style="font-weight:bold; color:#000000;font-size:20px">  Email</p>
-                @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
-            </div>
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Chức vụ</p>
-                @Html.DropDownListFor(model => model.Position, new[] { new SelectListItem { Text = "Nhân viên", Value = "1" }, new SelectListItem { Text = "Quản trị viên", Value = "2" }, new SelectListItem { Text = "Quản lí", Value = "3" } }, new { @class = "form-control form-control-user" })
-            </div>
-        </div>
-        <div class="form-group row">
-
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Thay đổi ảnh đại diện</p>
-                <input type="file" class="form-control" name="file" accept="image/*" required />
-            </div>
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <img src="@Html.ValueFor(model => model.Avatar)" alt="Ảnh minh họa sản phẩm" width="300px" height="300px" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
-            </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Chứng minh nhân dân</p>
+            @Html.TextBoxFor(model => model.CMND, new { @class = "form-control form-control-user" })
         </div>
     </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Họ</p>
+            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Tên</p>
+            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Số điện thoại</p>
+            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Địa chỉ</p>
+            @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Email</p>
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control form-control-user", @type = "gmail" })
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Chức vụ</p>
+            @Html.DropDownListFor(model => model.Position, new[] { new SelectListItem { Text = "Nhân viên", Value = "1" }, new SelectListItem { Text = "Quản trị viên", Value = "2" }, new SelectListItem { Text = "Quản lí", Value = "3" } }, new { @class = "form-control form-control-user" })
+        </div>
+    </div>
+    <div class="form-group row">
+
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Thay đổi ảnh đại diện</p>
+            <input type="file" class="form-control" name="file" accept="image/*" />
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <img src="@Html.ValueFor(model => model.Avatar)" alt="Ảnh minh họa sản phẩm" width="300px" height="300px" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-success" style="width:200px;" />
+        </div>
+    </div>
+</div>
 }
 

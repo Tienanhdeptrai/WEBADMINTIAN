@@ -49,10 +49,8 @@ namespace HocWeb.Areas.Admin.Controllers
         public async Task<ActionResult> Create(ProductModels product, HttpPostedFileBase file)
         {
             
-           
-                var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
-                if (file.ContentLength > 0)
+                if (file != null)
                 {
                     var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
                     var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
@@ -73,7 +71,7 @@ namespace HocWeb.Areas.Admin.Controllers
                         .PutAsync(stream, cancellation.Token);
                     try
                     {
-                        link = await task;
+                    product.Image = await task;
                     }
                     catch (Exception ex)
                     {
@@ -88,7 +86,6 @@ namespace HocWeb.Areas.Admin.Controllers
                 {                 
                     var session = (UserSession)Session[CommomConstants.USER_SESSION];
                     var data = new ProductDao();
-                    product.Image = link;
                     product.CreatedDate = DateTime.Now.ToString();
                     product.CreatedBy = session.TenTK;
                     product.ModifiedDate = DateTime.Now.ToString();

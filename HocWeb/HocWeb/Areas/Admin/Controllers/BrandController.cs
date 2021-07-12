@@ -120,10 +120,9 @@ namespace HocWeb.Areas.Admin.Controllers
         {
             
            
-                var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
-                if (file.ContentLength > 0)
-                {
+            if (file != null)
+            {
                     var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
                     var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
                     var cancellation = new CancellationTokenSource();
@@ -143,7 +142,7 @@ namespace HocWeb.Areas.Admin.Controllers
                         .PutAsync(stream, cancellation.Token);
                     try
                     {
-                        link = await task;
+                    category.Image = await task;
                     }
                     catch (Exception ex)
                     {
@@ -156,7 +155,6 @@ namespace HocWeb.Areas.Admin.Controllers
                 var dao = new BrandDAO();
                 category.ModifiedDate = DateTime.Now.ToString();
                 category.ModifiedBy = session.TenTK;
-                category.Image = link;
                 var result = dao.update(category);
                 if (result)
                 {

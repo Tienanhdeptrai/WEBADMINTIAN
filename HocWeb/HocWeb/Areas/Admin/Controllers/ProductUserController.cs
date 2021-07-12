@@ -37,11 +37,8 @@ namespace HocWeb.Areas.Admin.Controllers
         [HttpPost]
         public async Task<ActionResult> Edit(ProductUserModels product, HttpPostedFileBase file)
         {
-
-
-            var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
             FileStream stream;
-            if (file.ContentLength > 0)
+            if (file != null)
             {
                 var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
                 var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
@@ -62,7 +59,7 @@ namespace HocWeb.Areas.Admin.Controllers
                     .PutAsync(stream, cancellation.Token);
                 try
                 {
-                    link = await task;
+                    product.Image = await task;
                 }
                 catch (Exception ex)
                 {
@@ -72,7 +69,6 @@ namespace HocWeb.Areas.Admin.Controllers
 
             }
             var data = new ProductUserDao();
-            product.Image = link;
             var result = data.update(product);
             if (result == true)
             {

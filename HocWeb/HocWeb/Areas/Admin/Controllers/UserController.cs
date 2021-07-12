@@ -124,9 +124,6 @@ namespace HocWeb.Areas.Admin.Controllers
         [HttpPost]
         public async Task<ActionResult> Edit(UserModels user, HttpPostedFileBase file)
         {
-            
-          
-                var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
                 if (file  !=null)
                 {
@@ -149,17 +146,13 @@ namespace HocWeb.Areas.Admin.Controllers
                         .PutAsync(stream, cancellation.Token);
                     try
                     {
-                        link = await task;
+                    user.Avatar = await task;
                     }
                 catch { }
                 }
                 var session = (UserSession)Session[CommomConstants.USER_SESSION];
                 var dao = new USERDAO();
                 user.ModifiedBy = session.TenTK;
-                if(user.Avatar == "")
-                {
-                    user.Avatar = link;
-                }
                 user.ModifiedDate = DateTime.Now.ToString(); 
                 
                 var result = dao.Update(user);

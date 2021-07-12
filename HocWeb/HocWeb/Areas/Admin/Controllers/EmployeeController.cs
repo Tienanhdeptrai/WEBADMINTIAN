@@ -115,11 +115,9 @@ namespace HocWeb.Areas.Admin.Controllers
         [HttpPost]
         public async Task<ActionResult> Edit(EmployeeModels user, HttpPostedFileBase file)
         {
-            var link = "https://i.ibb.co/HDzz1rC/avartarnone.png";
-          
                 FileStream stream;
-                if (file.ContentLength > 0)
-                {
+            if (file != null)
+            {
                     var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
                     var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
                     var cancellation = new CancellationTokenSource();
@@ -139,7 +137,7 @@ namespace HocWeb.Areas.Admin.Controllers
                         .PutAsync(stream, cancellation.Token);
                     try
                     {
-                        link = await task;
+                     user.Avatar = await task;
                     }
                     catch (Exception ex)
                     {
@@ -152,7 +150,6 @@ namespace HocWeb.Areas.Admin.Controllers
                 var dao = new EmployeeDAO();
                 user.ModifiedBy = session.TenTK;
                 user.ModifiedDate = DateTime.Now.ToString();
-                user.Avatar = link;
                 var result = dao.Update(user);
                 if (result)
                 {

@@ -118,11 +118,8 @@ namespace HocWeb.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(ShipperModels user, HttpPostedFileBase file)
         {
-            
-         
-                var link = "https://i.ibb.co/S6QZ2N4/web-hi-res-512.png";
                 FileStream stream;
-                if (file.ContentLength > 0)
+                if (file != null)
                 {
                     var auth = new FirebaseAuthProvider(new FirebaseConfig(APIKEY));
                     var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPass);
@@ -143,14 +140,13 @@ namespace HocWeb.Areas.Admin.Controllers
                         .PutAsync(stream, cancellation.Token);
                     try
                     {
-                        link = await task;
+                    user.Avatar = await task;
                     }
                     catch { }
 
                 }
                 var session = (UserSession)Session[CommomConstants.USER_SESSION];
                 var dao = new ShipperDAO();
-                user.Avatar = link;
                 user.ModifiedBy = session.TenTK;
                 user.ModifiedDate = DateTime.Now.ToString(); ;
                 var result = dao.Update(user);

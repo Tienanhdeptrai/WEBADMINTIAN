@@ -11,14 +11,15 @@
 @using (Html.BeginForm("Edit", "ProductUser", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    <div class="container-fluid">
-        <h1 class="m-0 font-weight-bold text-primary">Chi tiết sản phẩm khách hàng</h1>
-        <div>
-            <a class="btn btn-primary" href="/Admin/ProductUser/Index" style="width:200px;">Trở về</a>
-        </div>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.ProductID)
+<div class="container-fluid">
+    <h1 class="m-0 font-weight-bold text-primary">Chi tiết sản phẩm khách hàng</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/ProductUser/Index" style="width:200px;">Trở về</a>
+    </div>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ProductID)
+    @Html.HiddenFor(model => model.Image)
     <div class="form-group row">
         <div class="col-sm-3 mb-1 mb-sm-0">
             <p style="font-weight:bold; color:#000000;font-size:20px">Tên sản phẩm</p>
@@ -26,82 +27,82 @@
             @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
         </div>
         <div class="col-sm-3">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Danh mục</p>
-                @Html.DropDownListFor(model => model.CategoryID, null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+            <p style="font-weight:bold; color:#000000;font-size:20px">Danh mục</p>
+            @Html.DropDownListFor(model => model.CategoryID, null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
         </div>
         <div class="col-sm-3">
             <p style="font-weight:bold; color:#000000;font-size:20px">Ngày tạo</p>
             <p style="font-weight:bold; color:#000000;font-size:20px">@Model.CreatedDate</p>
             @Html.ValidationMessageFor(model => model.CreatedDate, "", new { @class = "text-danger" })
         </div>
-        </div>
+    </div>
 
-        <div class="form-group row">
-            <div class="col-sm-5 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Tháng bảo hành</p>
-                @Html.EditorFor(model => model.Warranty, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Warranty, "", new { @class = "text-danger" })
-            </div>
-            <div class="col-sm-5">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Tiêu đề </p>
-                @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
-            </div>
+    <div class="form-group row">
+        <div class="col-sm-5 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Tháng bảo hành</p>
+            @Html.EditorFor(model => model.Warranty, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Warranty, "", new { @class = "text-danger" })
         </div>
-
-        <div class="form-group row">
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Giá sản phẩm</p>
-                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
-            </div>
-            <div class="col-sm-3">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Giá khuyến mãi</p>
-                @Html.EditorFor(model => model.PromotionPrice, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PromotionPrice, "", new { @class = "text-danger" })
-            </div>
-            <div class="col-sm-3">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Số lượng</p>
-                @Html.EditorFor(model => model.Count, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Count, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group row">
-
-            <div class="col-sm-2">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
-                @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Còn hàng", Value = "True" },
-               new SelectListItem { Text = "Hết hàng", Value = "False" } }, new { @class = "form-control form-control-user" })
-            </div>
-            <div class="col-sm-8 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Nội dung</p>
-                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-sm-2 mb-1 mb-sm-0">
-                <p style="font-weight:bold; color:#000000;font-size:20px">Chọn hình ảnh</p>
-                <input type="file" class="form-control" name="file" accept="image/*" required />
-            </div>
-            <div class="col-sm-3 mb-1 mb-sm-0">
-                <img src="@Html.ValueFor(model => model.Image)" alt="Ảnh minh họa sản phẩm" width="500px" height="500px" />
-            </div>
-        </div>
-        <div>
-
-            @Html.HiddenFor(model => model.Rating)
-            @Html.HiddenFor(model => model.MoreImage)
-            @Html.HiddenFor(model => model.UserID)
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-success" style="width:100px;" />
-            </div>
+        <div class="col-sm-5">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Tiêu đề </p>
+            @Html.EditorFor(model => model.MetaDescription, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
         </div>
     </div>
+
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Giá sản phẩm</p>
+            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Giá khuyến mãi</p>
+            @Html.EditorFor(model => model.PromotionPrice, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PromotionPrice, "", new { @class = "text-danger" })
+        </div>
+        <div class="col-sm-3">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Số lượng</p>
+            @Html.EditorFor(model => model.Count, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Count, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+
+        <div class="col-sm-2">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Trạng thái</p>
+            @Html.DropDownListFor(model => model.Status, new[] { new SelectListItem { Text = "Còn hàng", Value = "True" },
+           new SelectListItem { Text = "Hết hàng", Value = "False" } }, new { @class = "form-control form-control-user" })
+        </div>
+        <div class="col-sm-8 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Nội dung</p>
+            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">Chọn hình ảnh</p>
+            <input type="file" class="form-control" name="file" accept="image/*"  />
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <img src="@Html.ValueFor(model => model.Image)" alt="Ảnh minh họa sản phẩm" width="500px" height="500px" />
+        </div>
+    </div>
+    <div>
+
+        @Html.HiddenFor(model => model.Rating)
+        @Html.HiddenFor(model => model.MoreImage)
+        @Html.HiddenFor(model => model.UserID)
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-success" style="width:100px;" />
+        </div>
+    </div>
+</div>
 }
 
