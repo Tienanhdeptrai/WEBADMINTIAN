@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using System.IO;
 using System.Web.Script.Serialization;
-
+using HocWeb.Areas.Admin.Code;
 
 namespace HocWeb.DAO
 {
@@ -17,6 +17,7 @@ namespace HocWeb.DAO
     {
         private FirebaseContext dBContext;
         private List<OrderModels> OrderCollection = new List<OrderModels>();
+      
         public OrderDao()
         {
             try
@@ -32,7 +33,57 @@ namespace HocWeb.DAO
             catch { }
 
         }
-        
+        public List<OrderModels> GetListOrderbySeller (string sellerId)
+        {
+            List<OrderDetailModels> OrderDetailCollection = new List<OrderDetailModels>();
+            List<OrderModels> orderList = new List<OrderModels>();
+
+            foreach (var item in OrderCollection)
+            {
+                FirebaseResponse response2 = dBContext.Client.Get("Orders/" + item.OrderID + "/OrderDetails/");
+                dynamic data2 = JsonConvert.DeserializeObject<dynamic>(response2.Body);
+                foreach (var items in data2)
+                {
+                    OrderDetailCollection.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)items).Value.ToString()));
+                }
+                foreach (var items in OrderDetailCollection)
+                {
+                    if(items.UserProduct == true && items.UserID == sellerId)
+                    {
+                        orderList.Add(item);
+                        break;
+                    }
+                }
+            }
+
+            return orderList;
+        }
+
+        public int checkOrder(string orderId, string sellerId)
+        {
+            List<OrderDetailModels> orderDetailModels = new List<OrderDetailModels>();
+            FirebaseResponse response = dBContext.Client.Get("Orders/" + orderId + "/OrderDetails/");
+            dynamic data1 = JsonConvert.DeserializeObject<dynamic>(response.Body);
+            foreach (var item in data1)
+            {
+                orderDetailModels.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)item).Value.ToString()));
+            }
+            foreach(var items in orderDetailModels)
+            {
+                if(items.UserProduct == true && items.UserID == sellerId)
+                {
+                    if (items.detailStatus == "0")
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return 1;
+                    }
+                }            
+            }
+            return -1;
+        }
         public List<OrderModels> GetByCustomer(string cusID)
         {
             List<OrderModels> orders = new List<OrderModels>();
@@ -90,50 +141,93 @@ namespace HocWeb.DAO
             }
             return OrderDetailCollection.AsQueryable<OrderDetailModels>().ToList();
         }
-        public bool update(OrderModels models)
+        public bool update(OrderModels models, string sellerId)
         {
             string dateTime = DateTime.Now.ToString();
             try
             {
+                List<OrderDetailModels> OrderDetailCollection = new List<OrderDetailModels>();
                 FirebaseResponse response = dBContext.Client.Update("Orders/" + models.OrderID,  models);
                 OrderModels data = JsonConvert.DeserializeObject<OrderModels>(response.Body);
                 var timeline = new TimeLineModels();
                 FirebaseResponse response1 = dBContext.Client.Get("Orders/" + models.OrderID + "/TimeLine/");
                 timeline = JsonConvert.DeserializeObject<TimeLineModels>(response1.Body);
+
+                FirebaseResponse response2 = dBContext.Client.Get("Orders/" + models.OrderID + "/OrderDetails/");
+                dynamic data2 = JsonConvert.DeserializeObject<dynamic>(response2.Body);
+                foreach (var item in data2)
+                {
+                    OrderDetailCollection.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)item).Value.ToString()));
+                }
+
                 if (models.Status == "2")
                 {
                     PushNotification(models, "XAC_NHAN");
                     timeline.ChoXacNhan = dateTime;
-                    FirebaseResponse response2 = dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
+                    dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
+                    foreach(var item in OrderDetailCollection)
+                    {
+                        if(item.UserProduct == false)
+                        {
+                            item.detailStatus = "1";
+                            dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
+                        }
+                        else
+                        {
+                            if (item.UserID == sellerId)
+                            {
+                                item.detailStatus = "1";
+                                dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
+                            }
+                        }
+                    }
                 }
                 else if (models.Status == "3")
                 {
-                    PushNotification(models, "GIAO_HANG");
+              
+                    PushNotification(models, "CHO_GIAO");
                     timeline.ChoLayHang = dateTime;
-                    FirebaseResponse response2 = dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
+                    dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
                 }
                 else if (models.Status == "4")
                 {
-                    PushNotification(models, "DA_GIAO");
+                    PushNotification(models, "GIAO_HANG");
                     timeline.DangVanChuyen = dateTime;
-                    FirebaseResponse response2 = dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
+                    dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
                 }
                 else if (models.Status == "5")
                 {
-                    PushNotification(models, "HUY_DON");
+                    PushNotification(models, "DA_GIAO");
                     timeline.DaGiaoHang = dateTime;
-                    FirebaseResponse response2 = dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
+                    dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
                 }
                 else if (models.Status == "6")
                 {
-                    PushNotification(models, "TRA_HANG");
+                    PushNotification(models, "CHUA_GIAO");
                     timeline.DaHuy = dateTime;
-                    FirebaseResponse response2 = dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
+                    dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
                 }
-                else 
+                else if (models.Status == "7")
                 {
-                    timeline.TraHang = dateTime;
-                    FirebaseResponse response2 = dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
+                    PushNotification(models, "HUY_DON");
+                    timeline.DaHuy = dateTime;
+                    dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
+                    foreach (var item in OrderDetailCollection)
+                    {
+                        if (item.UserProduct == false)
+                        {
+                            item.detailStatus = "2";
+                            dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
+                        }
+                        else
+                        {
+                            if(item.UserID == sellerId)
+                            {
+                                item.detailStatus = "2";
+                                dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
+                            }
+                        }
+                    }
                 }
                 return true;
 
@@ -160,16 +254,22 @@ namespace HocWeb.DAO
                     bodyMess = "Đơn hàng đã được xác nhận thành công";
                 }else if (obj.Status == "3")
                 {
-                    bodyMess = "Đơn hàng đang được vận chuyển \nNgười giao hàng:"+ obj.ShipName;
-                }else if (obj.Status == "4")
+                    bodyMess = "Đơn hàng đã tới kho đang chờ vận chuyển";
+                }
+                else if (obj.Status == "4")
                 {
-                    bodyMess = "Đơn hàng giao thành công";
+                    bodyMess = "Đơn hàng đang được vận chuyển \nNgười giao hàng:" + obj.ShipName;
+                   
                 }else if (obj.Status == "5")
                 {
-                    bodyMess = "Huỷ đơn hàng thành công";
+                    bodyMess = "Đơn hàng giao thành công";
+                 
                 }else if (obj.Status == "6")
                 {
-                    bodyMess = "Xác nhận trả hàng thành công";
+                    bodyMess = "Giao hàng thất bại";
+                }
+                else if(obj.Status =="7"){
+                    bodyMess = "Huỷ đơn hàng thành công";
                 }
 
 

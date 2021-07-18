@@ -7,7 +7,7 @@
     var dao = new ProductDao();
     var modelSeller = new SellserModels();
     modelSeller = ViewData["Seller"] as SellserModels;
-    var liststatus = new string[] { "Chờ xác nhận", "Chờ lấy hàng", "Đang giao hàng", "Đã giao hàng", "Đã hủy", "Trả hàng" };
+    var liststatus = new string[] { "Chờ xác nhận","", "Chờ lấy hàng", "Đang giao hàng", "Đã giao hàng", "Đã hủy", "Trả hàng" };
     var userDAO = new USERDAO();
     var sellserdao = new SellserDAO();
 
@@ -28,7 +28,7 @@
     @Html.AntiForgeryToken()
 <div class="container-fluid">
     @{
-        if (Model.Merchant==true || new SellserDAO().CheckSellerStatus1(Model.UserID) == true)
+        if (Model.Merchant == true || new SellserDAO().CheckSellerStatus1(Model.UserID) == true)
         {
             <h1 class="m-0 font-weight-bold text-primary">Chỉnh sửa thông tin người bán</h1>
         }
@@ -149,7 +149,7 @@
         </div>
     </div>
     @{
-        if (Model.Merchant == true || new SellserDAO().CheckSellerStatus1(Model.UserID)==true)
+        if (Model.Merchant == true || new SellserDAO().CheckSellerStatus1(Model.UserID) == true)
         {
             <hr />
             <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm đang kinh doanh</h1>
@@ -196,6 +196,77 @@
                     </div>
                 </div>
             </div>
+            <hr />
+            <h1 class="m-0 font-weight-bold text-primary">Danh sách đơn Report</h1>
+            <hr />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Người gửi đơn</th>
+                                        <th>Hình người gửi</th>
+                                        <th>Tên cửa hàng</th>
+                                        <th>Tên chủ cửa hàng</th>
+                                        <th>Hình chủ cửa hàng</th>
+                                        <th>Ngày gửi</th>
+                                        <th>Trạng thái</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Người gửi đơn</th>
+                                        <th>Hình người gửi</th>
+                                        <th>Tên cửa hàng</th>
+                                        <th>Tên chủ cửa hàng</th>
+                                        <th>Hình chủ cửa hàng</th>
+                                        <th>Ngày gửi</th>
+                                        <th>Trạng thái</th>
+                                        <th>#</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @foreach (var item in ViewData["REPORT"] as List<ReportModels>)
+                                    {
+                                    <tr id="row_@item">
+                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userDAO.GetCusName(item.UserID)</a></td>
+                                        <td align="center">
+                                            <img src="@userDAO.GetAvatar(item.UserID)" alt="Ảnh đại diện" width="100px" height="100px" />
+                                        </td>
+                                        <td>@item.StoreName</td>
+                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userDAO.GetCusName(item.StoreID)</a></td>
+                                        <td align="center">
+                                            <img src="@userDAO.GetAvatar(item.StoreID)" alt="Ảnh đại diện" width="100px" height="100px" />
+                                        </td>
+                                        <td>@item.CreatedDate</td>
+                                        <td>
+                                            @{
+                                                if (item.Status == "True")
+                                                {
+                                                    <p style="color:green; font-size:20px;font-weight:bold">Chưa kiểm tra</p>
+                                                }
+                                                else
+                                                {
+                                                    <p style="color:red; font-size:20px;font-weight:bold">Đã kiểm tra</p>
+                                                }
+                                            }
+
+                                        </td>
+
+                                        <td>
+                                            <a class="btn btn-primary" href="/Admin/Report/Detail/@item.FeedBackID">Chi tiết</a>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         }
     }
     <hr />
@@ -229,7 +300,7 @@
                                     <td>@item.CreatedDate </td>
                                     <td>@item.Total </td>
                                     <td>
-                                        @liststatus[Convert.ToInt32(item.Status) - 1]
+                                        @liststatus[Convert.ToInt32(item.Status)]
                                     </td>
                                     <td>
                                         <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Chi tiết</a>

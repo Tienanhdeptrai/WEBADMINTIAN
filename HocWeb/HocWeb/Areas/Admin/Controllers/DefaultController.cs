@@ -69,26 +69,29 @@ namespace HocWeb.Areas.Admin.Controllers
             Chart a = new Chart();
             int choxacnhan = 0;
             int cholayhang = 0;
+            int chogiaohang = 0;
             int danggiaohang = 0;
             int dagiaohang = 0;
             int dahuy = 0;
-            int trahang = 0;
+            int chuagiao = 0;
             foreach (var item in order)
             {
-                if (item.Status == "1")
+                if (item.Status == "0")
                     choxacnhan++;
                 else if (item.Status == "2")
                     cholayhang++;
                 else if (item.Status == "3")
-                    danggiaohang++;
+                    chogiaohang++;
                 else if (item.Status == "4")
-                    dagiaohang++;
+                    danggiaohang++;
                 else if (item.Status == "5")
-                    dahuy++;
+                    dagiaohang++;
                 else if (item.Status == "6")
-                    trahang++;
+                    chuagiao++;
+                else if (item.Status == "7")
+                    dahuy++;
                 pricenam = Convert.ToDecimal(item.Total);
-                if (item.Status == "4")
+                if (item.Status == "5")
                 {
                     switch (Convert.ToInt32((item.CreatedDate).Substring(6, 4)))
                     {
@@ -121,13 +124,15 @@ namespace HocWeb.Areas.Admin.Controllers
             a.nam2017 = doanhthunam[2];
             a.nam2018 = doanhthunam[3];
             a.nam2019 = doanhthunam[4];
+
             
+            ViewBag.ChoGiaoHang = chogiaohang;
             ViewBag.ChoXacNhan = choxacnhan;
             ViewBag.ChoLayHang = cholayhang;
             ViewBag.DangGiaoHang = danggiaohang;
             ViewBag.DaGiao = dagiaohang;
             ViewBag.DaHuy = dahuy;
-            ViewBag.TraHang = trahang;
+            ViewBag.ChuGiao = chuagiao;
 
             ViewBag.DoanhThuNam = doanhthunam;
             ViewBag.TongDoanhThuNam = tong;       

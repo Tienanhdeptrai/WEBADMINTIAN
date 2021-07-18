@@ -27,7 +27,8 @@
     decimal danggiaohang = ViewBag.DangGiaoHang;
     decimal dagiaohang = ViewBag.DaGiao;
     decimal dahuy = ViewBag.DaHuy;
-    decimal trahang = ViewBag.TraHang;
+    decimal chuagiao = ViewBag.ChuGiao;
+    decimal chogiao = ViewBag.ChoGiaoHang;
 
     decimal product = ViewBag.CountProduct[0];
     decimal tbnam = (nam2015 + nam2016 + nam2017 + nam2018 + nam2019) / 12;
@@ -153,6 +154,22 @@
         </div>
         <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Chờ giao hàng</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@chogiao Đơn hàng</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-success shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
@@ -218,8 +235,8 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Trả hàng</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">@trahang Đơn hàng</div>
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Giao thất bại</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">@chuagiao Đơn hàng</div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-shopping-cart fa-2x text-gray-300"></i>

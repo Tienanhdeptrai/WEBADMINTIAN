@@ -17,5 +17,7 @@ namespace HocWeb.Models
         public string StoreName { get; set; }
 
         public string UserID { get; set; }
+
+        public string ProductID { get; set; }
     }
 }

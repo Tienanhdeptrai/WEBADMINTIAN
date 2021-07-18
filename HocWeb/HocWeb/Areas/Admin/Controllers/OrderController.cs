@@ -31,7 +31,13 @@ namespace HocWeb.Areas.Admin.Controllers
             var model = dao.ListAllPaging();
             return View(model);
         }
-       
+        public ActionResult IndexSeller()
+        {
+            var dao = new OrderDao();
+            var session = (UserSession)Session[CommomConstants.USER_SESSION];
+            var model = dao.GetListOrderbySeller(session.UserID);
+            return View(model);
+        }
         [HttpPost]
         public ActionResult Detail(OrderModels orders)
         {
@@ -40,15 +46,24 @@ namespace HocWeb.Areas.Admin.Controllers
                 SetViewBag();
                 var result = new OrderDao().ViewDetail(orders.OrderID);
                 var dao = new USERDAO().ViewDetail(result.CustomerID);
+                var session = (UserSession)Session[CommomConstants.USER_SESSION];
                 IList<OrderDetailModels> product = new OrderDao().GetAll(orders.OrderID);
                 IList<UserModels> user = new List<UserModels>();
                 user.Add(dao);
                 ViewData["KHACHHANG"] = user;
                 ViewData["SANPHAM"] = product;
                 var order = new OrderDao();
-                order.update(orders);
+                order.update(orders, session.UserID);
                 SetAlert("Chỉnh sửa trạng thái thành công", "success");
-                RedirectToAction("index");
+                if(session.ChucVu == "Seller")
+                {
+                    RedirectToAction("IndexSeller");
+                }
+                else
+                {
+                    RedirectToAction("Index");
+                }
+                
              
             }           
             return View(orders);

@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TiAn ADMIN</title>
+    <title>VEGAN FOOD MARKER TIAN</title>
 
     <!-- Custom fonts for this template-->
     <link href="~/Assets/Admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,49 +35,68 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="/Admin/Default/Index">
-                    <i class="fa fa-home"></i>
-                    <span>Trang chủ</span>
-                </a>
+            @if (session.ChucVu == "2" || session.ChucVu == "3" || session.ChucVu == "1")
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="/Admin/Default/Index">
+                        <i class="fa fa-home"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="/Admin/Default/Index">
+                        <i class="fa fa-home"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+
+            }
             </li>
-            </li>
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-            <!-- Heading -->
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fa fa-user"></i>
-                    <span>Quản lí danh mục</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/Admin/Brand/Index">Danh mục thương hiệu</a>
-                        <a class="collapse-item" href="/Admin/CateProduct/Index">Danh mục sản phẩm</a>
-                        <a class="collapse-item" href="/Admin/Announces/Index">Danh mục thông báo</a>
-                        <a class="collapse-item" href="/Admin/FeedBack/Index">Quản lí kho</a>
+            @if (session.ChucVu == "2" || session.ChucVu == "3" || session.ChucVu == "1")
+            {
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+                <!-- Heading -->
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="fa fa-user"></i>
+                        <span>Quản lí danh mục</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="/Admin/Brand/Index">Danh mục thương hiệu</a>
+                            <a class="collapse-item" href="/Admin/CateProduct/Index">Danh mục sản phẩm</a>
+                            <a class="collapse-item" href="/Admin/Announces/Index">Danh mục thông báo</a>
+                            <a class="collapse-item" href="/Admin/FeedBack/Index">Quản lí kho</a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
+            }
             <!-- Nav Item - Utilities Collapse Menu -->
             <!-- Divider -->
-            <hr class="sidebar-divider">
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span>Quản lí sản phẩm</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="/Admin/Product/Index">Sản phẩm</a>
-                        <a class="collapse-item" href="/Admin/ProductUser/Index">Sản phẩm của khách hàng</a>
-                        <a class="collapse-item" href="/Admin/Order/Index">Đơn hàng</a>
+            @if (session.ChucVu == "2" || session.ChucVu == "3" || session.ChucVu == "1")
+            {
+                <hr class="sidebar-divider">
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Quản lí sản phẩm</span>
+                    </a>
+                    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="/Admin/Product/Index">Sản phẩm</a>
+                            <a class="collapse-item" href="/Admin/ProductUser/Index">Sản phẩm của khách hàng</a>
+                            <a class="collapse-item" href="/Admin/Order/Index">Đơn hàng</a>
 
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
+            }
             <!-- Nav Item - Charts -->
             <!-- Nav Item - Pages Collapse Menu -->
             @if (session.ChucVu == "2" || session.ChucVu == "3")
@@ -102,7 +121,39 @@
                     </div>
                 </li>
             }
-
+            @if (session.ChucVu == "Seller")
+            {
+                <hr class="sidebar-divider">
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Quản lí sản phẩm</span>
+                    </a>
+                    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="/Admin/ProductUser/IndexProduct">Sản phẩm</a>
+                            <a class="collapse-item" href="/Admin/Order/IndexSeller">Đơn hàng</a>
+                        </div>
+                    </div>
+                </li>
+            }
+            @if (session.ChucVu == "Seller")
+            {
+                <hr class="sidebar-divider">
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fa fa-newspaper"></i>
+                        <span>Quản lí thông tin</span>
+                    </a>
+                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="/Admin/Employee/Index">Thông tin cửa hàng</a>
+                            <a class="collapse-item" href="/Admin/Shipper/Index">Thông tin cá nhân</a>
+                        </div>
+                    </div>
+                </li>
+            }
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -339,7 +390,16 @@
                         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-primary" href="/Admin/Employee/Logout">Logout</a>
+                            @if (session.ChucVu == "2" || session.ChucVu == "3" || session.ChucVu == "1")
+                            {
+                                <a class="btn btn-primary" href="/Admin/Employee/Logout">Logout</a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-primary" href="/Admin/User/Logout">Logout</a>
+                            }
+
+
                         </div>
                     </div>
                 </div>

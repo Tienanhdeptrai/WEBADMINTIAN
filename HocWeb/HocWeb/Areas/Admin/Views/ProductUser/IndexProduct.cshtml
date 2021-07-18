@@ -1,7 +1,8 @@
 ﻿@model List<HocWeb.Models.ProductUserModels>
 @using HocWeb.DAO
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "IndexProductSeller";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
     List<HocWeb.Models.ProductUserModels> products = null;
     var userdao = new USERDAO();
@@ -15,7 +16,10 @@
     <script src="~/Assets/Admin/js/controller/productcontroller.js"></script>
 }
 <div class="container-fluid">
-    <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm của khách hàng</h1>
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách sản phẩm của seller</h1>
+    <div>
+        <a class="btn btn-primary" href="/Admin/ProductUser/Create" style="width:200px"> Thêm mới </a>
+    </div>
     <br />
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
@@ -55,7 +59,7 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
+                                  
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -69,21 +73,21 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                                        
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>
@@ -117,7 +121,7 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
+
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -131,21 +135,21 @@
                                 <tbody>
                                     @foreach (var item in products)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                                          
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>
@@ -177,7 +181,6 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -191,21 +194,21 @@
                                 <tbody>
                                     @foreach (var item in products)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                                          
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>
@@ -237,7 +240,6 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -251,21 +253,21 @@
                                 <tbody>
                                     @foreach (var item in products)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                              
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>
@@ -297,7 +299,6 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -311,21 +312,21 @@
                                 <tbody>
                                     @foreach (var item in products)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                                      
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>
@@ -357,7 +358,7 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
+                             
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -371,21 +372,21 @@
                                 <tbody>
                                     @foreach (var item in products)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                    
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>
@@ -417,7 +418,7 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
+
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -431,21 +432,21 @@
                                 <tbody>
                                     @foreach (var item in products)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                                 
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>
@@ -477,7 +478,7 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
+                                   
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -491,21 +492,21 @@
                                 <tbody>
                                     @foreach (var item in products)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                                 
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>
@@ -537,7 +538,7 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Tên người bán</th>
+                                 
                                         <th>Tên sản phẩm</th>
                                         <th>Tên danh mục</th>
                                         <th>Hình ảnh</th>
@@ -551,21 +552,21 @@
                                 <tbody>
                                     @foreach (var item in products)
                                     {
-                                    <tr id="row_@item.ProductID">
-                                        <td><a href="~/Admin/User/Edit/@item.UserID">@userdao.GetCusName(item.UserID)</a></td>
-                                        <td>@item.Name</td>
-                                        <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
-                                        <td align="center">
-                                            <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
-                                        </td>
-                                        <td>@item.Price</td>
-                                        <td>@item.PromotionPrice</td>
-                                        <td>@item.Count</td>
-                                        <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
-                                        <td>
-                                            <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
-                                        </td>
-                                    </tr>
+                                        <tr id="row_@item.ProductID">
+                                    
+                                            <td>@item.Name</td>
+                                            <td><a href="~/Admin/CateProduct/Edit/@item.CategoryID">@dao.GetCateNameByID(item.CategoryID)</a></td>
+                                            <td align="center">
+                                                <img src="@item.Image" alt="Ảnh minh họa sản phẩm" width="100px" height="100px" />
+                                            </td>
+                                            <td>@item.Price</td>
+                                            <td>@item.PromotionPrice</td>
+                                            <td>@item.Count</td>
+                                            <td><a href="#" class="btn-productactive" data-id="@item.ProductID">@Html.Raw(Convert.ToBoolean(item.Status) ? "Còn hàng" : "Hết hàng")</a></td>
+                                            <td>
+                                                <a class="btn btn-primary" href="~/Admin/ProductUser/Edit/@item.ProductID">Chi tiết</a>
+                                            </td>
+                                        </tr>
 
                                     }
                                 </tbody>

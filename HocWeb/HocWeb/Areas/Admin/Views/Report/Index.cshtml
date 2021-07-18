@@ -48,7 +48,7 @@
                             @foreach (var item in Model)
                             {
                             <tr id="row_@item">
-                                <td><a href="~/Admin/User/Edit/@item.UserID">@item.ReportName</a></td>
+                                <td><a href="~/Admin/User/Edit/@item.UserID">@user.GetCusName(item.UserID)</a></td>
                                 <td align="center">
                                     <img src="@user.GetAvatar(item.UserID)" alt="Ảnh đại diện" width="100px" height="100px" />
                                 </td>

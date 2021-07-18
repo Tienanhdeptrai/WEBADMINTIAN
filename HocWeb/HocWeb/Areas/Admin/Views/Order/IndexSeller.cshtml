@@ -1,14 +1,15 @@
 ﻿@model List<HocWeb.Models.OrderModels>
 @using HocWeb.DAO
-
+@using HocWeb.Areas.Admin.Code;
 
 @{
     ViewBag.Title = "Index";
-    var liststatus = new string[] { "Chờ xác nhận", "", "Chờ lấy hàng", "Chờ giao hàng", "Đang giao hàng", "Giao thành công", "Giao thất bại", "Đã hủy" };
+    var liststatus = new string[] { "Chờ Admin duyệt", "", "Chờ lấy hàng", "Chờ giao hàng", "Đang giao hàng", "Giao thành công", "Giao thất bại", "Đã hủy" };
     Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
     List<HocWeb.Models.OrderModels> orders = null;
     var dao = new USERDAO();
-
+    var orderDao = new OrderDao();
+    var session = (UserSession)Session[CommomConstants.USER_SESSION];
 }
 @section header{
 
@@ -16,13 +17,16 @@
 
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="m-0 font-weight-bold text-primary">Danh sách hóa đơn</h1>
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách đơn hàng</h1>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Tất cả</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Chờ xác nhận</a>
+            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Chờ Admin duyệt</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="xacnhan-tab" data-toggle="tab" href="#xacnhan" role="tab" aria-controls="xacnhan" aria-selected="false">Chờ xác nhận</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" id="layhang-tab" data-toggle="tab" href="#layhang" role="tab" aria-controls="layhang" aria-selected="false">Chờ lấy hàng</a>
@@ -173,6 +177,75 @@
             </div>
 
         </div>
+        <div class="tab-pane fade" id="xacnhan" role="tabpanel" aria-labelledby="xacnhan-tab">
+            @{
+                orders = new List<HocWeb.Models.OrderModels>();
+
+            }
+            @foreach (var item in Model)
+            {
+                if (item.Status == "2" && orderDao.checkOrder(item.OrderID, session.UserID) == 0)
+                {
+                    orders.Add(item);
+                }
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổng</th>
+                                        <th>Status</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @if (orders.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không tìm thấy đơn hàng</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in orders)
+                                    {
+                                        <tr id="row_@item.OrderID">
+                                            <td>@dao.GetCusName(item.CustomerID)</td>
+                                            <td>@item.ShipName</td>
+                                            <td>@item.ShipMoblie</td>
+                                            <td>@item.ShipAddress</td>
+                                            <td>@item.CreatedDate </td>
+                                            <td>@item.Total </td>
+                                            <td>
+                                                @liststatus[Convert.ToInt32(item.Status)]
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="/Admin/order/Detail/@item.OrderID">Details</a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         <div class="tab-pane fade" id="layhang" role="tabpanel" aria-labelledby="layhang-tab">
             @{
                 orders = new List<HocWeb.Models.OrderModels>();
@@ -180,7 +253,7 @@
             }
             @foreach (var item in Model)
             {
-                if (Convert.ToInt32(item.Status) == 2)
+                if (item.Status == "2" && orderDao.checkOrder(item.OrderID, session.UserID) == 1)
                 {
                     orders.Add(item);
                 }

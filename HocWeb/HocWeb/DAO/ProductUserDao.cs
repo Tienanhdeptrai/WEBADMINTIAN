@@ -29,11 +29,6 @@ namespace HocWeb.DAO
             catch { }
         }
 
-        internal IList<ProductUserModels> GetProductByUser(object userID)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<ProductUserModels> GetProductByUser(string userId)
         {
             List<ProductUserModels> model = new List<ProductUserModels>();
@@ -68,6 +63,26 @@ namespace HocWeb.DAO
                 return false;
             }
         }
+        public bool CheckProduct(string name)
+        {
+            return ProductCollection.AsQueryable<ProductUserModels>().Count(x => x.Name == name) > 0;
+        }
+        public bool Insert(ProductUserModels models)
+        {
+            try
+            {
+                var data = models;
+                PushResponse response = dBContext.Client.Push("ProductUser/", data);
+                data.ProductID = response.Result.name;
+                SetResponse setResponse = dBContext.Client.Set("ProductUser/" + data.ProductID, data);
+            }
+            catch { }
+            if (CheckProduct(models.Name) == true)
+            {
+                return false;
+            }
+            return true;
+        }
         public void ChangeStatusAllProductSeller(string sellerId)
         {
             foreach (var item in ProductCollection)
@@ -91,6 +106,34 @@ namespace HocWeb.DAO
                 model.Status = true;
             }
             FirebaseResponse response = dBContext.Client.Update("ProductUser/" + id, model);
+        }
+
+        public string GetProductName(string id)
+        {
+            try
+            {
+                var models = ProductCollection.AsQueryable<ProductUserModels>().SingleOrDefault(x => x.ProductID == id);
+                return models.Name;
+            }
+            catch
+            {
+                return "Tên sản phẩm";
+            }
+
+        }
+
+        public string GetProductImage(string id)
+        {
+            try
+            {
+                var models = ProductCollection.AsQueryable<ProductUserModels>().SingleOrDefault(x => x.ProductID == id);
+                return models.Image;
+            }
+            catch
+            {
+                return "Tên sản phẩm";
+            }
+
         }
     }
 }

@@ -142,13 +142,29 @@ namespace HocWeb.DAO
         }
         public string GetProductName(string id)
         {
-            var models = ProductCollection.AsQueryable<ProductModels>().SingleOrDefault(x => x.ProductID == id);
-            return models.Name;
+            try
+            {
+                var models = ProductCollection.AsQueryable<ProductModels>().SingleOrDefault(x => x.ProductID == id);
+                return models.Name;
+            }
+            catch
+            {
+                return "Tên sản phẩm";
+            }
+          
         }
         public string GetBrandNameByID(string id)
         {
-            var brand_models = BrandCollection.AsQueryable<BrandModels>().SingleOrDefault(x => x.BrandID == id);
-            return brand_models.Name;
+            try
+            {
+                var brand_models = BrandCollection.AsQueryable<BrandModels>().SingleOrDefault(x => x.BrandID == id);
+                return brand_models.Name;
+            }
+            catch
+            {
+                return "Tên nhãn";
+            }
+          
         }
         public string GetCateNameByID(string id)
         {
@@ -157,13 +173,29 @@ namespace HocWeb.DAO
         }
         public string GetBrand_Name(ProductModels models)
         {
-            var brand_models = BrandCollection.AsQueryable<BrandModels>().SingleOrDefault(x => x.BrandID == models.BrandID);
-            return brand_models.Name;
+            try
+            {
+                var brand_models = BrandCollection.AsQueryable<BrandModels>().SingleOrDefault(x => x.BrandID == models.BrandID);
+                return brand_models.Name;
+            }
+            catch
+            {
+                return "";
+            }
+      
         }
         public string GetCate_Name(ProductModels models)
         {
-            var cate_models = CateCollection.AsQueryable<CateProductModels>().SingleOrDefault(x => x.CateProductID == models.CategoryID);
-            return cate_models.Name;
+            try
+            {
+                var cate_models = CateCollection.AsQueryable<CateProductModels>().SingleOrDefault(x => x.CateProductID == models.CategoryID);
+                return cate_models.Name;
+            }
+            catch
+            {
+                return "";
+            }
+            
         }
     }
 }

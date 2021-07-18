@@ -53,6 +53,18 @@ namespace HocWeb.DAO
             ReportDetailModels data = JsonConvert.DeserializeObject<ReportDetailModels>(response.Body);
             return data;
         }
+        public List<ReportModels> GetbyUserId (string id)
+        {
+            List<ReportModels> reports = new List<ReportModels>();
+            foreach (var items in Collection)
+            {
+                if(items.StoreID == id)
+                {
+                    reports.Add(items);
+                }
+            }
+            return reports;
+        }
         public List<ReportModels> ListAll()
         {
             return Collection;

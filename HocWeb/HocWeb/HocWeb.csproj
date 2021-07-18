@@ -399,6 +399,7 @@
     <Compile Include="Areas\Admin\Controllers\FeedBackController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginSellerController.cs" />
     <Compile Include="Areas\Admin\Controllers\OrderController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\EmployeeController.cs" />
@@ -2811,6 +2812,10 @@
     <Content Include="Scripts\ckeditor\ckeditor.pack" />
     <Content Include="Areas\Admin\Views\Report\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Report\Detail.cshtml" />
+    <Content Include="Areas\Admin\Views\LoginSeller\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductUser\IndexProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\ProductUser\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\IndexSeller.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
     <Content Include="Scripts\ckeditor\ckeditor_basic.js" />

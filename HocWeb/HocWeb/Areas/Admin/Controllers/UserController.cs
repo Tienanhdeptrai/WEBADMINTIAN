@@ -39,6 +39,7 @@ namespace HocWeb.Areas.Admin.Controllers
                 ViewData["Seller"] = new SellserDAO().ViewDetail(id);
                 ViewData["DIACHI"] = address;
                 ViewData["ORDERS"] = new OrderDao().GetByCustomer(id);
+                ViewData["REPORT"] = new ReportDAO().GetbyUserId(id);
             }
             return View(user);
         }
@@ -186,6 +187,11 @@ namespace HocWeb.Areas.Admin.Controllers
             {
                 status = result
             });
+        }
+        public ActionResult Logout()
+        {
+            Session[CommomConstants.USER_SESSION] = null;
+            return Redirect("/Admin/LoginSeller/Index");
         }
     }
 }

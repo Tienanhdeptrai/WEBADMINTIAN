@@ -29,9 +29,43 @@ namespace HocWeb.DAO
             }
             catch { }
         }
+        public int Login(string userName, string password)
+        {
+
+            var result = Collection.AsQueryable().SingleOrDefault(x => x.UserName== userName);
+
+            if (result == null)
+            {
+                return 0;
+            }
+            else
+            {
+                if(result.Merchant == false)
+                {
+                    return -3;
+                }
+                else
+                {
+                    if (result.Status == "false")
+                    {
+                        return -1;
+                    }
+                    else
+                    {
+                        if (result.Passwords == password)
+                        {
+                            return 1;
+                        }
+                        else
+                            return -2;
+                    }
+                }
+            }
+
+        }
         public UserModels GetByID(string userName)
         {                     
-            return (UserModels)Collection.Where(x => x.UserName == userName);
+            return Collection.AsQueryable().SingleOrDefault(x => x.UserName == userName);
         }
         public UserModels GetByEmail(string Email)
         {
@@ -48,13 +82,29 @@ namespace HocWeb.DAO
         }
         public string GetCusName(string id)
         {
-            var model = Collection.AsQueryable().SingleOrDefault(x => x.UserID == id);
-            return model.FullName;
+            try
+            {
+                var model = Collection.AsQueryable().SingleOrDefault(x => x.UserID == id);
+                return model.FullName;
+            }
+            catch
+            {
+                return "Không tìm thấy dữ liệu";
+            }
+         
         }
         public string GetAvatar(string id)
         {
-            var model = Collection.AsQueryable().SingleOrDefault(x => x.UserID == id);
-            return model.Avatar;
+            try
+            {
+                var model = Collection.AsQueryable().SingleOrDefault(x => x.UserID == id);
+                return model.Avatar;
+            }
+            catch
+            {
+                return "";
+            }
+           
         }
 
         public List<UserModels> GetAll()

@@ -28,5 +28,7 @@ namespace HocWeb.Models
         public string ShipLocation { get; set; }
 
         public string WarehouseId { get; set; }
+        public string ReasonCanelOrder { get; set; }
+
     }
 }

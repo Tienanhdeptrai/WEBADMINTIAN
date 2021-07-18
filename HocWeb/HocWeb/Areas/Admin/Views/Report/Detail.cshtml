@@ -7,6 +7,7 @@
     var user = new USERDAO();
     var product = new ProductDao();
     var reprotdDetail = ViewData["REPORTS"] as ReportDetailModels;
+    var userProduct = new ProductUserDao();
 }
 @section header{
 
@@ -49,6 +50,16 @@
             <p class="form-control form-control-user">@user.GetCusName(Model.StoreID)</p>
         </div>
     </div>
+    <div class="form-group row">
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Sản phẩm bị báo cáo</p>
+            <p class="form-control form-control-user">@userProduct.GetProductName(Model.ProductID)</p>
+        </div>
+        <div class="col-sm-3 mb-1 mb-sm-0">
+            <p style="font-weight:bold; color:#000000;font-size:20px">  Hình sản phẩm</p>
+            <img src="@userProduct.GetProductImage(Model.ProductID)" width="250px" height="250px" />
+        </div>
+    </div>
     <br />
     <p style="font-weight:bold; color:#000000;font-size:30px">  Nội dung báo cáo</p>
     <br />
@@ -69,7 +80,7 @@
             <p class="form-control form-control-user">@reprotdDetail.rules_orther</p>
         </div>
     </div>
-   
+
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <a class="btn btn-success" href="~/Admin/User/Edit/@Model.StoreID">
