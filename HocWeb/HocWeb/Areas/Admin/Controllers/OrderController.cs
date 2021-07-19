@@ -38,6 +38,77 @@ namespace HocWeb.Areas.Admin.Controllers
             var model = dao.GetListOrderbySeller(session.UserID);
             return View(model);
         }
+        public ActionResult IndexRefund()
+        {
+            var dao = new OrderDao();
+            var model = dao.GetListRefund();
+            IList<OrderModels> seller = new OrderDao().GetListRejectBySeller();
+            ViewData["REJECTSELLER"] = seller;
+            return View(model);
+        }
+        [HttpGet]
+        public ActionResult DetailRefund(string id)
+        {
+            var result = new OrderDao().ViewDetailRefund(id);
+            var dao = new USERDAO().ViewDetail(result.CustomerID);
+            IList<OrderDetailModels> product = new OrderDao().GetAllRefund(id);
+            IList<UserModels> user = new List<UserModels>();
+            user.Add(dao);
+            ViewData["KHACHHANG"] = user;
+            ViewData["SANPHAM"] = product;
+            return View(result);
+        }
+        [HttpPost]
+        public ActionResult DetailRefund(OrderModels orders)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = new OrderDao().ViewDetailRefund(orders.OrderID);
+                var dao = new USERDAO().ViewDetail(result.CustomerID);
+                IList<OrderDetailModels> product = new OrderDao().GetAllRefund(orders.OrderID);
+                IList<UserModels> user = new List<UserModels>();
+                user.Add(dao);
+                ViewData["KHACHHANG"] = user;
+                ViewData["SANPHAM"] = product;
+                var order = new OrderDao();
+                order.updateRefund(orders);
+                SetAlert("Chỉnh sửa trạng thái thành công", "success");
+                RedirectToAction("IndexRefund");
+            }
+            return View(orders);
+        }
+        [HttpGet]
+        public ActionResult DetailRejectSeller(string id)
+        {
+            var result = new OrderDao().ViewDetailSellerReject(id);
+            var dao = new USERDAO().ViewDetail(result.CustomerID);
+            IList<OrderDetailModels> product = new OrderDao().GetAllRejectSeller(id);
+            IList<UserModels> user = new List<UserModels>();
+            user.Add(dao);
+            ViewData["KHACHHANG"] = user;
+            ViewData["SANPHAM"] = product;
+            return View(result);
+        }
+        [HttpPost]
+        public ActionResult DetailRejectSeller(OrderModels orders)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = new OrderDao().ViewDetailSellerReject(orders.OrderID);
+                var dao = new USERDAO().ViewDetail(result.CustomerID);
+                IList<OrderDetailModels> product = new OrderDao().GetAllRejectSeller(orders.OrderID);
+                IList<UserModels> user = new List<UserModels>();
+                user.Add(dao);
+                ViewData["KHACHHANG"] = user;
+                ViewData["SANPHAM"] = product;
+                var order = new OrderDao();
+                //hoantien
+                order.updateRefund(orders);
+                SetAlert("Chỉnh sửa trạng thái thành công", "success");
+                RedirectToAction("IndexRefund");
+            }
+            return View(orders);
+        }
         [HttpPost]
         public ActionResult Detail(OrderModels orders)
         {
@@ -62,9 +133,7 @@ namespace HocWeb.Areas.Admin.Controllers
                 else
                 {
                     RedirectToAction("Index");
-                }
-                
-             
+                }                          
             }           
             return View(orders);
         }

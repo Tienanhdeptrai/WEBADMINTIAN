@@ -18,6 +18,7 @@ namespace HocWeb.Models
 
         public string ShipEmail { get; set; }
 
+        public double ShipPayment { get; set; }
         public string Payment { get; set; }
 
         public string Status { get; set; }
@@ -30,5 +31,11 @@ namespace HocWeb.Models
         public string WarehouseId { get; set; }
         public string ReasonCanelOrder { get; set; }
 
+        //refund
+        public double RefundMonney { get; set; }
+
+        public bool isRefund { get; set; }
+
+        public string apptransid { get; set; }
     }
 }

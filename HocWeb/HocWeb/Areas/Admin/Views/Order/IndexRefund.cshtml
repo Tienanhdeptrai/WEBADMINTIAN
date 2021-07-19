@@ -1,0 +1,150 @@
+﻿@model List<HocWeb.Models.OrderModels>
+@using HocWeb.DAO
+
+@{
+    ViewBag.Title = "IndexRefund";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutView.cshtml";
+    List<HocWeb.Models.OrderModels> orders = null;
+    var dao = new USERDAO();
+}
+@section header{
+
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="m-0 font-weight-bold text-primary">Danh sách hóa hoàn tiền</h1>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Đơn giao thất bại</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " id="choxacnhan-tab" data-toggle="tab" href="#choxacnhan" role="tab" aria-controls="choxacnhan" aria-selected="false">Đơn seller từ chối</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <br />
+            <h6>@Model.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổng</th>
+                                        <th>Tiền Refund</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (Model.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không có đơn hàng cần hoàn tiền</p>
+                                            </td>
+                                        </tr>
+                                    }
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr id="row_@item.OrderID">
+                                            <td>@dao.GetCusName(item.CustomerID)</td>
+                                            <td>@item.ShipName</td>
+                                            <td>@item.ShipMoblie</td>
+                                            <td>@item.ShipAddress</td>
+                                            <td>@item.CreatedDate </td>
+                                            <td>@item.Total </td>
+                                            <td>@item.RefundMonney </td>
+                                            <td>
+                                                <a class="btn btn-primary" href="/Admin/order/DetailRefund/@item.OrderID">Details</a>
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="choxacnhan" role="tabpanel" aria-labelledby="choxacnhan-tab">
+
+            @{
+                orders = new List<HocWeb.Models.OrderModels>();
+
+            }
+            @foreach (var item in ViewData["REJECTSELLER"] as List<HocWeb.Models.OrderModels>)
+            {
+                orders.Add(item);
+            }
+            <br />
+            <h6>@orders.Count Đơn hàng </h6>
+            <br />
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Tên khách hàng</th>
+                                        <th>Người nhận</th>
+                                        <th>Điện thoại</th>
+                                        <th>Địa chỉ nhận</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Tổng</th>
+                                        <th>Tiền Refund</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @if (orders.Count == 0)
+                                    {
+                                        <tr>
+                                            <td colspan="6">
+                                                <img src="~/Assets/Admin/img/process3.jpg" style="display:block;margin:0 auto" width="200px" height="200px" />
+                                                <p style="text-align:center">Không có đơn hàng cần hoàn tiền</p>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                    @foreach (var item in orders)
+                                    {
+                                <tr id="row_@item.OrderID">
+                                    <td>@dao.GetCusName(item.CustomerID)</td>
+                                    <td>@item.ShipName</td>
+                                    <td>@item.ShipMoblie</td>
+                                    <td>@item.ShipAddress</td>
+                                    <td>@item.CreatedDate </td>
+                                    <td>@item.Total </td>
+                                    <td>@item.RefundMonney </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/Admin/order/DetailRejectSeller/@item.OrderID">Details</a>
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>                   
+    </div>
+</div>
+

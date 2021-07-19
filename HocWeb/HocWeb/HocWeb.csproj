@@ -2816,6 +2816,9 @@
     <Content Include="Areas\Admin\Views\ProductUser\IndexProduct.cshtml" />
     <Content Include="Areas\Admin\Views\ProductUser\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Order\IndexSeller.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\IndexRefund.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\DetailRefund.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\DetailRejectSeller.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
     <Content Include="Scripts\ckeditor\ckeditor_basic.js" />

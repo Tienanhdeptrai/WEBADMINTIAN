@@ -9,7 +9,6 @@ using Newtonsoft.Json.Linq;
 using System.Net;
 using System.IO;
 using System.Web.Script.Serialization;
-using HocWeb.Areas.Admin.Code;
 
 namespace HocWeb.DAO
 {
@@ -58,7 +57,70 @@ namespace HocWeb.DAO
 
             return orderList;
         }
+        public List<OrderModels> GetListRefund()
+        {
+            List<OrderModels> orderModels = new List<OrderModels>();
+            foreach(var item in OrderCollection)
+            {
+                if(item.Status == "6" && item.Payment == "02" && item.isRefund == false)
+                {
+                    List<OrderDetailModels> orderDetailModels = new List<OrderDetailModels>();
+                    FirebaseResponse response = dBContext.Client.Get("Orders/" + item.OrderID + "/OrderDetails/");
+                    dynamic data1 = JsonConvert.DeserializeObject<dynamic>(response.Body);
+                    foreach (var itemDetail in data1)
+                    {
+                        orderDetailModels.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)itemDetail).Value.ToString()));
+                    }
+                    double temp = 0;
+                    foreach (var itemDetail in orderDetailModels)
+                    {
+                        if (itemDetail.detailStatus == "1")
+                        {
+                            temp += itemDetail.Quantity * Convert.ToInt32(itemDetail.Price);
+                        }
+                    }
+                    if (temp != 0)
+                    {
+                        item.RefundMonney = temp;
+                        orderModels.Add(item);
+                    }
+                   
+                }
+            }
+            return orderModels;
+        }
+        public List<OrderModels> GetListRejectBySeller()
+        {
+            List<OrderModels> orderModels = new List<OrderModels>();
+            foreach (var item in OrderCollection)
+            {
+                if (item.Status == "2" && item.Payment == "02" && item.isRefund == false)
+                {
+                    List<OrderDetailModels> orderDetailModels = new List<OrderDetailModels>();
+                    FirebaseResponse response = dBContext.Client.Get("Orders/" + item.OrderID + "/OrderDetails/");
+                    dynamic data1 = JsonConvert.DeserializeObject<dynamic>(response.Body);
+                    foreach (var itemDetail in data1)
+                    {
+                        orderDetailModels.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)itemDetail).Value.ToString()));
+                    }
+                    int temp = 0;
+                    foreach (var itemDetail in orderDetailModels)
+                    {
 
+                        if (itemDetail.UserProduct == true && itemDetail.detailStatus == "2")
+                        {
+                            temp += itemDetail.Quantity * Convert.ToInt32(itemDetail.Price);
+                        }
+                    }
+                    if (temp != 0)
+                    {
+                        item.RefundMonney = temp;
+                        orderModels.Add(item);
+                    }
+                }
+            }
+            return orderModels;
+        }
         public int checkOrder(string orderId, string sellerId)
         {
             List<OrderDetailModels> orderDetailModels = new List<OrderDetailModels>();
@@ -121,8 +183,56 @@ namespace HocWeb.DAO
         public OrderModels ViewDetail(string id)
         {
             return OrderCollection.AsQueryable<OrderModels>().SingleOrDefault(x => x.OrderID == id);
-        }     
+        }
+        public OrderModels ViewDetailRefund(string id)
+        {
+            var model = OrderCollection.AsQueryable<OrderModels>().SingleOrDefault(x => x.OrderID == id);
+            List<OrderDetailModels> orderDetailModels = new List<OrderDetailModels>();
+            FirebaseResponse response = dBContext.Client.Get("Orders/" + model.OrderID + "/OrderDetails/");
+            dynamic data1 = JsonConvert.DeserializeObject<dynamic>(response.Body);
+            foreach (var itemDetail in data1)
+            {
+                orderDetailModels.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)itemDetail).Value.ToString()));
+            }
+            int temp = 0;
+            foreach (var itemDetail in orderDetailModels)
+            {
+                if (itemDetail.detailStatus == "1")
+                {
+                    temp += itemDetail.Quantity * Convert.ToInt32(itemDetail.Price);
+                }
+            }
+            if (temp != 0)
+            {
+                model.RefundMonney = temp;
+            }
+            return model;
+        }
+        public OrderModels ViewDetailSellerReject(string id)
+        {
+            var model = OrderCollection.AsQueryable<OrderModels>().SingleOrDefault(x => x.OrderID == id);
+            List<OrderDetailModels> orderDetailModels = new List<OrderDetailModels>();
+            FirebaseResponse response = dBContext.Client.Get("Orders/" + model.OrderID + "/OrderDetails/");
+            dynamic data1 = JsonConvert.DeserializeObject<dynamic>(response.Body);
+            foreach (var itemDetail in data1)
+            {
+                orderDetailModels.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)itemDetail).Value.ToString()));
+            }
+            int temp = 0;
+            foreach (var itemDetail in orderDetailModels)
+            {
 
+                if (itemDetail.UserProduct == true && itemDetail.detailStatus == "2")
+                {
+                    temp += itemDetail.Quantity * Convert.ToInt32(itemDetail.Price);
+                }
+            }
+            if (temp != 0)
+            {
+                model.RefundMonney = temp;
+            }
+            return model;
+        }
         public bool hasOrderDetail(string id)
         {
             var result = OrderCollection.AsQueryable<OrderModels>().SingleOrDefault(x => x.CustomerID == id);
@@ -140,6 +250,60 @@ namespace HocWeb.DAO
                 OrderDetailCollection.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)item).Value.ToString()));
             }
             return OrderDetailCollection.AsQueryable<OrderDetailModels>().ToList();
+        }
+        public List<OrderDetailModels> GetAllRefund(string id)
+        {
+            List<OrderDetailModels> orderDetailModels = new List<OrderDetailModels>();
+            List<OrderDetailModels> OrderDetailCollection = new List<OrderDetailModels>();
+            FirebaseResponse response2 = dBContext.Client.Get("Orders/" + id + "/OrderDetails/");
+            dynamic data2 = JsonConvert.DeserializeObject<dynamic>(response2.Body);
+            foreach (var item in data2)
+            {
+                OrderDetailCollection.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)item).Value.ToString()));
+            }
+            foreach(var item in OrderDetailCollection)
+            {
+                if (item.detailStatus == "1")
+                {
+                    orderDetailModels.Add(item);
+                }
+            }
+            return orderDetailModels;
+        }
+        public List<OrderDetailModels> GetAllRejectSeller(string id)
+        {
+            List<OrderDetailModels> orderDetailModels = new List<OrderDetailModels>();
+            List<OrderDetailModels> OrderDetailCollection = new List<OrderDetailModels>();
+            FirebaseResponse response2 = dBContext.Client.Get("Orders/" + id + "/OrderDetails/");
+            dynamic data2 = JsonConvert.DeserializeObject<dynamic>(response2.Body);
+            foreach (var item in data2)
+            {
+                OrderDetailCollection.Add(JsonConvert.DeserializeObject<OrderDetailModels>(((JProperty)item).Value.ToString()));
+            }
+            foreach (var item in OrderDetailCollection)
+            {
+                if (item.UserProduct == true && item.detailStatus == "2")
+                {
+                    orderDetailModels.Add(item);
+                }
+            }
+            return orderDetailModels;
+        }
+        public bool updateRefund(OrderModels models)
+        {
+            try
+            {
+                models.isRefund = true;
+                FirebaseResponse response = dBContext.Client.Update("Orders/" + models.OrderID, models);
+                //hoan tien
+
+                PushNotification(models, "Refund");
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
         public bool update(OrderModels models, string sellerId)
         {
@@ -218,6 +382,7 @@ namespace HocWeb.DAO
                         {
                             item.detailStatus = "2";
                             dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
+                            //
                         }
                         else
                         {
@@ -225,6 +390,7 @@ namespace HocWeb.DAO
                             {
                                 item.detailStatus = "2";
                                 dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
+                                //
                             }
                         }
                     }
@@ -271,8 +437,10 @@ namespace HocWeb.DAO
                 else if(obj.Status =="7"){
                     bodyMess = "Huỷ đơn hàng thành công";
                 }
-
-
+                if (type == "Refund")
+                {
+                    bodyMess = "Đơn hàng của bạn đã được hoàn tiền";
+                }
                 string applicationID = "AAAA2WbinkI:APA91bEBVS1RR8PzeEEcnVXieNKReaS4BTcFzKmRHMC-kvXymsbrmITORkNFcEbcqTGjaY1DfF5W6GMvGLOT9JwnOrutVfZ0xUByjSAud2ehowg4cpm2aPpmt1p3cj5IDxQd0ktVp1MX";
 
                 string senderId = "933734030914";
