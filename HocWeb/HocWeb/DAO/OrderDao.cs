@@ -32,6 +32,14 @@ namespace HocWeb.DAO
             catch { }
 
         }
+
+
+        //HoanTienZalo
+        public void renderZaloPay (double totalRefund, string apptransid)
+        {
+            ////
+        }
+
         public List<OrderModels> GetListOrderbySeller (string sellerId)
         {
             List<OrderDetailModels> OrderDetailCollection = new List<OrderDetailModels>();
@@ -296,7 +304,6 @@ namespace HocWeb.DAO
                 models.isRefund = true;
                 FirebaseResponse response = dBContext.Client.Update("Orders/" + models.OrderID, models);
                 //hoan tien
-
                 PushNotification(models, "Refund");
                 return true;
             }
@@ -378,21 +385,9 @@ namespace HocWeb.DAO
                     dBContext.Client.Update("Orders/" + models.OrderID + "/TimeLine/", timeline);
                     foreach (var item in OrderDetailCollection)
                     {
-                        if (item.UserProduct == false)
-                        {
-                            item.detailStatus = "2";
-                            dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
-                            //
-                        }
-                        else
-                        {
-                            if(item.UserID == sellerId)
-                            {
-                                item.detailStatus = "2";
-                                dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
-                                //
-                            }
-                        }
+                        item.detailStatus = "2";
+                        dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
+                        renderZaloPay(Convert.ToDouble(models.Total), models.apptransid);
                     }
                 }
                 return true;

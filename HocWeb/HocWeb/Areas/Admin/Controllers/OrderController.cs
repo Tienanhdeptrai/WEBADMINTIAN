@@ -71,6 +71,8 @@ namespace HocWeb.Areas.Admin.Controllers
                 ViewData["KHACHHANG"] = user;
                 ViewData["SANPHAM"] = product;
                 var order = new OrderDao();
+                //hoantien
+                order.renderZaloPay(orders.RefundMonney, orders.apptransid);
                 order.updateRefund(orders);
                 SetAlert("Chỉnh sửa trạng thái thành công", "success");
                 RedirectToAction("IndexRefund");
@@ -103,6 +105,7 @@ namespace HocWeb.Areas.Admin.Controllers
                 ViewData["SANPHAM"] = product;
                 var order = new OrderDao();
                 //hoantien
+                order.renderZaloPay(orders.RefundMonney, orders.apptransid);
                 order.updateRefund(orders);
                 SetAlert("Chỉnh sửa trạng thái thành công", "success");
                 RedirectToAction("IndexRefund");

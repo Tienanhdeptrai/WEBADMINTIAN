@@ -141,6 +141,13 @@
                 }
             }
             @{
+                if (Model.Status == "6")
+                {
+                    <p style="font-size: 24px;font-weight:bold; color:black">Lý do hoàn trả</p>
+                    <p style="font-size: 24px">@Model.ReasonCanelOrder</p>
+                }
+            }
+            @{
                 if (Model.Status == "0")
                 {
                     <div class="col-sm-10">
