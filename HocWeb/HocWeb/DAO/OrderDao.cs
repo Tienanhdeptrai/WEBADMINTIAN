@@ -387,6 +387,9 @@ namespace HocWeb.DAO
                     {
                         item.detailStatus = "2";
                         dBContext.Client.Update("Orders/" + models.OrderID + "/OrderDetails/" + item.OrderDetailID, item);
+                    }
+                    if (models.Payment == "02")
+                    {
                         renderZaloPay(Convert.ToDouble(models.Total), models.apptransid);
                     }
                 }
