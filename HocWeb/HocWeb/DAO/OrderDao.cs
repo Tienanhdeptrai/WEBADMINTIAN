@@ -35,9 +35,11 @@ namespace HocWeb.DAO
 
 
         //HoanTienZalo
-        public void renderZaloPay (double totalRefund, string apptransid)
+        public bool renderZaloPay (double totalRefund, string apptransid)
         {
-            ////
+
+
+            return true;    
         }
 
         public List<OrderModels> GetListOrderbySeller (string sellerId)
@@ -301,11 +303,20 @@ namespace HocWeb.DAO
         {
             try
             {
-                models.isRefund = true;
-                FirebaseResponse response = dBContext.Client.Update("Orders/" + models.OrderID, models);
-                //hoan tien
-                PushNotification(models, "Refund");
-                return true;
+              
+                if (renderZaloPay(models.RefundMonney, models.apptransid)==true)
+                {
+                    models.isRefund = true;
+                    FirebaseResponse response = dBContext.Client.Update("Orders/" + models.OrderID, models);
+                    //hoan tien
+                    PushNotification(models, "Refund");
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+               
             }
             catch
             {
@@ -390,7 +401,11 @@ namespace HocWeb.DAO
                     }
                     if (models.Payment == "02")
                     {
-                        renderZaloPay(Convert.ToDouble(models.Total), models.apptransid);
+                         if(renderZaloPay(Convert.ToDouble(models.Total), models.apptransid)==true)
+                        {
+                            models.isRefund = true;
+                            dBContext.Client.Update("Orders/" + models.OrderID, models);
+                        }
                     }
                 }
                 return true;
